@@ -1,12 +1,25 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+
+.navbar {
+  background: $primary;
+  color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-brand {
+  font-family: "Sansita";
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  margin-left: 10px;
+}
+.navbar-light .navbar-toggler {
+  border-color: transparent;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.fas {
+  font-size: 34px;
+  color: white;
+}
+.nav-link {
+  color: white;
 }
