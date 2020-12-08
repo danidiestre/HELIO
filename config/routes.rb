@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :booking_dates, only: [:new, :create]
   resources :booking_options, only: [:new, :create]
   resources :booking_budgets, only: [:new, :create]
+  resources :booking_users, only: [:new, :create]
 
 end
