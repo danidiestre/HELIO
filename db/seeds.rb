@@ -183,29 +183,27 @@ p "Also created #{Event.count} Events with #{Iteration.count} Iterations"
 
 
 
-
-
-
+##########################################
 
 avatar_ana = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQES3TPGourBwg/profile-displayphoto-shrink_800_800/0/1517466023378?e=1612396800&v=beta&t=rrMXlDr6agrpQS0_YnrFKHCxuWHfpaxhW2sDoMtiVR4')
-ana = User.create(email: "ana@gmail.com", encrypted_password: "password", first_name: "Ana", last_name: "Bajo")
+ana = User.create!(email: "ana@gmail.com", password: "password", first_name: "Ana", last_name: "Bajo")
 ana.avatar.attach(io: avatar_ana, filename: 'ana.png', content_type: 'image/png')
 
-# rocio = User.create(email: 'rocio@gmail.com', password: 'password' first_name: "Rocio", last_name:"Nadal")
-# avatar_rocio = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQHWSUqNdAXHcQ/profile-displayphoto-shrink_800_800/0/1596640241152?e=1612396800&v=beta&t=MXHi43SBRu6f1nRNdK06yfoTH3khbirL4fLfzMH1pbU')
-# rocio.avatar.attach(io: avatar_rocio, filename: 'rocio.png', content_type: 'image/png')
+rocio = User.create!(email: 'rocio@gmail.com', password: 'password', first_name: "Rocio", last_name:"Nadal")
+avatar_rocio = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQHWSUqNdAXHcQ/profile-displayphoto-shrink_800_800/0/1596640241152?e=1612396800&v=beta&t=MXHi43SBRu6f1nRNdK06yfoTH3khbirL4fLfzMH1pbU')
+rocio.avatar.attach(io: avatar_rocio, filename: 'rocio.png', content_type: 'image/png')
 
-# dani = User.create(email: "dani@gmail.com", password: "password", first_name: "Dani", last_name: "Diestre")
-# avatar_dani = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQEK9HaUmStSVA/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=dgCFjJPjYrJOVYgifWDWqACUU2Rvg2wneJUVIFO-jb0')
-# dani.avatar.attach(io: avatar_dani, filename: 'dani.png', content_type: 'image/png')
+dani = User.create!(email: "dani@gmail.com", password: "password", first_name: "Dani", last_name: "Diestre")
+avatar_dani = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQEK9HaUmStSVA/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=dgCFjJPjYrJOVYgifWDWqACUU2Rvg2wneJUVIFO-jb0')
+dani.avatar.attach(io: avatar_dani, filename: 'dani.png', content_type: 'image/png')
 
-# bruna = User.create(email: "bruna@gmail.com", password: "password", first_name: "Bruna", last_name: "Scopel")
-# avatar_bruna = URI.open('https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/86697044_3433571363324662_8857190224778756096_o.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=2TkTxmqmjCYAX9x3D4V&_nc_ht=scontent-mad1-1.xx&oh=3e33322ca309d6094de856549efdffe5&oe=5FEFE3BD')
-# bruna.avatar.attach(io: avatar_bruna, filename: 'bruna.png', content_type: 'image/png')
+bruna = User.create!(email: "bruna@gmail.com", password: "password", first_name: "Bruna", last_name: "Scopel")
+avatar_bruna = URI.open('https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/86697044_3433571363324662_8857190224778756096_o.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=2TkTxmqmjCYAX9x3D4V&_nc_ht=scontent-mad1-1.xx&oh=3e33322ca309d6094de856549efdffe5&oe=5FEFE3BD')
+bruna.avatar.attach(io: avatar_bruna, filename: 'bruna.png', content_type: 'image/png')
 
-# jaume = User.create(email: "jaume@gmail.com", password: "password", first_name: "Jaume", last_name: "Ros")
-# avatar_jaume = URI.open('https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/102261476_4326706187354465_4726682033989961974_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=g5gFygsSFvsAX8dd2L9&_nc_ht=scontent-mad1-1.xx&oh=8463412a9d20c5e0835fc02d5acb70a7&oe=5FEE13D7')
-# jaume.avatar.attach(io: avatar_jaume, filename: 'jaume.png', content_type: 'image/png')
+jaume = User.create!(email: "jaume@gmail.com", password: "password", first_name: "Jaume", last_name: "Ros")
+avatar_jaume = URI.open('https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/102261476_4326706187354465_4726682033989961974_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=g5gFygsSFvsAX8dd2L9&_nc_ht=scontent-mad1-1.xx&oh=8463412a9d20c5e0835fc02d5acb70a7&oe=5FEE13D7')
+jaume.avatar.attach(io: avatar_jaume, filename: 'jaume.png', content_type: 'image/png')
 
 
 
