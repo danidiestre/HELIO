@@ -8,9 +8,9 @@ class BookingCategoriesController < ApplicationController
   def create
     @booking_categories = BookingCategory.new(booking_categories_params)
     if @booking_categories.valid?
-      session[:booking_category] = {
-        'name' => @booking_categories.name
-      }
+      session[:booking_params].merge({
+        category_ids: [@booking_categories.category_ids]
+      })
       redirect_to new_booking_option_path
     else
       render :new

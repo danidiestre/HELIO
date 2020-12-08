@@ -1,6 +1,9 @@
 class BookingDate
   include ActiveModel::Model
-  attr_accessor :start_date, :end_date
+  include ActiveModel::Attributes
+
+  attribute :start_date, :date
+  attribute :end_date, :date
 
   validates :start_date, presence: true
   validates :end_date, presence: true

@@ -8,9 +8,9 @@ class BookingDatesController < ApplicationController
   def create
     @booking_dates = BookingDate.new(booking_dates_params)
     if @booking_dates.valid?
-      session[:booking_dates] = {
-        'start_date' => @booking_dates.start_date,
-        'end_date' => @booking_dates.end_date
+      session[:booking_params] = {
+        start_date: @booking_dates.start_date,
+        end_date: @booking_dates.end_date
       }
       redirect_to new_booking_category_path
     else
@@ -21,6 +21,6 @@ class BookingDatesController < ApplicationController
   private
 
   def booking_dates_params
-    params.require(:booking_dates).permit(:start_date, :end_date)
+    params.require(:booking_date).permit(:start_date, :end_date)
   end
 end

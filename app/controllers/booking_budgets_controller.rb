@@ -12,7 +12,7 @@ class BookingBudgetsController < ApplicationController
         'budget' => @booking_budgets.budget,
         'cancellation_insurance' => @booking_budgets.cancellation_insurance
       }
-      redirect_to new_booking_category_path
+      redirect_to new_booking_user_path
     else
       render :new
     end
