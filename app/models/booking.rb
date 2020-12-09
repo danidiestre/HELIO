@@ -11,7 +11,7 @@ class Booking < ApplicationRecord
   end
 
   def event_is_tomorrow?
-    countdown < 30
+    countdown < 24
   end
 
   def assign_iteration
