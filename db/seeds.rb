@@ -208,7 +208,6 @@ p "Created #{User.count} users"
 
 ####################################################
 
-
 Booking_1 = Booking.create(
   user_id: dani.id,
   iteration_id: Iteration.all.sample.id,
