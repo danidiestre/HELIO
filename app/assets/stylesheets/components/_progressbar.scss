@@ -1,0 +1,37 @@
+.progressbar-wrapper {
+  background: transparent;
+  width: 100%;
+  padding: 10px 10%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.line {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border-bottom: 1px solid $gray-transparent;
+  width: 80%;
+
+}
+
+.pearl {
+  border-radius: 50%;
+  border: 1px solid $gray-transparent;
+  color: $gray;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.pearl.active {
+  color: #fff;
+  border: 1px solid $primary;
+  background-color: $primary;
+}
