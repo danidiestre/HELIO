@@ -1,5 +1,8 @@
 <%= simple_form_for @booking_categories do |f|%>
-<%= f.input :category_ids %>
-<%= f.submit %>
+  <% Category.all.each do |cat| %>
+    <input type="checkbox" name="booking_category[category_ids][]" id="check_<%= cat.name %>" value="<%= cat.id %>">
+    <label for="check_<%= cat.name %>"><%= cat.name %></label>
+  <% end %>
+  <%= f.submit 'Next'%>
 <% end %>
 

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :booking_categories, only: [:new, :create]
   resources :booking_options, only: [:new, :create]
   resources :booking_budgets, only: [:new, :create]
-  resources :booking_users, only: [:new, :create]
+  resources :booking_checkout, only: [:new, :create]
 
 end

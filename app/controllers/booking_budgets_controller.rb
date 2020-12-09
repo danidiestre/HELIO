@@ -1,5 +1,5 @@
 class BookingBudgetsController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: :new
 
   def new
     @booking_budgets = BookingBudget.new
@@ -8,11 +8,20 @@ class BookingBudgetsController < ApplicationController
   def create
     @booking_budgets = BookingBudget.new(booking_budgets_params)
     if @booking_budgets.valid?
-      session[:booking_budget] = {
+      session[:booking_params].merge!({
         'budget' => @booking_budgets.budget,
         'cancellation_insurance' => @booking_budgets.cancellation_insurance
-      }
-      redirect_to new_booking_user_path
+      })
+
+      @booking = Booking.new(session[:booking_params])
+
+      @booking.user = current_user
+
+      @booking.save!
+
+      reset_session
+
+      redirect_to new_booking_checkout_path
     else
       render :new
     end

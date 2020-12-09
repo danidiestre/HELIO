@@ -1,0 +1,3 @@
+class BookingCheckoutController < ApplicationController
+
+end

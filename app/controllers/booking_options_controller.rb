@@ -8,10 +8,10 @@ class BookingOptionsController < ApplicationController
   def create
     @booking_options = BookingOption.new(booking_options_params)
     if @booking_options.valid?
-      session[:booking_option] = {
-        'languages' => @booking_options.languages,
-        'audiences' => @booking_options.audiences
-      }
+      session[:booking_params].merge!({
+        languages: @booking_options.languages,
+        audiences: @booking_options.audiences
+      })
       redirect_to new_booking_budget_path
     else
       render :new
@@ -21,6 +21,6 @@ class BookingOptionsController < ApplicationController
   private
 
   def booking_options_params
-    params.require(:booking_option).permit(:languages, :audiences)
+    params.require(:booking_option).permit(languages: [], audiences: [])
   end
 end
