@@ -1,0 +1,11 @@
+<%= simple_form_for @booking_options do |f|%>
+  <% ['English', 'Spanish', 'Catalan'].each do |lan| %>
+    <input type="checkbox" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
+    <label for="check_<%= lan %>"><%= lan %></label>
+  <% end %>
+  <% ['Adults', 'All ages', '16 +', '14 +'].each do |aud| %>
+    <input type="checkbox" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
+    <label for="check_<%= aud %>"><%= aud %></label>
+  <% end %>
+  <%= f.submit 'Next'%>
+<% end %>
