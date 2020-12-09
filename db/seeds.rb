@@ -5,6 +5,8 @@
 require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Booking.destroy_all
 Iteration.destroy_all
 Event.destroy_all
 Category.destroy_all
@@ -34,7 +36,6 @@ Event_1 = Event.create(
 )
 
 Iteration.create(event_id: Event_1.id, price: 10, start_date: DateTime.new(2020,12,25,17))
-
 Iteration.create(event_id: Event_1.id, price: 15, start_date: DateTime.new(2020,12,24,17))
 
 #########################
@@ -53,7 +54,6 @@ Navidad con Toni Moog rememora, a través de su peculiar estilo canalla y sin pe
 )
 
 Iteration.create(event_id: Event_2.id, price: 18, start_date: DateTime.new(2021,1,25,17))
-
 Iteration.create(event_id: Event_2.id, price: 23, start_date: DateTime.new(2021,1,23,17))
 
 
@@ -177,10 +177,7 @@ Iteration.create(event_id: Event_10.id, price: 69, start_date: DateTime.new(2020
 Iteration.create(event_id: Event_10.id, price: 50, start_date: DateTime.new(2020,12,18,20))
 
 
-
 p "Also created #{Event.count} Events with #{Iteration.count} Iterations"
-
-
 
 
 ##########################################
@@ -209,8 +206,49 @@ jaume.avatar.attach(io: avatar_jaume, filename: 'jaume.png', content_type: 'imag
 
 p "Created #{User.count} users"
 
+####################################################
 
 
+Booking_1 = Booking.create(
+  user_id: dani.id,
+  iteration_id: Iteration.all.sample.id,
+  start_date: DateTime.new(2020,12,20,19),
+  end_date: DateTime.new(2020,12,25,20),
+  budget: 70,
+  languages: "Spanish",
+  audiences: "Adults",
+  cancellation_insurance: false,
+  exclude_category_ids: nil,
+  city: "Barcelona",
+)
+
+Booking_2 = Booking.create(
+  user_id: dani.id,
+  iteration_id: Iteration.all.sample.id,
+  start_date: DateTime.new(2020,12,18,19),
+  end_date: DateTime.new(2020,12,22,20),
+  budget: 100,
+  languages: "Catalan",
+  audiences: "Adults",
+  cancellation_insurance: false,
+  exclude_category_ids: nil,
+  city: "Barcelona",
+)
+
+Booking_3 = Booking.create(
+  user_id: dani.id,
+  iteration_id: Iteration.all.sample.id,
+  start_date: DateTime.new(2020,12,26,19),
+  end_date: DateTime.new(2020,12,31,20),
+  budget: 120,
+  languages: "Español",
+  audiences: "Adults",
+  cancellation_insurance: false,
+  exclude_category_ids: nil,
+  city: "Barcelona",
+)
+
+p "Created #{Booking.count} bookings"
 
 
 # create_table "iterations", force: :cascade do |t|
