@@ -1,6 +1,6 @@
 .general-card {
-    box-shadow: 1px 1px 3px #868686;
-    // box-shadow: 2px 2px 2px rgba(133, 133, 133, 0.705);
+    box-shadow: 1px 1px 3px $gray;
+    box-shadow: 2px 2px 2px rgba(133, 133, 133, 0.705);
     border-radius: 5px ;
     padding: 5 px;
   }
@@ -13,7 +13,25 @@
   // background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705);
   border-radius: 5px ;
   padding: 5 px;
+  .counter {
+    color: $primary;
+  }
 }
+
+.image_div {
+  background-color: $primary;
+  width: 30%;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    color: #fff;
+    font-family: $logo;
+    margin-bottom: 0;
+  }
+}
+
 
 .light-border {
   border: 2px solid #868686;
@@ -55,4 +73,11 @@
 
 .fa-user-check {
   color:black;
+}
+
+  border: 1px solid $gray;
+}
+
+.primary-border {
+  border: 1px solid $primary;
 }
