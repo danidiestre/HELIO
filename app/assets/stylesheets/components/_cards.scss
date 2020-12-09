@@ -4,19 +4,55 @@
     border-radius: 5px ;
     padding: 5 px;
   }
-  
+
+.general-card h5 {
+  text-align: center;
+}
+
 .picture-card {
-  background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705);
+  // background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705);
   border-radius: 5px ;
   padding: 5 px;
 }
 
 .light-border {
-  border: 2px solid #868686;  
-}  
-
-.primary-border {
-  border: 2px solid #00A0BA;  
+  border: 2px solid #868686;
 }
 
-  
+.primary-border {
+  border: 2px solid #00A0BA;
+}
+
+.numbers {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+}
+
+.fa-chevron-circle-right {
+  color:#DADADA;
+}
+
+.rosa {
+  background-image: url(https://www.elnacional.cat/uploads/s1/95/02/15/5/rosalia-concert-barcelona-efe.jpeg);
+  background-size: cover;
+  color:white;
+}
+
+.tricicle {
+  background-image: url(https://teatrolopezdeayala.es/images/shows/1550484061TRICICLE-5.jpg);
+  background-size: cover;
+  color:white;
+}
+
+.linky {
+  text-align: center;
+}
+
+.fa-star {
+  color:#01A0BA;
+}
+
+.fa-user-check {
+  color:black;
+}
