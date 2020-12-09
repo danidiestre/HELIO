@@ -5,6 +5,8 @@
 require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Booking.destroy_all
 Iteration.destroy_all
 Event.destroy_all
 Category.destroy_all
@@ -205,7 +207,6 @@ jaume.avatar.attach(io: avatar_jaume, filename: 'jaume.png', content_type: 'imag
 p "Created #{User.count} users"
 
 ####################################################
-
 
 Booking_1 = Booking.create(
   user_id: dani.id,
