@@ -3,3 +3,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.flatpickr-day.selected {
+  background: $primary !important;
+  border-color: $primary !important;
+
+}
