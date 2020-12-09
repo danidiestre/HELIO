@@ -8,7 +8,7 @@ class BookingDatesController < ApplicationController
   def create
     @booking_dates = BookingDate.new(booking_dates_params)
     if @booking_dates.valid?
-      session[:booking_params] = {
+      session[:booking_dates] = {
         start_date: @booking_dates.start_date,
         end_date: @booking_dates.end_date
       }

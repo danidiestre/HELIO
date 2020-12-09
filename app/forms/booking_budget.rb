@@ -1,9 +1,6 @@
 class BookingBudget
   include ActiveModel::Model
-  include ActiveModel::Attributes
-
-  attribute :budget, :integer
-  attribute :cancellation_insurance, :boolean
+  attr_accessor :budget, :cancellation_insurance
 
   validates :budget, presence: true
   validates :cancellation_insurance, presence: true
