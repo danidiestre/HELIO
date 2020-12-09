@@ -3,6 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :user
   has_one :review
   has_many_attached :photos
+  after_validation :assign_iteration
 
 
   def countdown
@@ -11,8 +12,7 @@ class Booking < ApplicationRecord
 
   def event_is_tomorrow?
     countdown < 30
-
-  after_validation :assign_iteration
+  end
 
   def assign_iteration
     self.iteration = Iteration.all.sample
