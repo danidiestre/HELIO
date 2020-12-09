@@ -3,8 +3,7 @@
     <h2>Flatpickr Demo</h2>
 
     <%= simple_form_for @booking_dates do |f| %>
-      <%= f.input :start_date, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :end_date, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :start_date, input_html: {class: "datepicker"} %>
       <%= f.button :submit, "Next", class: "btn btn-primary" %>
     <% end %>
   </div>

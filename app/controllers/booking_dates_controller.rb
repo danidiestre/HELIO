@@ -6,7 +6,7 @@ class BookingDatesController < ApplicationController
   end
 
   def create
-    @booking_dates = BookingDate.new(booking_dates_params)
+    @booking_dates = BookingDate.new(extract_dates)
     if @booking_dates.valid?
       session[:booking_params] = {
         start_date: @booking_dates.start_date,
@@ -18,9 +18,14 @@ class BookingDatesController < ApplicationController
     end
   end
 
+  def extract_dates
+    dates = params[:booking_date][:start_date].split(" to ")
+    { start_date: dates[0], end_date: dates[1] }
+  end
+
   private
 
   def booking_dates_params
-    params.require(:booking_date).permit(:start_date, :end_date)
+    params.require(:booking_date).permit(:dates)
   end
 end
