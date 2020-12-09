@@ -19,7 +19,7 @@ class BookingDatesController < ApplicationController
   end
 
   def extract_dates
-    dates = params[:booking_date][:start_date].split(" to ")
+    dates = params[:booking_date][:dates].split(" to ")
     { start_date: dates[0], end_date: dates[1] }
   end
 
