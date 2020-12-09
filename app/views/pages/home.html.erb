@@ -1,12 +1,73 @@
+<div class="home-banner">
+  <div class="container">
+    <div class="text-home"> 
+      <h4>Discover surprise cultural events in your city</h4>
+      <h6>¡Know your adventure 24h before!</h6>
+    </div>
+    
+    <div class="row ">
+      <div class="col-12">
+        <div class = "center-block">
 
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="form-tag" >
+              <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Book</a>
+            </li>
+            <li class="form-tag">
+              <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Buy as a gift</a>
+            </li>
+          </ul>
 
+          <div class="tab-content p-3" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <form class="form-home justify-content-center">
+                <h6><label for="inputCity">Wich City?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>Barcelona</option>
+                  <option>Madrid</option>
+                </select>
 
+                <h6><label for="inputPeople">How many people?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
 
+                <input type="submit" value="GET STARTED" class="button-rounded d-block w-100" href="#">
+              </form>
+            
+            </div>
 
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <form class="form-home justify-content-center">
+                <h6><label for="inputCity">Wich City?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>Barcelona</option>
+                  <option>Madrid</option>
+                </select>
 
-
-
+                <h6><label for="inputPeople">How many people?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <input type="submit" value="GET STARTED" class="button-rounded d-block w-100" href="#">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
 
 
 <%= render "shared/footer"  %>
+
+
+
+
+
+
+
 
