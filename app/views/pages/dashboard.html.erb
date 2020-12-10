@@ -2,6 +2,8 @@
 
 <%# Iteration to countdown card  %>
 
+<h1>Dashboard</h1>
+
 <% @user_bookings.each do |booking| %>
    <p>Starting in: <%= booking.countdown %> hours</p>
    <% if booking.event_is_tomorrow? %>
@@ -42,3 +44,4 @@
   </div>
 
 </div> -->
+

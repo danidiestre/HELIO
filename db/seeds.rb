@@ -34,9 +34,9 @@ p "Created #{Category.count} categories"
 event_1 = Event.create(
   title:'El Mètode Grönnholm',
   description: "No te puedes perder El Mètode Grönnholm en el Teatre Poliorama.En el año 2003 El método Grönholm se estrenó por primera vez en el Teatro Nacional de Cataluña y desde entonces ha traspasado todas las fronteras: se ha convertido en un éxito de público tanto en Cataluña, como en el resto del Estado como en el ámbito internacional.",
-  language: 'Catalan',
+  language: 'catalan',
   address: 'Ramblas, 115 (Barcelona)',
-  audience: 'Adults',
+  audience: 'adults',
   category_id: Category.find_by(name:'Comedy').id
 )
 
@@ -51,9 +51,9 @@ Iteration.create(event_id: event_1.id, price: 15, start_date: DateTime.new(2020,
 event_2 = Event.create(
   title:'Navidad con Toni Moog',
   description: "Toni Moog vuelve a casa por Navidad para seguir pateando el culo al espíritu navideño tras 12 temporadas consecutivas de éxito. Navidad con Toni Moog rememora, a través de su peculiar estilo canalla y sin pelos en la lengua, las típicas escenas de estos días tan señalados: cenas de celebración, regalos, amigos invisibles, villancicos, anuncios de TV, lotería, programación especial de televisión, turrones, polvorones, mantecados, uvas, campanadas, familia, panderetas, zambombas, desmadre, resaca…",
-  language: 'Español',
+  language: 'spanish',
   address: 'Urquinaona, 9 (Barcelona)',
-  audience: 'All ages',
+  audience: 'all ages',
   category_id: Category.find_by(name:'Theatre').id
 )
 
@@ -68,9 +68,9 @@ Iteration.create(event_id: event_2.id, price: 23, start_date: DateTime.new(2021,
 event_3 = Event.create(
   title:'Nada es imposible - Mago Pop',
   description: "Nada es imposible es el espectáculo de Antonio Díaz, El Mago Pop, que llega al Teatre Victòria de Barcelona, ofreciendo un viaje por lo extraordinario lleno de asombro, diversión, sensibilidad, sorpresas, ritmo y emoción, en una aventura llena de ilusiones que confirma que, cuando El Mago Pop está en escena, ¡nada es imposible!",
-  language: 'Español',
+  language: 'spanish',
   address: 'Avda. Paral·lel, 67 (Barcelona)',
-  audience: 'All ages',
+  audience: 'all ages',
   category_id: Category.find_by(name:'Magic').id
 )
 
@@ -85,9 +85,9 @@ Iteration.create(event_id: event_3.id, price: 31, start_date: DateTime.new(2021,
 event_4 = Event.create(
   title:'Vermunólogos',
   description: "¡Cuidado, han llegado los Vermunólogos! Un show de monólogos, vermut, tapeo, música, improvisación, cómicos invitados... ¡Todo esto en el Café Teatro Llantiol! Mucho más que una función de comedia, ¡Esto es una fiesta!",
-  language: 'Español',
+  language: 'spanish',
   address: 'Riereta, 7. (Barcelona)',
-  audience: '16 +',
+  audience: 'family',
   category_id: Category.find_by(name:'Monologues').id
 )
 
@@ -102,9 +102,9 @@ Iteration.create(event_id: event_4.id, price: 9, start_date: DateTime.new(2021,1
 event_5 = Event.create(
   title:'Impro Show',
   description: "Los actores, un escenario y una caja repleta de frases escritas por los espectadores. Estos son los ingredientes principales que abren la puerta a Impro Show. El resto: creación, imaginación, humor y mucha capacidad de reacción. ¡Descubre el fenómeno impro en Teatreneu! Planeta Impro, creadores del “fenómeno impro” y referentes a nivel nacional del mejor humor improvisado, presentan Impro Show. Un espectáculo fresco, original y interactivo!",
-  language: 'Español',
+  language: 'spanish',
   address: 'Riereta, 7. (Barcelona)',
-  audience: '14 +',
+  audience: 'family',
   category_id: Category.find_by(name:'Improv').id
 )
 
@@ -119,9 +119,9 @@ Iteration.create(event_id: event_5.id, price: 9, start_date: DateTime.new(2021,2
 event_6 = Event.create(
   title:'Emociones - Espectáculo flamenco',
   description: "En el Teatro Flamenco Madrid disfrutarás de una experiencia única: descubrir la auténtica esencia del flamenco. Es el primer teatro dedicado en exclusiva a este género reconocido Patrimonio Inmaterial de la Humanidad por la UNESCO. Con el propósito de acercar el flamenco a todos los públicos, además de conciertos de reconocidos artistas, cuenta en su programación diaria, de lunes a domingo, con Emociones un espectáculo de cante, baile y guitarra con un elenco de artistas de primer nivel que recorren los principales estilos del flamenco. En el marco único de la sala de un teatro y a la luz de las velas, un ambiente tan íntimo y acogedor que recuerda a los míticos cafés cantantes despierta la magia que conecta al espectador con el artista. Emociones es una manera diferente de vivir y sentir el flamenco. El Teatro Flamenco Madrid se encuentra en el popular e histórico barrio de Malasaña, zona de tendencias que concentra tiendas vintage, librerías, mercadillos y bares situados a escasos pasos de la animada Gran Vía de Madrid. A poco más de dos años de su apertura, el Teatro Flamenco Madrid es un referente de la escena cultural y flamenca de la capital.",
-  language: 'Spanish',
+  language: 'spanish',
   address: 'Calle del Pez, 10 (Madrid)',
-  audience: 'Adults',
+  audience: 'adults',
   category_id: Category.find_by(name:'Dance').id
 )
 event_6_photo = URI.open('https://images.unsplash.com/photo-1603187405780-3becb5aee688?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=683&q=80')
@@ -136,9 +136,9 @@ Iteration.create(event_id: event_6.id, price: 20, start_date: DateTime.new(2020,
 event_7 = Event.create(
   title:'Sergio Dalma, en concierto',
   description: "Sergio Dalma se sube al escenario del Auditori del Fòrum de Barcelona para presentar su nuevo disco 30… y tanto, un álbum que celebra los 30 años de carrera de una de las voces más icónicas de nuestro país.Un disco que recoge una colección de 13 clásicos elegidos personalmente Sergio y que ahora renueva con su inconfundible estilo, elegancia y clase. A estos clásicos se suman tres temas inéditos como Donna que fue el adelanto del álbum de celebración de los 30 años de la carrera de Sergio. Un concierto en el que podrás disfrutar de canciones como Esta chica es mía, Galilea, Solo para ti o Bailar pegados, entre otros. ¡Disfruta en directo de la cautivora voz rota del cantante de catalán!",
-  language: 'Español',
+  language: 'spanish',
   address: 'Leonardo Da Vinci, s/n (Barcelona)',
-  audience: 'Adults',
+  audience: 'adults',
   category_id: Category.find_by(name:'Concerts').id
 )
 
@@ -153,9 +153,9 @@ Iteration.create(event_id: event_7.id, price: 40, start_date: DateTime.new(2020,
 event_8 = Event.create(
   title:'Aquarella Music Restaurant',
   description: "¡Regala a tu paladar y a tu alma esta cena con espectáculo musical en Aquarella Music Restaurant! Aquarella es una experiencia, diferente, original, única en Barcelona, y sobre todo personalizada, donde el trato con el cliente es exclusivo creando un vínculo importante con la cena y el espectáculo. Los más de 10 artistas en el escenario, 15 cambios de vestuario, cantantes en directo, maestros de ceremonias, 4 cambios de escenografía, crearán el entorno perfecto para cualquier celebración especial. Un espectáculo que sorprende por la innovación, creando una puesta en escena cuidada hasta el último detalle y nuestra cena se compone de platos seleccionados de la dieta mediterránea, donde podrán disfrutar del diseño y cuidado de un producto fresco y elaborado. Una experiencia diferente de la que siempre se sale contento, déjate llevar hacia una nueva forma de pasar una velada única. Cualquier evento o reunión es digno de tener una cita especial y para eso Aquarella Music Restaurant es el lugar idóneo para disfrutar de una cocina mediterránea de mercado, que junto a su equipo artístico crearán un momento irrepetible lleno de sorpresas.",
-  language: 'Español',
+  language: 'spanish',
   address: 'Gran Vía, 572 (Barcelona)',
-  audience: 'Adults',
+  audience: 'adults',
   category_id: Category.find_by(name:'Show + Dinner').id
 )
 
@@ -170,9 +170,9 @@ Iteration.create(event_id: event_8.id, price: 40, start_date: DateTime.new(2020,
 event_9 = Event.create(
   title:'India Martínez- Guitar BCN Festival 2020',
   description: "La cordobesa India Martínez afronta el lanzamiento de su octavo disco, Palmeras (Sony, 2019) con la determinación de quien sabe que ha conseguido un lugar propio en la música. En sus casi 15 años de carrera, India Martínez no ha parado de girar, de colaborar con artistas de primer nivel como Pitingo, David Bisbal o Niña Pastori, y de recibir premios, como el Goya a la mejor canción que consiguió en 2015 para la película El Niño, de Daniel Monzón. Con un estilo propio a medio camino entre la canción melódica y el flamenco pop, Martínez también ha sabido incorporar las músicas urbanas sin renunciar a su esencia. De hecho, su nuevo trabajo le permite reconectar con sus orígenes -le creció en el barrio de Las Palmeras, de Córdoba- y empoderarse aún más gracias canciones como La gitana, su nuevo éxito, que ella describe como un grito de guerra que mujeres y niñas de todo tipo llevamos dentro",
-  language: 'Español',
+  language: 'spanish',
   address: 'Leonardo Da Vinci, s/n (Barcelona)',
-  audience: 'Adults',
+  audience: 'adults',
   category_id: Category.find_by(name:'Festivals').id
 )
 
@@ -187,9 +187,9 @@ Iteration.create(event_id: event_9.id, price: 50, start_date: DateTime.new(2020,
 event_10 = Event.create(
   title:'Callas en concierto - En holograma',
   description: "Un espectáculo impactante que ha triunfado en el Teatro Pleyel de París y que ahora podrás disfrutar en el Gran Teatro Bankia Príncipe Pío, en el que como por arte de magia, María Callas vuelve a escena radiante, con su inolvidable voz, gracias a la técnica del holograma. María Callas volverá a escena con una proeza tecnológica en 3D desarrollada por la empresa de Estados Unidos BASE Hologram, co productora del show, consiguiendo que la mítica cantante lírica se muestre nuevamente al público como si estuviera allí de nuevo, en carne y hueso. El show irá acompañado por la OSB, la Orquesta Sinfónica de Bankia, con 20 músicos en directo que interpretarán el emblemático repertorio de María Callas mientras se escucha su voz perfectamente orquestada tanto con la sinfónica como con la alta tecnología.",
-  language: 'Español',
+  language: 'spanish',
   address: 'Cuesta de San Vicente, 44 (Madrid)',
-  audience: 'Adults',
+  audience: 'adults',
   category_id: Category.find_by(name:'Classical Music and Opera').id
 )
 
@@ -237,8 +237,8 @@ Booking_1 = Booking.create(
   start_date: DateTime.new(2020,12,20,19),
   end_date: DateTime.new(2020,12,25,20),
   budget: 70,
-  languages: "Spanish",
-  audiences: "Adults",
+  languages: "spanish",
+  audiences: "adults",
   cancellation_insurance: false,
   exclude_category_ids: nil,
   city: "Barcelona",
@@ -250,8 +250,8 @@ Booking_2 = Booking.create(
   start_date: DateTime.new(2020,12,18,19),
   end_date: DateTime.new(2020,12,22,20),
   budget: 100,
-  languages: "Catalan",
-  audiences: "Adults",
+  languages: "catalan",
+  audiences: "adults",
   cancellation_insurance: false,
   exclude_category_ids: nil,
   city: "Barcelona",
@@ -263,8 +263,8 @@ Booking_3 = Booking.create(
   start_date: DateTime.new(2020,12,26,19),
   end_date: DateTime.new(2020,12,31,20),
   budget: 120,
-  languages: "Español",
-  audiences: "Adults",
+  languages: "spanish",
+  audiences: "adults",
   cancellation_insurance: false,
   exclude_category_ids: nil,
   city: "Barcelona",
