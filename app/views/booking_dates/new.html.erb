@@ -1,12 +1,10 @@
-<div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Flatpickr Demo</h2>
-
-    <%= simple_form_for @booking_dates do |f| %>
-      <%= f.input :start_date, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :end_date, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Next", class: "btn btn-primary" %>
-    <% end %>
+<div class="container form-container">
+  <div class="form-wrapper mt-3">
+    <h3>Choose dates</h3>
+      <%= simple_form_for @booking_dates do |f| %>
+        <%= f.input :dates, label: false, input_html: {class: "datepicker hidden"} %>
+        <%= f.button :submit, "Next", class: "btn btn-primary w-100" %>
+      <% end %>
   </div>
 </div>
 
