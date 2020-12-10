@@ -1,14 +1,11 @@
 <%= render "shared/progressbar", step: 3 %>
 <div class="container px-3">
-
   <div class="my-3">
    <h3>Advanced options</h3>
   </div>
-
   <div class="my-3">
     <h5>Languages</h5>
   </div>
-
   <%= simple_form_for @booking_options do |f|%>
     <div class="d-flex my-2 languages">
       <% ['english', 'spanish', 'catalan'].each do |lan| %>
@@ -18,11 +15,9 @@
         </label>
       <% end %>
     </div>
-
     <div class="my-3">
       <h5>Audience</h5>
     </div>
-
     <div class="d-flex my-3 audiences">
       <% ['adults', 'family', 'all ages'].each do |aud| %>
         <input type="checkbox" class="hidden" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
@@ -35,7 +30,5 @@
       <%= f.submit 'Next', class: "btn btn-primary form form-control" %>
     </div>
   <% end %>
-
 </div>
 
-<%= render "shared/footer"  %>
