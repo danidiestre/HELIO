@@ -1,4 +1,5 @@
-<div class="container form-container">
+<%= render "shared/progressbar", step: 1 %>
+<div class="container form-container px-3">
   <div class="dates-form">
     <h3 class="mt-4 ml-2 title">Choose dates</h3>
       <%= simple_form_for @booking_dates do |f| %>
