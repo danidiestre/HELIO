@@ -33,6 +33,6 @@ import { initSlider } from '../plugins/init_rangeslider';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initSlider();
   initFlatpickr();
+  initSlider();
 });
