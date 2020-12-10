@@ -1,54 +1,41 @@
 .general-card {
-    box-shadow: 1px 1px 3px $gray;
-    box-shadow: 2px 2px 2px rgba(133, 133, 133, 0.705);
-    border-radius: 5px ;
-    padding: 5 px;
-  }
-
-.general-card h5 {
-  text-align: center;
+  box-shadow: 1px 1px 10px $gray-border;
+  border-radius: 4px;
 }
 
-.picture-card {
-  // background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705);
-  border-radius: 5px ;
-  padding: 5 px;
-  .counter {
-    color: $primary;
-  }
+// Instructions card
+
+.instructions-card {
+  height: 140px;
+  padding: 24px;
+  padding-top: 30px;
 }
 
-.image_div {
-  background-color: $primary;
-  width: 30%;
-  border-radius: 5px 0 0 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h3 {
-    color: #fff;
-    font-family: $logo;
-    margin-bottom: 0;
-  }
-}
-
-
-.light-border {
-  border: 2px solid #868686;
-}
-
-.primary-border {
-  border: 2px solid #00A0BA;
-}
-
-.numbers {
+.steps {
   font-size: 20px;
   color:#01A0BA;
   font-weight: bold;
 }
 
+// Past Events card
+
+.event-card {
+  height: 180px;
+  position: relative;
+}
+
 .fa-chevron-circle-right {
   color:#DADADA;
+  font-size: 30px;
+  position: absolute;
+  right: 12px;
+  top: 76px;
+}
+
+.event-date {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
 }
 
 .rosa {
@@ -63,8 +50,21 @@
   color:white;
 }
 
-.linky {
-  text-align: center;
+// Reviews card
+
+.review-card {
+  height: 140px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.numbers {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 18px;
 }
 
 .fa-star {
@@ -72,10 +72,87 @@
 }
 
 .fa-user-check {
-  color:black;
-  border: 1px solid $gray;
+  color: black;
+  margin-left: 10px;
 }
 
-.primary-border {
-  border: 1px solid $primary;
+.review-text {
+  padding: 22px;
+  padding-top: 28px;
+  position: absolute;
+  left: 64px;
+  top: 6px;
 }
+
+.avatar-small {
+  position: absolute;
+  left: 12px;
+  top: 42px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+// Link to see al past events & all reviews
+
+.linky {
+  text-align: center;
+}
+
+// Color for Titles h2
+.title {
+  color: rgb(44, 43, 43);
+}
+
+// Dashboard Cards with Countdown
+
+.countdown {
+  height: 100%;
+  width: 172px;
+  display:block;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  background-color: black;
+  color: white;
+  padding-top: 12px;
+}
+
+.text-countdown-card {
+  color: $primary;
+  padding: 10px;
+}
+
+// Dashboard Cards with Picture
+
+.card-product {
+  overflow: hidden;
+  height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+
+.card-product p {
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-info {
+  padding: 16px;
+}
+
+.card-product-info h5 {
+  color: $primary;
+}
+
+
+

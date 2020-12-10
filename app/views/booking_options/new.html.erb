@@ -6,7 +6,7 @@
 
   <%= simple_form_for @booking_options do |f|%>
     <div class="d-flex languages">
-      <% ['English', 'Spanish', 'Catalan'].each do |lan| %>
+      <% ['english', 'spanish', 'catalan'].each do |lan| %>
         <input type="checkbox" class="hidden" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
         <label for="check_<%= lan %>" class="general-card lingo">
           <%= lan %>
@@ -17,7 +17,7 @@
 
     <h5>Audience</h5>
       <div class="d-flex audiences">
-        <% ['Adults', 'All ages', '16 +', '14 +'].each do |aud| %>
+        <% ['adults', 'family', 'all ages'].each do |aud| %>
           <div class="general-card age">
             <input type="checkbox" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
             <label for="check_<%= aud %>"><%= aud %></label>
@@ -30,4 +30,3 @@
 </div>
 
 <%= render "shared/footer"  %>
-
