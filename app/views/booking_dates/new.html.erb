@@ -1,10 +1,10 @@
 <%= render "shared/progressbar", step: 1 %>
-<div class="container form-container px-3">
+<div class="container form-container">
   <div class="dates-form">
-    <h3 class="mt-4 ml-2 title">Choose dates</h3>
+    <h3 class="mt-4 ml-2 title position">Choose dates</h3>
       <%= simple_form_for @booking_dates do |f| %>
         <%= f.input :dates, label: false, input_html: {class: "datepicker hidden"} %>
-        <%= f.button :submit, "Next", class: "btn btn-primary w-100 mt-3" %>
+        <%= f.button :submit, "Next", class: "btn btn-primary btn-dates" %>
       <% end %>
   </div>
 </div>
