@@ -5,7 +5,7 @@ class BookingInitialDataController < ApplicationController
     @booking_initial_data = BookingInitialData.new(booking_initial_data_params)
     if @booking_initial_data.valid?
       session[:booking_params] = {
-        address: @booking_initial_data.address,
+        city: @booking_initial_data.city,
         participants: @booking_initial_data.participants
       }
       redirect_to new_booking_date_path
@@ -17,6 +17,6 @@ class BookingInitialDataController < ApplicationController
   private
 
   def booking_initial_data_params
-    params.require(:booking_initial_data).permit(:address, :participants)
+    params.require(:booking_initial_data).permit(:city, :participants)
   end
 end
