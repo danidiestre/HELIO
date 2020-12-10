@@ -1,16 +1,12 @@
 .general-card {
-    box-shadow: 1px 1px 3px $gray;
-    box-shadow: 2px 2px 2px rgba(133, 133, 133, 0.705);
-    border-radius: 5px ;
-    padding: 5 px;
+    box-shadow: 1px 1px 10px $gray-border;
+    border-radius: 4px;
+    height: 180px;
+    position: relative;
   }
 
-.general-card h5 {
-  text-align: center;
-}
-
 .picture-card {
-  // background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705);
+  background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705));
   border-radius: 5px ;
   padding: 5 px;
   .counter {
@@ -32,7 +28,6 @@
   }
 }
 
-
 .light-border {
   border: 2px solid #868686;
 }
@@ -41,19 +36,24 @@
   border: 2px solid #00A0BA;
 }
 
-.numbers {
-  font-size: 20px;
-  color:#01A0BA;
-  font-weight: bold;
-}
-
 .fa-chevron-circle-right {
   color:#DADADA;
+  font-size: 30px;
+  position: absolute;
+  right: 12px;
+  top: 76px;
+}
+
+.header-text {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
 }
 
 .rosa {
   background-image: url(https://www.elnacional.cat/uploads/s1/95/02/15/5/rosalia-concert-barcelona-efe.jpeg);
   background-size: cover;
+  background-position: center;
   color:white;
 }
 
@@ -79,3 +79,29 @@
 .primary-border {
   border: 1px solid $primary;
 }
+
+.review-card {
+  box-shadow: 1px 1px 10px $gray-border;
+  border-radius: 4px;
+  height: 140px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.numbers {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.steps {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+}
+
+
+

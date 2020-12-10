@@ -2,6 +2,11 @@
   background: $black;
   color: white;
   width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 14vh;
+  width: 100%;
 }
 .terms a {
   color: white;
@@ -10,6 +15,36 @@
 .social-media a {
   color: white;
 }
-// .fab {
-//   margin: 20px;
-// }
+
+a > i {
+  color: white;
+  &:hover {
+    color: rgb(216, 216, 216);
+  }
+}
+
+.terms {
+  display: flex;
+  justify-content: center;
+  p {
+    padding: 8px 8px;
+    margin-bottom: 0;
+  }
+}
+
+.terms > a {
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: rgb(107, 108, 108);
+    text-decoration: none;
+  }
+}
+
+.social-media i {
+  font-size: 20px;
+  padding: 8px;
+}
