@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @booking_initial_datas
+    @booking_initial_data = BookingInitialData.new
   end
 
   def dashboard
