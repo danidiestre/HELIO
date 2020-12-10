@@ -1,5 +1,187 @@
+<div class="home-banner">
+  <div class="container">
+
+    <div class="text-home"> 
+      <h1>Discover surprise cultural events in your city</h4>
+      <h5>¡Know your adventure 24h before!</h6>
+    </div>
+    <div class="row ">
+      <div class="col-12">
+        <div class = "center-block">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="form-tag" >
+              <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Book</a>
+            </li>
+            <li class="form-tag">
+              <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Buy as a gift</a>
+            </li>
+          </ul>
+
+          <div class="tab-content p-3" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <form class="form-home justify-content-center">
+                <h6><label for="inputCity">Wich City?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>Barcelona</option>
+                  <option>Madrid</option>
+                </select>
+                <h6><label for="inputPeople">How many people?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+
+                <input type="submit" value="GET STARTED" class="button-rounded d-block w-100" href="#">
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <form class="form-home justify-content-center">
+                <h6><label for="inputCity">Wich City?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>Barcelona</option>
+                  <option>Madrid</option>
+                </select>
+
+                <h6><label for="inputPeople">How many people?</label></h6>
+                <select class="form-control form-control-lg mb-4">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <input type="submit" value="GET STARTED" class="button-rounded d-block w-100" href="#">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+
+<!-- #################################### Jaume's code ################# -->
+
+<div class="container pb-4">
+    <h2 class="ml-2 mb-2">How does Helio work?</h2>
+  <div class="row">
+    <div class="col-12">
+      <div class="general-card p-4 mb-3 mx-2">
+        <div class="d-flex">
+          <h5 class="numbers"> 1. </h5>
+          <h5 class="ml-2">Choose a City</h5>
+        </div>
+        <p>Pick your city, pick your place and find where you want to go!</p>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="general-card p-4 mb-3 mx-2">
+        <div class="d-flex">
+          <h5 class="numbers"> 2. </h5>
+          <h5 class="ml-2 header-text">Select your preferences</h5>
+        </div>
+        <p>Find what you like, and remove what you don't - it's that simple.</p>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="general-card p-4 mb-3 mx-2">
+        <div class="d-flex">
+          <h5 class="numbers"> 3. </h5>
+          <h5 class="ml-2 header-text">Have fun!</h5>
+        </div>
+        <p>Have a great time with you and your special ones!</p>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= link_to "Get Started", new_user_session_path, class: "button-rounded w-100 d-block" %>
+   </div>
+    <h2 class="mt-4 ml-3">Past Events</h2>
+     <div class="col-12">
+      <div class="general-card rosa p-4 mb-3">
+        <h4>Rosalía Concert Palau Sant Jordi</h4>
+        <div class="d-flex justify-content-between">
+          <h6 class="mt-4 header-text">Wednesday November 8th</h6>
+          <h2 class="mt-3 numbers"><i class="fas fa-chevron-circle-right"></i> </h2>
+        </div>
+      </div>
+    </div>
+     <div class="col-12">
+      <div class="general-card tricicle p-4 mb-3">
+        <h4>Tricicle in Teatre Borrás</h4>
+        <div class="d-flex justify-content-between">
+          <h6 class="mt-4 header-text">Monday December 5th</h6>
+          <h2 class="mt-3 numbers"><i class="fas fa-chevron-circle-right"></i> </h2>
+        </div>
+      </div>
+    </div>
+      <div class="col-12 linky">
+        <%= link_to "All Past Events →", new_user_session_path, class: "ml-3" %>
+      </div>
+        <h5 class="mt-4 ml-3">What are people saying about Helio?</h5>
+           <div class="col-12">
+            <div class="general-card p-1 mt-2">
+              <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-center eview-pic p-3">
+                  <i class="fas fa-user-check fa-3x"></i>
+                </div>
+                <div class="review-text p-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0"> <strong>Bruna</strong></h6>
+                     <div class="numbers">
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                    </div>
+                  </div>
+                  <p>Had such an amazing night, can't wait to go back!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="col-12">
+            <div class="general-card p-1 mt-2">
+              <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-center eview-pic p-3">
+                  <i class="fas fa-user-check fa-3x"></i>
+                </div>
+                <div class="review-text p-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0"> <strong>Bruna</strong></h6>
+                     <div class="numbers">
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                    </div>
+                  </div>
+                  <p>Had such an amazing night, can't wait to go back!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="general-card p-1 mt-2">
+              <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-center eview-pic p-3">
+                  <i class="fas fa-user-check fa-3x"></i>
+                </div>
+                <div class="review-text p-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0"> <strong>Bruna</strong></h6>
+                     <div class="numbers">
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                      <i class="fas fa-star fa-xs"></i>
+                    </div>
+                  </div>
+                  <p>Had such an amazing night, can't wait to go back!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
 
 <%= render "shared/footer"  %>
-
