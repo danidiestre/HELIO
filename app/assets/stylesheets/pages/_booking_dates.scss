@@ -9,3 +9,11 @@
   border-color: $primary !important;
 }
 
+// Position Next button at the end of the page
+
+.btn-dates {
+  position: fixed;
+  bottom: 2%;
+  left: 5%;
+}
+

@@ -1,7 +1,6 @@
 <%= render "shared/progressbar", step: 4 %>
 <div class="container px-3">
   <%= simple_form_for @booking_budgets do |f| %>
-    <div class="form-wrapper">
       <div>
           <%# empty DIV to push slider to center, for the time we don't have other elements in this page %>
       </div>
@@ -11,8 +10,7 @@
         <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 60, step: 5} %>
         <%= f.input :cancellation_insurance, as: :hidden, value: "0" %>
       </div>
-      <input class="button-rounded d-block" type="submit" value="NEXT" name="commit">
-    </div>
+      <input class="button-rounded d-block btn-budget" type="submit" value="Next" name="commit">
   <% end %>
 </div>
 
