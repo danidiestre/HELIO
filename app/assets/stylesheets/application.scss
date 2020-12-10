@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/booking_dates";
+
+// Flatpickr for dates
+
+@import "flatpickr/dist/flatpickr";
+
+.hidden {
+  visibility: hidden;
+}
