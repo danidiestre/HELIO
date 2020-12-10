@@ -11,14 +11,9 @@
 
 // Position Next button at the end of the page
 
-.position {
-  position: relative;
-}
-
 .btn-dates {
-  position: absolute;
-  bottom: 20px;
-  width: 92%;
-  left: 20px;
+  position: fixed;
+  bottom: 2%;
+  left: 5%;
 }
 

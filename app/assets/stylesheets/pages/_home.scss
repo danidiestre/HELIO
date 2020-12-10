@@ -7,9 +7,7 @@
 
 .center-block {
   background: #FFFFFF;
-  border: 1px solid #868686;
   box-sizing: border-box;
-  box-shadow: 1px 1px 3px #868686;
   overflow: hidden;
   border-radius: 10px;
   padding-bottom: 10px;
@@ -31,7 +29,7 @@
   a {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: $black;
     color: #FFFFFF;
     display: block;
     text-decoration: none;
