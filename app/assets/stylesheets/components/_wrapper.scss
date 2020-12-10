@@ -1,0 +1,10 @@
+.form-wrapper {
+    min-height: calc(100vh - 115px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-wrapper {
+    min-height: calc(100vh - 115px);
+}
