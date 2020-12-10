@@ -1,8 +1,20 @@
-<%= simple_form_for @booking_categories do |f|%>
-  <% Category.all.each do |cat| %>
-    <input type="checkbox" name="booking_category[category_ids][]" id="check_<%= cat.name %>" value="<%= cat.id %>">
-    <label for="check_<%= cat.name %>"><%= cat.name %></label>
+<div class="container">
+  <%= render "shared/progressbar", step: 2 %>
+  <div class="mt-2">
+    <h2>Exclude categories</h2>
+    <p class="mb-0">Select any categories you don't like:</p>
+  </div>
+  <%= simple_form_for @booking_categories do |f|%>
+    <div class="row">
+      <% Category.all.each do |cat| %>
+        <div class="col-6">
+          <input type="checkbox" class="hidden" name="booking_category[category_ids][]" id="check_<%= cat.name %>" value="<%= cat.id %>">
+          <label for="check_<%= cat.name %>" class="w-100 d-flex align-items-center justify-content-center general-card categories p-1 mb-2" style="background-image:url( <%= cl_image_path cat.photo.key %> ); background-size: cover;">
+            <h6><%= cat.name %></h6>
+          </label>
+        </div>
+      <% end %>
+    </div>
+    <%= f.submit 'Next', class: "btn btn-primary form form-control mt-3"%>
   <% end %>
-  <%= f.submit 'Next'%>
-<% end %>
-
+</div>

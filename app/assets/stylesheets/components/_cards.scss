@@ -104,6 +104,18 @@
   color: rgb(44, 43, 43);
 }
 
+.categories {
+  height: 90px;
+  color:white;
+  text-align:center;
+  opacity: 1;
+  animation: opacity 1s;
+}
+
+input:checked + label {
+ opacity: 0.3;
+}
+
 // Dashboard Cards with Countdown
 
 .countdown {
@@ -153,6 +165,4 @@
 .card-product-info h5 {
   color: $primary;
 }
-
-
 
