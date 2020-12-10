@@ -94,7 +94,7 @@
   color:#01A0BA;
   font-weight: bold;
   position: absolute;
-  top: 22px;
+  top: 20px;
   right: 18px;
 }
 
@@ -110,13 +110,18 @@
 .review-text {
   padding: 22px;
   padding-top: 28px;
+  position: absolute;
+  left: 64px;
+  top: 6px;
 }
 
 .avatar-small {
+  position: absolute;
+  left: 12px;
+  top: 42px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-left: 10px;
 }
 
 // Link to see al past events & all reviews
