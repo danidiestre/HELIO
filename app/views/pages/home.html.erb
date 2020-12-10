@@ -3,7 +3,6 @@
     <div class="text-home">
       <h4>Discover surprise cultural events in your city</h4>
       <h6>Know your adventure 24h before!</h6>
-    </div>
 
     <div class="row ">
       <div class="col-12">
@@ -24,6 +23,7 @@
                 <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
                 <%= f.button :submit, 'Get Started', class: "btn btn-primary w-100"%>
               <% end %>
+
             </div>
 
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -172,4 +172,3 @@
 </div>
 
 <%= render "shared/footer"  %>
-

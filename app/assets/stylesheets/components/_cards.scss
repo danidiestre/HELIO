@@ -20,18 +20,46 @@
   }
 }
 
-.image_div {
-  background-color: $primary;
-  width: 30%;
+.countdown {
+  display:block;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  background-color: black;
+  color: white;
+  width: 80%;
   border-radius: 5px 0 0 5px;
+  padding-top: 10px;
+}
+.text_div {
   display: flex;
   justify-content: center;
   align-items: center;
-  h3 {
-    color: #fff;
-    font-family: $logo;
-    margin-bottom: 0;
+  color: $primary;
+  padding-left: 10px;
+}
+
+.title_dscrp {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  h4 {
+    color: $primary;
   }
+  p {
+    color: $gray;
+  }
+}
+
+.image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705));
+  width: 40%;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  // text-align: center;
+  align-items: center;
 }
 
 .light-border {
