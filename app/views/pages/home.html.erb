@@ -5,7 +5,7 @@
       <h6>Know your adventure 24h before!</h6>
 
     <div class="row ">
-      <div class="col-12">
+      <div class="col-12 mt-4">
         <div class = "center-block">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="form-tag" >
@@ -15,23 +15,22 @@
               <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Buy as a gift</a>
             </li>
           </ul>
+            <div class="tab-content p-3" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
+                  <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
+                  <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
+                  <%= f.button :submit, 'Get Started', class: "btn btn-primary w-100"%>
+                <% end %>
+              </div>
 
-          <div class="tab-content p-3" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
-                <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
-                <%= f.button :submit, 'Get Started', class: "btn btn-primary w-100"%>
-              <% end %>
-            </div>
-          </div>
-
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
-                <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
-                <%= f.button :submit, 'Get Started', class: "btn btn-primary w-100"%>
-              <% end %>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
+                  <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
+                  <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
+                  <%= f.button :submit, 'Get Started', class: "btn btn-primary w-100"%>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
