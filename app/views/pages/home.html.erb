@@ -19,6 +19,11 @@
 
           <div class="tab-content p-3" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <%= simple_form_for @booking_initial_datas do |f|%>
+                <%= f.input :address, label: "Wich City?" %>
+                <%= f.input :participants, label: "How many people?"%>
+                <%= f.button 'Get Started', class: "btn btn-primary w-100"%>
+              <% end %>
               <form class="form-home justify-content-center">
                 <h6><label for="inputCity">Wich City?</label></h6>
                 <select class="form-control form-control-lg mb-4">
