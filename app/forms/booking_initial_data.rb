@@ -1,7 +1,7 @@
 class BookingInitialData
   include ActiveModel::Model
-  attr_accessor :address, :participants
+  attr_accessor :city, :participants
 
-  validates :address, presence: true
+  validates :city, presence: true
   validates :participants, presence: true
 end
