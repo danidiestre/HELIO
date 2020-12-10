@@ -8,10 +8,10 @@ class BookingDatesController < ApplicationController
   def create
     @booking_dates = BookingDate.new(extract_dates)
     if @booking_dates.valid?
-      session[:booking_params] = {
+      session[:booking_params].merge!({
         start_date: @booking_dates.start_date,
         end_date: @booking_dates.end_date
-      }
+      })
       redirect_to new_booking_category_path
     else
       render :new
