@@ -23,8 +23,8 @@
                 <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
                 <%= f.button :submit, 'Get Started', class: "btn btn-primary w-100"%>
               <% end %>
-
             </div>
+          </div>
 
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
