@@ -1,8 +1,8 @@
-<div class="container">
-  <%= render "shared/progressbar", step: 2 %>
+<%= render "shared/progressbar", step: 2 %>
+<div class="container px-3">
   <div class="mt-2">
-    <h2>Exclude categories</h2>
-    <p class="mb-0">Select any categories you don't like:</p>
+    <h2 class="mt-4 ml-2 title">Exclude categories</h2>
+    <p class="mb-0 ml-2">Select any categories you don't like:</p>
   </div>
   <%= simple_form_for @booking_categories do |f|%>
     <div class="row">
