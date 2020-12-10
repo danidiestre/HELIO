@@ -1,9 +1,9 @@
 <div class="container form-container">
-  <div class="form-wrapper mt-3">
-    <h3>Choose dates</h3>
+  <div class="dates-form">
+    <h3 class="mt-4 ml-2 title">Choose dates</h3>
       <%= simple_form_for @booking_dates do |f| %>
         <%= f.input :dates, label: false, input_html: {class: "datepicker hidden"} %>
-        <%= f.button :submit, "Next", class: "btn btn-primary w-100" %>
+        <%= f.button :submit, "Next", class: "btn btn-primary w-100 mt-3" %>
       <% end %>
   </div>
 </div>
