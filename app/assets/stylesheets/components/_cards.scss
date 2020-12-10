@@ -1,19 +1,18 @@
-
 .general-card {
-  box-shadow: 2px 2px 2px $gray-transparent;
-  border-radius: 5px ;
-  padding: 5 px;
-  margin-bottom: 15px;
-  height: 110px;
+  box-shadow: 1px 1px 10px $gray-border;
+  border-radius: 4px;
 }
 
+// Instructions card
 
-.general-card h5 {
-  text-align: center;
+.instructions-card {
+  height: 140px;
+  padding: 24px;
+  padding-top: 30px;
 }
 
 .picture-card {
-  // background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705);
+  background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705));
   border-radius: 5px ;
   padding: 5 px;
   .counter {
@@ -52,7 +51,6 @@
   p {
     color: $gray;
   }
-
 }
 
 .image {
@@ -62,7 +60,6 @@
   display: flex;
   // text-align: center;
   align-items: center;
-
 }
 
 .light-border {
@@ -73,14 +70,31 @@
   border: 2px solid #00A0BA;
 }
 
-.numbers {
+.steps {
   font-size: 20px;
   color:#01A0BA;
   font-weight: bold;
 }
 
+// Past Events card
+
+.event-card {
+  height: 180px;
+  position: relative;
+}
+
 .fa-chevron-circle-right {
   color:#DADADA;
+  font-size: 30px;
+  position: absolute;
+  right: 12px;
+  top: 76px;
+}
+
+.event-date {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
 }
 
 .rosa {
@@ -95,8 +109,21 @@
   color:white;
 }
 
-.linky {
-  text-align: center;
+// Reviews card
+
+.review-card {
+  height: 140px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.numbers {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 18px;
 }
 
 .fa-star {
@@ -104,10 +131,34 @@
 }
 
 .fa-user-check {
-  color:black;
-  border: 1px solid $gray;
+  color: black;
+  margin-left: 10px;
 }
 
-.primary-border {
-  border: 1px solid $primary;
+.review-text {
+  padding: 22px;
+  padding-top: 28px;
+  position: absolute;
+  left: 64px;
+  top: 6px;
+}
+
+.avatar-small {
+  position: absolute;
+  left: 12px;
+  top: 42px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+// Link to see al past events & all reviews
+
+.linky {
+  text-align: center;
+}
+
+// Color for Titles h2
+.title {
+  color: rgb(44, 43, 43);
 }
