@@ -11,65 +11,6 @@
   padding-top: 30px;
 }
 
-.picture-card {
-  background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705));
-  border-radius: 5px ;
-  padding: 5 px;
-  .counter {
-    color: $primary;
-  }
-}
-
-.countdown {
-  display:block;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  background-color: black;
-  color: white;
-  width: 80%;
-  border-radius: 5px 0 0 5px;
-  padding-top: 10px;
-}
-.text_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $primary;
-  padding-left: 10px;
-}
-
-.title_dscrp {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-left: 10px;
-  h4 {
-    color: $primary;
-  }
-  p {
-    color: $gray;
-  }
-}
-
-.image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.705));
-  width: 40%;
-  border-radius: 5px 0 0 5px;
-  display: flex;
-  // text-align: center;
-  align-items: center;
-}
-
-.light-border {
-  border: 2px solid #868686;
-}
-
-.primary-border {
-  border: 2px solid #00A0BA;
-}
-
 .steps {
   font-size: 20px;
   color:#01A0BA;
@@ -162,3 +103,56 @@
 .title {
   color: rgb(44, 43, 43);
 }
+
+// Dashboard Cards with Countdown
+
+.countdown {
+  height: 100%;
+  width: 172px;
+  display:block;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  background-color: black;
+  color: white;
+  padding-top: 12px;
+}
+
+.text-countdown-card {
+  color: $primary;
+  padding: 10px;
+}
+
+// Dashboard Cards with Picture
+
+.card-product {
+  overflow: hidden;
+  height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+
+.card-product p {
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-info {
+  padding: 16px;
+}
+
+.card-product-info h5 {
+  color: $primary;
+}
+
+
+
