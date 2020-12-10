@@ -3,9 +3,11 @@
     border-radius: 4px;
 }
 
+// Instructions card
+
 .instructions-card {
   height: 140px;
-  padding: 22px;
+  padding: 24px;
   padding-top: 30px;
 }
 
@@ -46,6 +48,8 @@
   font-weight: bold;
 }
 
+// Past Events card
+
 .event-card {
   height: 180px;
   position: relative;
@@ -68,7 +72,6 @@
 .rosa {
   background-image: url(https://www.elnacional.cat/uploads/s1/95/02/15/5/rosalia-concert-barcelona-efe.jpeg);
   background-size: cover;
-  background-position: center;
   color:white;
 }
 
@@ -77,6 +80,8 @@
   background-size: cover;
   color:white;
 }
+
+// Reviews card
 
 .review-card {
   height: 140px;
@@ -93,26 +98,36 @@
   right: 18px;
 }
 
-.linky {
-  text-align: center;
-}
-
 .fa-star {
   color:#01A0BA;
 }
 
 .fa-user-check {
-  color:black;
-  border: 1px solid $gray;
-}
-
-.primary-border {
-  border: 1px solid $primary;
+  color: black;
+  margin-left: 10px;
 }
 
 .review-text {
   padding: 22px;
   padding-top: 28px;
+}
+
+.avatar-small {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+// Link to see al past events & all reviews
+
+.linky {
+  text-align: center;
+}
+
+// Color for Titles h2
+.title {
+  color: rgb(44, 43, 43);
 }
 
 
