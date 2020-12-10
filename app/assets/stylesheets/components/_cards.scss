@@ -79,3 +79,15 @@
 .primary-border {
   border: 1px solid $primary;
 }
+
+.categories {
+  height: 90px;
+  color:white;
+  text-align:center;
+  opacity: 1;
+  animation: opacity 1s;
+}
+
+input:checked + label {
+ opacity: 0.3;
+}

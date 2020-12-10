@@ -19,10 +19,60 @@ p "Users destroyed!"
 p "-------------"
 
 
-categories_array = ['Theatre', 'Monologues', 'Comedy','Magic', 'Improv','Dance', 'Show + Dinner', 'Concerts', 'Festivals', 'Classical Music and Opera', ]
+categories_array = [
+  {
+    name: 'Theatre',
+    image_url: "https://images.unsplash.com/photo-1503095396549-807759245b35?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
+  },
+  {
+    name: 'Monologues',
+    image_url: "https://howtowritefunny.com/wp-content/uploads/2019/02/Crash-Course-in-StandupSMALL.jpg"
+  },
+  {
+    name: 'Comedy',
+    image_url: "https://images.unsplash.com/photo-1543584756-8f40a802e14f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80"
+  },
+
+  {
+    name: 'Magic',
+    image_url: "https://images.indianexpress.com/2019/06/magic.jpg"
+  },
+
+  {
+    name: 'Improv',
+    image_url: "https://images.theconversation.com/files/202495/original/file-20180118-158536-13l30yw.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip"
+  },
+
+  {
+    name: 'Dance',
+    image_url: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+  },
+
+  {
+    name: 'Show + Dinner',
+    image_url: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+  },
+
+  {
+    name: 'Concerts',
+    image_url: "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80"
+  },
+
+  {
+    name: 'Festivals',
+    image_url: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+  },
+
+  {
+    name: 'Classical Music + Opera',
+    image_url: "https://images.unsplash.com/photo-1508025690966-2a9a1957da31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+  }]
+
 
 categories_array.each do |category|
-  Category.create(name: category)
+  cat = Category.create(name: category[:name])
+  image_file = URI.open(category[:image_url])
+  cat.photo.attach(io: image_file, filename: 'image.png', content_type: 'image/png')
 end
 
 p "Created #{Category.count} categories"
@@ -190,7 +240,7 @@ event_10 = Event.create(
   language: 'Español',
   address: 'Cuesta de San Vicente, 44 (Madrid)',
   audience: 'Adults',
-  category_id: Category.find_by(name:'Classical Music and Opera').id
+  category_id: Category.find_by(name:'Classical Music + Opera').id
 )
 
 event_10_photo = URI.open('https://images.unsplash.com/flagged/photo-1576081823157-b020106d528f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80')
