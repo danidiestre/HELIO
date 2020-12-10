@@ -1,9 +1,13 @@
 .general-card {
     box-shadow: 1px 1px 10px $gray-border;
     border-radius: 4px;
-    height: 180px;
-    position: relative;
-  }
+}
+
+.instructions-card {
+  height: 140px;
+  padding: 22px;
+  padding-top: 30px;
+}
 
 .picture-card {
   background-image: linear-gradient(direction, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705));
@@ -36,6 +40,17 @@
   border: 2px solid #00A0BA;
 }
 
+.steps {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+}
+
+.event-card {
+  height: 180px;
+  position: relative;
+}
+
 .fa-chevron-circle-right {
   color:#DADADA;
   font-size: 30px;
@@ -44,7 +59,7 @@
   top: 76px;
 }
 
-.header-text {
+.event-date {
   position: absolute;
   bottom: 20px;
   left: 24px;
@@ -61,6 +76,21 @@
   background-image: url(https://teatrolopezdeayala.es/images/shows/1550484061TRICICLE-5.jpg);
   background-size: cover;
   color:white;
+}
+
+.review-card {
+  height: 140px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.numbers {
+  font-size: 20px;
+  color:#01A0BA;
+  font-weight: bold;
+  position: absolute;
+  top: 22px;
+  right: 18px;
 }
 
 .linky {
@@ -80,28 +110,11 @@
   border: 1px solid $primary;
 }
 
-.review-card {
-  box-shadow: 1px 1px 10px $gray-border;
-  border-radius: 4px;
-  height: 140px;
-  position: relative;
-  margin: 8px 0;
+.review-text {
+  padding: 22px;
+  padding-top: 28px;
 }
 
-.numbers {
-  font-size: 20px;
-  color:#01A0BA;
-  font-weight: bold;
-  position: absolute;
-  top: 18px;
-  right: 18px;
-}
-
-.steps {
-  font-size: 20px;
-  color:#01A0BA;
-  font-weight: bold;
-}
 
 
 
