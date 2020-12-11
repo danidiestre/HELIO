@@ -4,7 +4,8 @@
             <div class="bg-white p-3 mb-3">
                 <h3><%= @event.title %></h3>
             </div>
-            <%= cl_image_tag @event.photo.key, crop: :fill, :class => "d-block w-100 show-banner my-3" %>
+            <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')">
+            </div>        
             <div class="bg-white p-3">
                 <p><%= @event.description %></p>
             </div>
