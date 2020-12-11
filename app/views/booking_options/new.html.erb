@@ -13,7 +13,7 @@
     <div class="d-flex my-2 languages">
       <% ['english', 'spanish', 'catalan'].each do |lan| %>
         <input type="checkbox" class="hidden" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
-        <label for="check_<%= lan %>" class="general-card lingo">
+        <label for="check_<%= lan %>" class="general-card lingo <%= lan %>">
           <%= lan.capitalize %>
         </label>
       <% end %>
@@ -26,7 +26,7 @@
     <div class="d-flex my-3 audiences">
       <% ['adults', 'family', 'all ages'].each do |aud| %>
         <input type="checkbox" class="hidden" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
-        <label for="check_<%= aud %>" class="general-card age">
+        <label for="check_<%= aud %>" class="general-card age <%= aud %>">
           <%= aud.capitalize %>
         </label>
       <% end %>
