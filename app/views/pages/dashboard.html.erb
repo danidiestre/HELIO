@@ -6,10 +6,11 @@
       <% @user_bookings.each do |booking| %>
         <div class="general-card card-product my-3">
           <!-- First Card with black background and countdown -->
-          <div class="countdown">
-            <h6>6d</h6>
-            <h5><strong>20:35</strong></h5>
-            <h6>45s</h6>
+          <div class="countdown" data-start-date="<%= booking.iteration.start_date %>">
+
+            <h6 class="days">6d</h6>
+            <h5><strong class="time">20:35</strong></h5>
+            <h6 class="seconds">45s</h6>
           </div>
           <div class="text-countdown-card">
             <h6>Starting in: <%= booking.countdown %> hours</h6>
