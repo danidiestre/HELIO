@@ -22,19 +22,22 @@
         <li class="nav-item active">
           <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
         </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
       <% else %>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+          <%= link_to "Login", user_session_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sign up</a>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
     <!-- Links -->
 
   </div>
-  <!-- Collapsible content -->
+  <!-- Collapsible content --> 
 
 </nav>
 <!--/.Navbar-->
