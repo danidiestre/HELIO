@@ -30,6 +30,7 @@ import "bootstrap";
 import { initFlatpickr } from '../plugins/init_flatpickr';
 import { initSlider } from '../plugins/init_rangeslider';
 import { countDown } from '../functions/countdown';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   initSlider();
   countDown();
+  initMapbox();
 });

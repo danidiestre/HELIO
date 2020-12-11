@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <div class="bg-white p-3 mb-3">
+                <h3><%= @event.title %></h3>
+            </div>
+            <%= cl_image_tag @event.photo.key, crop: :fill, :class => "d-block w-100 show-banner my-3" %>
+            <div class="bg-white p-3">
+                <p><%= @event.description %></p>
+            </div>
+            <div class="bg-white p-3 mt-3">
+                <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
+            </div>
+
+            <div id="map"
+                class="map-show-page"
+                style="width: 100%; height: 500px;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+        </div>
+    </div>
+</div>
