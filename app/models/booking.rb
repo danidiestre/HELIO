@@ -15,6 +15,7 @@ class Booking < ApplicationRecord
 
   private
 
+
   def assign_iteration
     iterations = Iteration.all
     iterations = iterations.where(start_date: start_date..end_date)
@@ -25,4 +26,5 @@ class Booking < ApplicationRecord
     iterations = iterations.joins(:event).where(events: { audience: audiences  })
     self.iteration = iterations.sample || Iteration.all.sample
   end
+
 end
