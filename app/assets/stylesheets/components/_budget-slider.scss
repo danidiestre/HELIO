@@ -1,6 +1,6 @@
 .rangeslider__fill {
     background: #00A0BA;
-    height: 20px;
+    height: 10px;
 }
 .rangeslider {
     height: 10px;
@@ -11,6 +11,7 @@
 .rangeslider__handle {
     height: 25px;
     width: 25px;
+    top: 5px;
 }
 #budgetJs {
     text-align: center;
