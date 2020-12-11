@@ -1,41 +1,28 @@
 <%= render "shared/progressbar", step: 3 %>
-<div class="container px-5">
 
-  <div class="my-3">
-   <h3>Advanced options</h3>
+<div class="container px-3">
+  <h3 class="mt-4 ml-2 title">Advanced options</h3>
+  <h5 class="my-3 ml-2">Languages</h5>
+  <div class="form-wrapper">
+    <%= simple_form_for @booking_options do |f|%>
+      <div class="d-flex my-2 languages">
+        <% ['english', 'spanish', 'catalan'].each do |lan| %>
+          <input type="checkbox" class="hidden" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
+          <label for="check_<%= lan %>" class="general-card lingo <%= lan %>">
+            <%= lan.capitalize %>
+          </label>
+        <% end %>
+      </div>
+      <h5 class="my-3 ml-2">Audience</h5>
+      <div class="d-flex my-3 audiences">
+        <% ['adults', 'family', 'all ages'].each do |aud| %>
+          <input type="checkbox" class="hidden" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
+          <label for="check_<%= aud %>" class="general-card age <%= aud %>">
+            <%= aud.capitalize %>
+          </label>
+        <% end %>
+      </div>
+      <%= f.submit 'Next', class: "button-rounded form form-control btn-options" %>
+    <% end %>
   </div>
-
-  <div class="my-3">
-    <h5>Languages</h5>
-  </div>
-
-  <%= simple_form_for @booking_options do |f|%>
-    <div class="d-flex my-2 languages">
-      <% ['english', 'spanish', 'catalan'].each do |lan| %>
-        <input type="checkbox" class="hidden" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
-        <label for="check_<%= lan %>" class="general-card lingo <%= lan %>">
-          <%= lan.capitalize %>
-        </label>
-      <% end %>
-    </div>
-
-    <div class="my-3">
-      <h5>Audience</h5>
-    </div>
-
-    <div class="d-flex my-3 audiences">
-      <% ['adults', 'family', 'all ages'].each do |aud| %>
-        <input type="checkbox" class="hidden" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
-        <label for="check_<%= aud %>" class="general-card age <%= aud %>">
-          <%= aud.capitalize %>
-        </label>
-      <% end %>
-    </div>
-    <div class="my-3">
-      <%= f.submit 'Next', class: "btn btn-primary form form-control" %>
-    </div>
-  <% end %>
-
 </div>
-
-<%= render "shared/footer"  %>
