@@ -19,8 +19,7 @@ class BookingBudgetsController < ApplicationController
 
       @booking.save!
 
-      reset_session
-
+      session[:booking_params] = nil
       redirect_to new_booking_checkout_path
     else
       render :new
