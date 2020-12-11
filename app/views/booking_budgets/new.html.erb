@@ -1,11 +1,11 @@
-<%= render "shared/progressbar", step: 4 %>
-<div class="container px-3">
+
+<div class="container">
   <%= simple_form_for @booking_budgets do |f| %>
     <div class="form-wrapper">
       <div>
-          <%# empty DIV to push slider to center, for the time we don't have other elements in this page %>
+        <%= render "shared/progressbar", step: 4 %>
       </div>
-      <h2 class="mt-4 ml-2 title">Choose your budget</h2>
+      <h2 class="mt-4 title title-centered">Choose your budget</h2>
       <div>
         <h1 id="budgetJs">60</h1>
         <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 60, step: 5} %>
