@@ -4,11 +4,13 @@ h3 {
 
 .languages {
   justify-content: space-between;
+  margin-left: 0px;
 }
 
 input:checked + label.lingo {
-  opacity: 1;
+  opacity: 0.4;
 }
+
 .lingo {
   background-size: cover;
   display: flex;
@@ -17,9 +19,10 @@ input:checked + label.lingo {
   color: white;
   font-weight: bold;
   height: 80px;
-  width: 100px;
-  opacity: 0.4;
+  width: 110px;
+  opacity: 0.9;
 }
+
 
 .english {
   background-image: url(https://images.unsplash.com/photo-1575902384581-eec5cdff9edb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80);
@@ -41,12 +44,15 @@ input:checked + label.lingo {
   background-image: url(https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80);
 }
 
+
 .audiences {
   justify-content: space-between;
 }
+
 input:checked + label.age {
-  opacity: 1;
+  opacity: 0.4;
 }
+
 .age {
 
   background-size: cover;
@@ -56,6 +62,15 @@ input:checked + label.age {
   color: white;
   font-weight: bold;
   height: 80px;
-  width: 100px;
-  opacity: 0.4;
+  width: 110px;
+  opacity: 0.9;
 }
+
+// Position Next button at the end of the page
+
+.btn-options {
+  position: fixed;
+  bottom: 2%;
+  left: 5%;
+}
+
