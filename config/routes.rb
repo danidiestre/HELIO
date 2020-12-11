@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :booking_options, only: [:new, :create]
   resources :booking_budgets, only: [:new, :create]
   resources :booking_checkout, only: [:new, :create]
+
+  resources :events, only: [:show]
 end
