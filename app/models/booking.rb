@@ -15,7 +15,7 @@ class Booking < ApplicationRecord
   end
 
   private
-  
+
   def assign_iteration
 
     iterations = Iteration.all
@@ -29,5 +29,5 @@ class Booking < ApplicationRecord
   end
 
 
-  
+
 end
