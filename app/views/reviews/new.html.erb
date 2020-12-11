@@ -1,0 +1,11 @@
+<div class="container mt-4 mb-5">
+  <div class="form mt-3">
+<h1>Rate your Helio experience!</h1>
+<%= simple_form_for [@booking, @review] do |f| %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.input :description %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
+</div>
+</div>
+
