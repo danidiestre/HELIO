@@ -98,6 +98,9 @@
           <div class="general-card review-card p-1 w-100">
             <div class="d-flex justify-content-center">
               <div class="d-flex align-items-center review-pic">
+                <% @reviews.each do |review| %>
+                <H3>review.rating</H3>
+                <% end %>
                 <img src="https://sunrift.com/wp-content/uploads/2014/12/Blake-profile-photo-square.jpg" alt="" class="avatar-small">
               </div>
               <div class="review-text">
