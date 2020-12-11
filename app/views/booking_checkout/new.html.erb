@@ -1,1 +1,34 @@
-<h1>Checkout</h1>
+
+<div class="d-flex justify-content-around background">
+  <div class="general-card summary">
+    <h2>Order Summary</h2>
+    <h5>Congratulations, you have succesfully booked a Helio experience!</h5>
+    <p>Your event will be happening between the <%= @booking.start_date %> and <%= @booking.end_date %> in <%= @booking.city%>.</p>
+    <div class="d-flex language">
+      <p>Language preferences :  </p>
+      <% @booking.languages.each do |l|  %>
+        <%= l  %>
+      <% end %>
+    </div>
+    <div class="d-flex audience">
+      <p>Audience type :  </p>
+      <% @booking.audiences.each do |a| %>
+        <%= a  %>
+      <% end %>
+    </div>
+    <p>Further info will follow 24h before your event. Until then, enjoy the suspence!</p>
+  </div>
+</div>
+
+
+  <!-- <div class="d-flex">
+    <h5>Cancellation insurance: </h5>
+      <% if @booking.cancellation_insurance == true %>
+        <h5>included</h5>
+      <% else %>
+        <h5>not included</h5>
+      <% end %>
+  </div> -->
+  <%= render "shared/footer"  %>
+
+
