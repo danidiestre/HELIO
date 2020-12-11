@@ -28,9 +28,11 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initFlatpickr } from '../plugins/init_flatpickr';
+import { initSlider } from '../plugins/init_rangeslider';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initFlatpickr();
+  initSlider();
 });

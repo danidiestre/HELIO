@@ -2399,6 +2399,11 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
+custom-event@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/custom-event/-/custom-event-1.0.1.tgz#5d02a46850adf1b4a317946a3928fccb5bfd0425"
+  integrity sha1-XQKkaFCt8bSjF5RqOSj8y1v9BCU=
+
 cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
@@ -2798,6 +2803,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+ev-pos@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ev-pos/-/ev-pos-1.0.1.tgz#8bd7726667dfc3322f7f33e12bfd8a79658f66d0"
+  integrity sha1-i9dyZmffwzIvfzPhK/2KeWWPZtA=
 
 eventemitter3@^4.0.0:
   version "4.0.7"
@@ -6026,6 +6036,14 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+
+rangeslider-js@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/rangeslider-js/-/rangeslider-js-3.2.5.tgz#945b557ba7494053cd7f848840e19112dffb0b1a"
+  integrity sha512-aGNQPNpM4Qd8w3UpAZGY2ax8naLiiSPDAT+jKi/cz9Gigg9ON1ODc9xpWS8Kjsf1eIBHAEXcYcQtRU7NqabM/Q==
+  dependencies:
+    custom-event "^1.0.1"
+    ev-pos "^1.0.1"
 
 raw-body@2.4.0:
   version "2.4.0"
