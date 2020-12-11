@@ -14,9 +14,7 @@ class BookingBudgetsController < ApplicationController
       })
 
       @booking = Booking.new(session[:booking_params])
-
       @booking.user = current_user
-
       @booking.save!
 
       session[:booking_params] = nil
