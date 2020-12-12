@@ -8,10 +8,12 @@
 .center-block {
   background: #FFFFFF;
   box-sizing: border-box;
+  justify-content: center;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 7px;
   padding-bottom: 10px;
   margin-bottom: 30px;
+  box-shadow: 0 2px 49px 20px rgba(0,0,0,.07);
 }
 
 .text-home{
