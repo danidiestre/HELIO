@@ -43,3 +43,5 @@ document.addEventListener('turbolinks:load', () => {
   myFunction();
   initSlider();
 });
+
+import "controllers"

@@ -50,6 +50,9 @@
   color:white;
 }
 
+.event-title{
+  color: white;
+}
 // Reviews card
 
 .review-card {
@@ -133,7 +136,9 @@ input:checked + label {
   color: white;
   padding-top: 12px;
 }
-
+.countdown.soon{
+  background-color: $primary;
+}
 .text-countdown-card {
   padding: 10px;
   margin-left: 6px;

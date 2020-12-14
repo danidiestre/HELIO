@@ -3,24 +3,28 @@
 
 <div class="container px-3">
   <h3 class="mt-4 ml-2 title">Advanced options</h3>
-  <h5 class="my-3 ml-2">Languages</h5>
+  <h5 class="my-4 ml-2 mt-2">Exclude languages if needed</h5>
   <div class="form-wrapper">
     <%= simple_form_for @booking_options do |f|%>
-      <div class="d-flex my-2 languages">
+      <div class="d-flex my-1 pb-3 languages">
         <% ['english', 'spanish', 'catalan'].each do |lan| %>
-          <input type="checkbox" class="hidden" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
-          <label for="check_<%= lan %>" class="general-card lingo <%= lan %>">
-            <%= lan.capitalize %>
-          </label>
+          <div>
+            <input type="checkbox" checked class="hidden" name="booking_option[languages][]" id="check_<%= lan %>" value="<%= lan %>">
+            <label for="check_<%= lan %>" class="general-card lingo <%= lan %>">
+              <%= lan.capitalize %>
+            </label>
+          </div>
         <% end %>
       </div>
-      <h5 class="my-3 ml-2">Audience</h5>
+      <h5 class="my-3 ml-2">Select targeted audience</h5>
       <div class="d-flex my-3 audiences">
-        <% ['adults', 'family', 'all ages'].each do |aud| %>
-          <input type="checkbox" class="hidden" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
-          <label for="check_<%= aud %>" class="general-card age <%= aud %>">
-            <%= aud.capitalize %>
-          </label>
+        <% ['adults', 'all ages'].each_with_index do |aud, index| %>
+          <div class="flex-grow-1 p-1">
+            <input type="radio" <%= "checked" if index == 0 %> class="hidden" name="booking_option[audiences][]" id="check_<%= aud %>" value="<%= aud %>">
+            <label for="check_<%= aud %>" class="general-card w-100 age <%= aud %>">
+              <%= aud.capitalize %>
+            </label>
+          </div>
         <% end %>
       </div>
       <%= f.submit 'Next', class: "button-rounded form form-control btn-options" %>

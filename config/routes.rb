@@ -8,14 +8,15 @@ Rails.application.routes.draw do
   resources :booking_categories, only: [:new, :create]
   resources :booking_options, only: [:new, :create]
   resources :booking_budgets, only: [:new, :create]
-  resources :booking_checkout, only: [:new, :create]
 
-  resources :bookings do
+  resources :bookings, only: [:create] do
+    resources :booking_checkout, only: [:new, :create]
     resources :reviews, only: [:new, :create]
     member do
       get :loading
     end
   end
 
-  resources :events, only: [:show]
+  resources :events, only: [:show, :index]
+
 end

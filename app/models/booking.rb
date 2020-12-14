@@ -16,6 +16,8 @@ class Booking < ApplicationRecord
   private
 
   def assign_iteration
+    return if iteration
+    
     iterations = Iteration.all
     iterations = iterations.where(start_date: start_date..end_date)
     iterations = iterations.joins(:event).where.not(events: { category_id: exclude_category_ids })
