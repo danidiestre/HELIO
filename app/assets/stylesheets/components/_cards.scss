@@ -160,8 +160,10 @@ input:checked + label {
 
 .card-product img {
   height: 100%;
-  width: 100px;
-  object-fit: cover;
+  width: 150px;
+  object-fit: center;
+  align-items: stretch;
+  text-align: center;
 }
 
 .card-product p {
@@ -179,3 +181,15 @@ input:checked + label {
   color: $primary;
 }
 
+.event-image {
+  width: 100px;
+  height: 100%;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.link-review {  
+  display: block;
+  font-weight: bolder;
+  text-decoration: underline;
+}
