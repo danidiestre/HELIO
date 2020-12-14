@@ -5,10 +5,11 @@
         <%= render "shared/progressbar", step: 4 %>
       </div>
       <h2 class="mt-4 title title-centered">Choose your budget</h2>
+      <p class="ml-4 mt-2 subtitle">The price of the ticket will be maximum the budget that you choose</p>
       <div>
         <h1 id="budgetJs">60</h1>
         <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 60, step: 5} %>
-        <%= f.input :cancellation_insurance, as: :hidden, value: "0" %>
+        <%= f.input :cancellation_insurance, as: :hidden, input_html: { value: "0" } %> 
       </div>
       <input class="button-rounded d-block btn-budget" type="submit" value="Next" name="commit">
   <% end %>

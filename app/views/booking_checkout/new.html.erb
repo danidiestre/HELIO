@@ -1,4 +1,3 @@
-
 <div class="d-flex justify-content-around background">
   <div class="general-card summary">
     <h2>Order Summary</h2>
@@ -20,15 +19,14 @@
   </div>
 </div>
 
+<%= link_to "PAY", dashboard_path, class: "button-rounded d-block btn-budget" %>
 
-  <!-- <div class="d-flex">
-    <h5>Cancellation insurance: </h5>
-      <% if @booking.cancellation_insurance == true %>
-        <h5>included</h5>
-      <% else %>
-        <h5>not included</h5>
-      <% end %>
-  </div> -->
-  <%= render "shared/footer"  %>
-
-
+<!-- <div class="d-flex">
+  <h5>Cancellation insurance: </h5>
+    <% if @booking.cancellation_insurance == true %>
+      <h5>included</h5>
+    <% else %>
+      <h5>not included</h5>
+    <% end %>
+</div> -->
+<%= render "shared/footer"  %>
