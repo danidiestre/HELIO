@@ -4,4 +4,8 @@ class BookingBudget
 
   validates :budget, presence: true
   validates :cancellation_insurance, presence: true
+
+  def total_price_cents(participants)
+    budget.to_i * participants * 100
+  end
 end

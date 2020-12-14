@@ -2,6 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :iteration, optional: true
   belongs_to :user
   has_one :review
+  monetize :total_price_cents
   has_many_attached :photos
   after_validation :assign_iteration, on: :create
 
@@ -17,7 +18,7 @@ class Booking < ApplicationRecord
 
   def assign_iteration
     return if iteration
-    
+
     iterations = Iteration.all
     iterations = iterations.where(start_date: start_date..end_date)
     iterations = iterations.joins(:event).where.not(events: { category_id: exclude_category_ids })
