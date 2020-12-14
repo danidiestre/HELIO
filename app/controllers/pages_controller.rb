@@ -4,9 +4,11 @@ class PagesController < ApplicationController
   def home
     @booking_initial_data = BookingInitialData.new
     @reviews = Review.order(:rating).limit(3)
+    @events = Event.all
   end
 
   def dashboard
-    @user_bookings = current_user.bookings
+    @upcoming_bookings = current_user.bookings.joins(:iteration).where("iterations.start_date > ?", DateTime.now)
+    @past_bookings = current_user.bookings.joins(:iteration).where("iterations.start_date <= ?", DateTime.now)
   end
 end

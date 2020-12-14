@@ -1,0 +1,37 @@
+
+<div class="container past-events" data-controller="events">
+    <div class="row ">
+        <div class="col-12 mt-4 ">
+            <div >
+                <h2>See all past Events</h2>
+                <p>Or select bellow the categories that you want to see</p>          
+            </div>
+        </div>
+        <div class="grid col-12 mb-3">
+            <% Category.all.each do |category| %>
+                <p class="button-secondary cell py-1 mb-0" data-category="<%= category.id %>"  data-action="click->events#filter">
+                    <%= category.name.split("+").first %>
+                </p>                  
+            <% end %>
+        </div>
+
+        <% @events.each do |event| %>
+            <div class="col-12 mb-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" > 
+                <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
+                    <h4><%= event.title %></h4>
+                    <div class="d-flex justify-content-between">
+                        <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+
+        
+      
+        
+    </div>
+</div>
+
+
+
+<%= render "shared/footer"  %>
