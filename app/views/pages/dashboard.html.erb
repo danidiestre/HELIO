@@ -2,26 +2,29 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
       <h2 class="mb-4 title">Upcoming Events</h2>
+
       <% @user_bookings.each do |booking| %>
         <div class="general-card card-product my-3">
-          <div class="countdown">
-            <h6>6d</h6>
-            <h5><strong>20:35</strong></h5>
-            <h6>45s</h6>
+          <!-- First Card with black background and countdown -->
+          <div class="countdown <%= "soon" if booking.event_is_tomorrow? %>" data-start-date="<%= booking.iteration.start_date %>">
+
+            <h6 class="days">6d</h6>
+            <h5><strong class="time">20:35</strong></h5>
+            <h6 class="seconds">45s</h6>
           </div>
-          <div class="text-countdown-card">
-            <h6>Starting in: <%= booking.countdown %> hours</h6>
-          </div>
-        </div>
-         <% if booking.event_is_tomorrow? %>
-          <div class="general-card card-product my-3">
-            <img class="image" src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80">
+          <div class="my-3">
             <div class="card-product-info">
-              <h5>Surprise, surprise!</h5>
-              <p>less than 24 hours for your Helio experience!</p>
+              <% if booking.event_is_tomorrow? %>
+                <h5><%= link_to booking.iteration.event.title, event_path(booking.iteration.event) %></h5>
+                <p>less than 24 hours for your Helio experience!</p>
+              <% else %>
+                <h5>Surprise, surprise!</h5>
+                <p>Time until your next Helio experience!</p>
+              <% end %>
             </div>
           </div>
-         <% end %>
+        </div>
+         
       <% end %>
     </div>
   </div>

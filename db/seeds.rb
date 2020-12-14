@@ -5,7 +5,7 @@
 require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Review.destroy_all
 Booking.destroy_all
 p "Bookings destroyed!"
 Iteration.destroy_all
@@ -93,7 +93,7 @@ event_1 = Event.create(
 event_1_photo = URI.open('https://images.unsplash.com/photo-1585699324551-f6c309eedeca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 event_1.photo.attach(io: event_1_photo, filename: 'event1.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_1.id, price: 10, start_date: DateTime.new(2020,12,25,17))
+recent_iteration = Iteration.create(event_id: event_1.id, price: 10, start_date: DateTime.new(2020,12,12,15))
 Iteration.create(event_id: event_1.id, price: 15, start_date: DateTime.new(2020,12,24,17))
 
 #########################
@@ -284,14 +284,15 @@ p "Created #{User.count} users"
 Booking_1 = Booking.create(
   user_id: dani.id,
   iteration_id: Iteration.all.sample.id,
-  start_date: DateTime.new(2020,12,20,19),
+  start_date: DateTime.new(2020,12,10,19),
   end_date: DateTime.new(2020,12,25,20),
   budget: 70,
-  languages: "spanish",
-  audiences: "adults",
+  languages: ["spanish"],
+  audiences: ["adults"],
   cancellation_insurance: false,
   exclude_category_ids: nil,
   city: "Barcelona",
+  iteration: recent_iteration
 )
 
 Booking_2 = Booking.create(
@@ -300,8 +301,8 @@ Booking_2 = Booking.create(
   start_date: DateTime.new(2020,12,18,19),
   end_date: DateTime.new(2020,12,22,20),
   budget: 100,
-  languages: "catalan",
-  audiences: "adults",
+  languages: ["spanish"],
+  audiences: ["adults"],
   cancellation_insurance: false,
   exclude_category_ids: nil,
   city: "Barcelona",
@@ -313,8 +314,8 @@ Booking_3 = Booking.create(
   start_date: DateTime.new(2020,12,26,19),
   end_date: DateTime.new(2020,12,31,20),
   budget: 120,
-  languages: "spanish",
-  audiences: "adults",
+  languages: ["spanish"],
+  audiences: ["adults"],
   cancellation_insurance: false,
   exclude_category_ids: nil,
   city: "Barcelona",

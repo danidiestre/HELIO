@@ -1,5 +1,5 @@
 .home-banner {
-  background-image: url(https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-image: url(https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -8,10 +8,12 @@
 .center-block {
   background: #FFFFFF;
   box-sizing: border-box;
+  justify-content: center;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 7px;
   padding-bottom: 10px;
   margin-bottom: 30px;
+  box-shadow: 0 2px 49px 20px rgba(0,0,0,.07);
 }
 
 .text-home{

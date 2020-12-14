@@ -124,7 +124,7 @@ input:checked + label {
 
 .countdown {
   height: 100%;
-  width: 100px;
+  width: 120px;
   display:block;
   justify-content: center;
   text-align: center;
@@ -133,10 +133,16 @@ input:checked + label {
   color: white;
   padding-top: 12px;
 }
-
+.countdown.soon{
+  background-color: $primary;
+}
 .text-countdown-card {
-  color: $primary;
   padding: 10px;
+  margin-left: 6px;
+}
+
+.text-countdown-card h5 {
+  color: $primary;
 }
 
 // Dashboard Cards with Picture
