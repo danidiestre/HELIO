@@ -9,12 +9,14 @@
 }
 
 .lds-spinner {
-  color: official;
+  color: $primary;
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
   margin-bottom: 16px;
+  text-align: center;
+  align-items: center;
 }
 .lds-spinner div {
   transform-origin: 40px 40px;
