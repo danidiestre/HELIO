@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:create] do
     resources :reviews, only: [:new, :create]
+    member do
+      get :loading
+    end
   end
 
   resources :events, only: [:show]
