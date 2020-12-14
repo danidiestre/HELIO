@@ -17,7 +17,7 @@
       <h5><strong class="time">helio</strong></h5>
       <h6 class="dot-black">.</h6>
     </div>
-    
+
     <div class="text-countdown-card">
       <h5>Your helio experience</h5>
     </div>
@@ -25,4 +25,14 @@
 </div>
 
 <%= link_to "PAY", dashboard_path, class: "button-rounded d-block btn-budget" %>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @order.checkout_session_id %>'
+          });
+        });
+      </script>
 </div>
