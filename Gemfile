@@ -8,6 +8,7 @@ gem 'geocoder'
 
 gem 'stripe'
 gem 'money-rails'
+gem 'stripe_event'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'

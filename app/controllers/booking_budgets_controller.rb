@@ -7,8 +7,10 @@ class BookingBudgetsController < ApplicationController
     @booking_budgets = BookingBudget.new(booking_budgets_params)
     if @booking_budgets.valid?
       session[:booking_params].merge!({
-        'budget' => @booking_budgets.budget,
-        'cancellation_insurance' => @booking_budgets.cancellation_insurance
+        budget: @booking_budgets.budget,
+        cancellation_insurance:  @booking_budgets.cancellation_insurance,
+        state: "pending",
+        total_price_cents: @booking_budgets.total_price_cents(session[:booking_params]["participants"].to_i)
       })
 
       @booking = Booking.new(session[:booking_params])
