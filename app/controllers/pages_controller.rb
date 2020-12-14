@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @user_bookings = current_user.bookings
+    @upcoming_bookings = current_user.bookings.joins(:iteration).where("iterations.start_date > ?", DateTime.now)
+    @past_bookings = current_user.bookings.joins(:iteration).where("iterations.start_date <= ?", DateTime.now)
   end
 end
