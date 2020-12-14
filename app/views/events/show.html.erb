@@ -14,11 +14,8 @@
             </div>
 
             <div>
-
-              <%= link_to "Review the experience", booking_reviews_path(@event), class: "button-rounded" %>
-
-
-            </div>
+<%#               <%= link_to "Review the experience", booking_reviews_path, class: "button-rounded" %>
+ %>            </div>
 
             <div id="map"
                 class="map-show-page"
@@ -27,7 +24,10 @@
                 data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
         </div>
-        <h2>Reviews</h2>
+        <div class="mt-5">
+          <h2>Reviews</h2>
+      
+        </div>
          <div class="col-12">
            <div class="general-card review-card p-1 w-100">
              <div class="d-flex justify-content-center">
@@ -78,3 +78,4 @@
 
     </div>
 </div>
+<%= render "shared/footer"  %>
