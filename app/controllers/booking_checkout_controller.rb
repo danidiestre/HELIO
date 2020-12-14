@@ -14,7 +14,7 @@ class BookingCheckoutController < ApplicationController
         currency: 'eur',
         quantity: 1
       }],
-      success_url: dashboard_url,
+      success_url: loading_booking_url(@booking),
       cancel_url: root_url
     )
 
