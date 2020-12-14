@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :booking_budgets, only: [:new, :create]
   resources :booking_checkout, only: [:new, :create]
 
-  resources :bookings, only: [:create] do
+  resources :bookings do
     resources :reviews, only: [:new, :create]
     member do
       get :loading
