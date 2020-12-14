@@ -1,30 +1,29 @@
 <div class="d-flex justify-content-around background">
   <div class="general-card summary">
     <h2>Order Summary</h2>
-    <h5>Congratulations, you have succesfully booked a Helio experience!</h5>
+    <h5>Here are the available details for your upcoming Helio experience</h5>
     <p>Your event will be happening between the <%= @booking.start_date %> and <%= @booking.end_date %> in <%= @booking.city%>.</p>
     <div class="d-flex language">
       <p>Language preferences :  </p>
       <% @booking.languages.each do |l|  %>
-        <%= l  %>
+        <%= l %>
       <% end %>
     </div>
     <div class="d-flex audience">
       <p>Audience type :  </p>
       <% @booking.audiences.each do |a| %>
-        <%= a  %>
+        <%= a %>
       <% end %>
     </div>
-    <div>
-      <p>Total price :</p>
-      <span><%= @booking.budget %><p> x </p><%= @booking.participants %></span>
-      <%= @booking.budget * @booking.participants  %>
+    <div >
+      <p>Total price:&nbsp; <%= @booking.budget %>€ x <%= @booking.participants %> =&nbsp;<%= @booking.budget * @booking.participants %>€</p>
     </div>
+    <p>To finalize your order, please proceed to payment.</p>
     <p>Further info will follow 24h before your event. Until then, enjoy the suspence!</p>
   </div>
 </div>
 
-<%= link_to "PAY", dashboard_path, class: "button-rounded d-block btn-budget" %>
+<%= link_to "PAY", dashboard_path, class: "button-rounded d-block btn-pay" %>
 
 
 <%= render "shared/footer"  %>
