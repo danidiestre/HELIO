@@ -2,6 +2,14 @@
     height: 200px;
     background-image: cover;
     background-position: center;
-   
+}
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.opacity-animation {
+    animation: opacity linear 1s;
 }

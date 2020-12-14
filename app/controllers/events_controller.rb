@@ -10,4 +10,8 @@ class EventsController < ApplicationController
             }
         ]
     end
+
+    def index
+        @events = Event.all
+    end
 end
