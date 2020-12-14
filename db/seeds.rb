@@ -282,7 +282,7 @@ p "Created #{User.count} users"
 ####################################################
 
 Booking_1 = Booking.create(
-  user_id: dani.id,
+  user_id: rocio.id,
   iteration_id: Iteration.all.sample.id,
   start_date: DateTime.new(2020,12,10,19),
   end_date: DateTime.new(2020,12,25,20),
@@ -296,7 +296,7 @@ Booking_1 = Booking.create(
 )
 
 Booking_2 = Booking.create(
-  user_id: dani.id,
+  user_id: bruna.id,
   iteration_id: Iteration.all.sample.id,
   start_date: DateTime.new(2020,12,18,19),
   end_date: DateTime.new(2020,12,22,20),
@@ -325,6 +325,32 @@ p "Created #{Booking.count} bookings"
 
 
 ####################################################
+
+Review_1 = Review.create(
+  booking_id: Booking_1.id,
+  rating: 5,
+  description: "Highly recommended app for those looking for something new and exciting! My surprise event was the fabulous new drag-production – A Dragatha Christie Murder Mystery ,and boy was that a fun night out!",
+)
+
+Review_2 = Review.create(
+  booking_id: Booking_2.id,
+  rating: 5,
+  description: "Brilliant app! Helio assigns you a wonderful mystery event. If you like surprises and culture, this is the place for you. I was lucky enough to receive tickets for the fantastic Cuarteto Casals at the l'Auditori in Barcelona, and will definitely book again.",
+)
+
+Review_3 = Review.create(
+  booking_id: Booking_3.id,
+  rating: 5,
+  description: "Never thought magic shows were my thing, but Helio proved me wrong! I really enjoyed watching the illusionist Daniel Collado, and will definitely return for more exciting Helio experiences. Highly recommended! ",
+)
+
+p "Created #{Review.count} reviews"
+
+
+
+
+####################################################
+
 
 
 # create_table "iterations", force: :cascade do |t|

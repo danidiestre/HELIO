@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @booking_initial_data = BookingInitialData.new
+    @reviews = Review.order(:rating).limit(3)
     @events = Event.all
   end
 
