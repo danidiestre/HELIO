@@ -1,38 +1,41 @@
-<div class="container">
-  <div class="title-centered">
-    <h1 class="dot-gray-bg">.</h1>
-    <h1>Checkout</h1>
-  </div>
-
-  <div class="title-centered dot-gray-bg">
-    <h2>.</h2>
-    <h2>.</h2>
-    <h2>.</h2>
-  </div>
-
-<div>
-  <div class="general-card card-product my-3">
-    <div class="countdown">
-      <h6 class="dot-black">.</h6>
-      <h5><strong class="time">helio</strong></h5>
-      <h6 class="dot-black">.</h6>
+<div class="d-flex justify-content-around background">
+  <div class="general-card summary">
+    <h2>Order Summary</h2>
+    <h5>Here are the available details for your upcoming Helio experience</h5>
+    <p>Your event will be happening between the <%= @booking.start_date %> and <%= @booking.end_date %> in <%= @booking.city%>.</p>
+    <div class="d-flex language">
+      <p>Language preferences:&nbsp;</p>
+      <% @booking.languages.each do |l|  %>
+        <%= l %>
+      <% end %>
     </div>
-
-    <div class="text-countdown-card">
-      <h5>Your helio experience</h5>
+    <div class="d-flex audience">
+      <p>Audience type:&nbsp;</p>
+      <% @booking.audiences.each do |a| %>
+        <%= a %>
+      <% end %>
     </div>
+    <div >
+      <p>Total price:&nbsp; <%= @booking.budget %>€ x <%= @booking.participants %> =&nbsp;<%= @booking.budget * @booking.participants %>€</p>
+    </div>
+    <p>To finalize your order, please proceed to payment.</p>
+    <p>Further info will follow 24h before your event. Until then, enjoy the suspence!</p>
   </div>
 </div>
 
 <%= link_to "PAY", dashboard_path, class: "button-rounded d-block btn-budget" %>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
-          });
-        });
-      </script>
-</div>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const paymentButton = document.getElementById('pay');
+  paymentButton.addEventListener('click', () => {
+    const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+    stripe.redirectToCheckout({
+      sessionId: '<%= @order.checkout_session_id %>'
+    });
+  });
+</script>
+
+
+<%= render "shared/footer"  %>
+
+

@@ -1,8 +1,10 @@
 class BookingCheckoutController < ApplicationController
 
-@booking = Booking.find(params[:id])
 
   def new
+
+    @booking = Booking.find(params[:id])
+
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
@@ -17,7 +19,7 @@ class BookingCheckoutController < ApplicationController
     )
 
     order.update(checkout_session_id: session.id)
-      redirect_to new_booking_checkout_path
-    end
+    redirect_to new_booking_checkout_path
 
+  end
 end

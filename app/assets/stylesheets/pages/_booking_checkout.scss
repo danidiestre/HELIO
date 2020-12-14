@@ -1,0 +1,25 @@
+
+.summary {
+  width: 80%;
+  margin-top: 40px;
+  text-align: center;
+  .language {
+    justify-content: center;
+  }
+  .audience {
+    justify-content: center;
+  }
+  p {
+    text-align: center;
+  }
+  padding: 20px;
+  h2 {
+    margin-top: 10px;
+    color: $primary;
+  }
+}
+.btn-pay {
+  width: 80%;
+  margin: 20px auto;
+
+}
