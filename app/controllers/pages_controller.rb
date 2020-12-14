@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @booking_initial_data = BookingInitialData.new
+    @events = Event.all
   end
 
   def dashboard
