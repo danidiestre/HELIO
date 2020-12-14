@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
 
-  resources :events, only: [:show]
+  resources :events, only: [:show, :index]
+
 end
