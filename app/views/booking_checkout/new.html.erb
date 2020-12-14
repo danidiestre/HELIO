@@ -16,19 +16,17 @@
         <%= a  %>
       <% end %>
     </div>
+    <div>
+      <p>Total price :</p>
+      <span><%= @booking.budget %><p> x </p><%= @booking.participants %></span>
+      <%= @booking.budget * @booking.participants  %>
+    </div>
     <p>Further info will follow 24h before your event. Until then, enjoy the suspence!</p>
   </div>
 </div>
 
 
-  <!-- <div class="d-flex">
-    <h5>Cancellation insurance: </h5>
-      <% if @booking.cancellation_insurance == true %>
-        <h5>included</h5>
-      <% else %>
-        <h5>not included</h5>
-      <% end %>
-  </div> -->
+
   <%= render "shared/footer"  %>
 
 
