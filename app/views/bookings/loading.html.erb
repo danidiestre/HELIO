@@ -1,0 +1,28 @@
+<div class="container onload='myFunction()'">
+  <div class="loading-page" id="loader">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h6 id="loading-sentence" data-sentences="<%= ["Searching for events in #{@booking.city}", "Searching for events within #{@booking.budget}€", "Searching for events with #{@booking.audiences.first} audience"].to_json %>">
+      Finding your dream event...
+    </h6>
+  </div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+    <div class="container confirmation">
+      <h2>We succesfully found the perfect event!</h2>
+      <i class="far fa-check-circle"></i>
+    </div>
+  </div>
+</div>
