@@ -1,7 +1,7 @@
 .show-banner{
     height: 200px;
-    background-image: cover;
-    background-position: center;
+    background-size: cover;
+
 }
 
 .grid {
@@ -14,6 +14,6 @@
     animation: opacity linear 1s;
 }
 
-.past-events{
-    min-height: calc(100vh - 160px);
-}    
+.past-event {
+  min-height: calc(100vh - 160px);
+}

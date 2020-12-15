@@ -27,6 +27,7 @@
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
                 <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
                 <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
+                <%= f.input :guest_email, label: "Guest Email: (Person receiving the gift, will only receive emails once bookings is confirmed)" %>
                 <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
@@ -107,7 +108,7 @@
                         <%= '<i class="fas fa-star fa-xs"></i>'.html_safe * r.rating %>
                       </div>
                   </div>
-                    <p><%= r.description.truncate(95, omission: '...')  %></p>
+                    <p><%= r.description.truncate(75, omission: '...')  %></p>
                 </div>
               </div>
             </div>
@@ -115,7 +116,7 @@
         <% end %>
 
         <div class="col-12 mt-3 w-100">
-          <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
+          <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 " %>
         </div>
   </div>
 </div>
