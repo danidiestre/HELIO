@@ -7,11 +7,11 @@
       <p class="ml-4 mt-2 subtitle">The price of the ticket will be maximum the budget that you choose</p>
       <div>
         <div class="d-flex">
-          <h1 id="budgetJs">60/</h1>
+          <h1 id="budgetJs">60</h1>
           <h5 class="budget-person">€/ per person</h5>
         </div>
         <div class="d-flex justify-content-center my-4">
-          <input id="slider11" class="border-0" type="range" min="0" max="200" />
+          <%= f.input :budget, label: false, input_html: { type: “range”, min: 40, max: 120,  value: 60, step: 5} %>
         </div>
       </div>
       <input class="button-rounded d-block btn-budget" type="submit" value="Next" name="commit">
