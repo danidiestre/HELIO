@@ -28,7 +28,6 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initFlatpickr } from '../plugins/init_flatpickr';
-import { initSlider } from '../plugins/init_rangeslider';
 import { countDown } from '../functions/countdown';
 import { initMapbox } from '../plugins/init_mapbox';
 import { displaySentences, myFunction } from '../functions/loading';
@@ -41,7 +40,6 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   displaySentences();
   myFunction();
-  initSlider();
 });
 
 import "controllers"
