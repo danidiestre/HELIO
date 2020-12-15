@@ -324,7 +324,7 @@ Booking_3 = Booking.create(
 p "Created #{Booking.count} bookings"
 
 
-####################################################
+###################################################
 
 Review_1 = Review.create(
   booking_id: Booking_1.id,
