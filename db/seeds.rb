@@ -311,7 +311,7 @@ Booking_2 = Booking.create(
 Booking_3 = Booking.create(
   user_id: dani.id,
   iteration_id: Iteration.all.sample.id,
-  start_date: DateTime.new(2020,12,26,19),
+  start_date: DateTime.new(2020,12,12,19),
   end_date: DateTime.new(2020,12,31,20),
   budget: 120,
   languages: ["spanish"],
