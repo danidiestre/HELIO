@@ -17,11 +17,10 @@ Rails.application.routes.draw do
     end
   end
 
-
-  resources :events, only: [:show, :index]
+  resources :events, only: [:show, :index] do
+    resources :iterations, only: :show
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-
-
-
+  end
+  
 
 end

@@ -1,0 +1,16 @@
+<%= render "shared/navbar" %>
+
+<div class="event-image" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)">
+
+<h1>Your Helio experience</h1>
+
+<p>Your experience will happen between <%= @iterations.booking.start_date %> and <%= @iteration.booking.end_date %> in <%= @iteration.event.address %></p>
+<p>You booked <%= @iteration.bookings.participants %> experiences, with total value of <%= @iterations.price %> euros. </p>
+
+
+<p>Language preferences: <%= @iteration.event.language %></p>
+<p>Audience type: <%= @iteration.bookings.audience %></p>
+
+<%= link_to, "See your experiences", dashboard_path %>
+
+<%= render "shared/footer"  %>
