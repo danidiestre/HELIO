@@ -14,7 +14,11 @@ class BookingBudgetsController < ApplicationController
       })
 
       @booking = Booking.new(session[:booking_params])
-      @booking.user = current_user
+      if session[:guest_email].nil?
+        @booking.user = current_user
+      else
+        @booking.user = User.find_by_email(session[:guest_email]) || User.invite!(email: session[:guest_email])
+      end
       @booking.save!
 
       session[:booking_params] = nil
