@@ -1,12 +1,13 @@
 <div class="progressbar-wrapper">
   <div class="line">
-
   </div>
-
-  <div class="pearl <%= 'active' if step == 1 %>">1</div>
-  <div class="pearl <%= 'active' if step == 2 %>">2</div>
-  <div class="pearl <%= 'active' if step == 3 %>">3</div>
-  <div class="pearl <%= 'active' if step == 4 %>">4</div>
-  <div class="pearl <%= 'active' if step == 5 %>">5</div>
-
+  <% [new_booking_date_path, new_booking_category_path, new_booking_option_path, new_booking_budget_path, new_booking_date_path ].each_with_index do |link, index| %>
+    <% if step >= index + 1 %>
+      <%= link_to index + 1, link, class: "pearl #{'active' if step == index + 1}" %>
+    <% else %>
+      <div class="pearl">
+        <%= index + 1 %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
