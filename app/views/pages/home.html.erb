@@ -77,9 +77,9 @@
         <% @events.each do |event| %>
           <% i = i + 1 %>
           <% if i <= 3 %>
-            <div class="col-12 mb-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" > 
+            <div class="col-12 mb-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
               <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
-                <h4><%= event.title %></h4>
+                <h4 class="past-event-card-home"><%= event.title %></h4>
                 <p><%= event.description.truncate(70) %></p>
                 <div class="d-flex justify-content-between">
                   <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
