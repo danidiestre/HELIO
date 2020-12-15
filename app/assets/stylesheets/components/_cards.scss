@@ -22,6 +22,7 @@
 .event-card {
   height: 180px;
   position: relative;
+  background-size: cover;
 }
 
 .fa-chevron-circle-right {
@@ -127,7 +128,7 @@ input:checked + label {
 
 .countdown {
   height: 100%;
-  width: 120px;
+  width: 130px;
   display:block;
   justify-content: center;
   text-align: center;
@@ -188,7 +189,7 @@ input:checked + label {
   background-position-x: center;
 }
 
-.link-review {  
+.link-review {
   display: block;
   font-weight: bolder;
   text-decoration: underline;

@@ -8,6 +8,7 @@ class BookingInitialDataController < ApplicationController
         city: @booking_initial_data.city,
         participants: @booking_initial_data.participants
       }
+      session[:guest_email] = @booking_initial_data.guest_email
       redirect_to new_booking_date_path
     else
       render "pages/home"
@@ -17,6 +18,6 @@ class BookingInitialDataController < ApplicationController
   private
 
   def booking_initial_data_params
-    params.require(:booking_initial_data).permit(:city, :participants)
+    params.require(:booking_initial_data).permit(:city, :participants, :guest_email)
   end
 end
