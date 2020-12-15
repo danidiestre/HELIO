@@ -1,1 +1,17 @@
+.nav-link {
+  color: $primary;
+  .active {
+    color: white;
+  }
+}
+.nav-item {
+  width: 50%;
+ }
 
+#pills-past-tab, #pills-upcoming-tab {
+  text-align: center;
+}
+
+.wrap {
+  min-height: calc(100vh - 160px);
+}
