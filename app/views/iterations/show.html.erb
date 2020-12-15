@@ -1,16 +1,27 @@
-<%= render "shared/navbar" %>
 
-<div class="event-image" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)">
+<div class="container">
+  <div class="form-wrapper px-4">
+    <div class="top.position" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)"></div>
+    
+    <div>
+      <h2>Your Helio experience</h2>
+    </div>
+    
+    <div>
+      <p>Your experience will happen between <%= @booking.start_date %> and <%= @booking.end_date %> in <%= @booking.city %>.</p>
+    </div>
 
-<h1>Your Helio experience</h1>
+    <div>
+      <p>You booked <%= @booking.participants %> experiences, with total value of <%= @iteration.price %> euros. </p>
+      <p>Language preferences: <%= @iteration.event.language %></p>
+      <p>Audience type: <%= @booking.audiences %></p>
+    </div>
 
-<p>Your experience will happen between <%= @iterations.booking.start_date %> and <%= @iteration.booking.end_date %> in <%= @iteration.event.address %></p>
-<p>You booked <%= @iteration.bookings.participants %> experiences, with total value of <%= @iterations.price %> euros. </p>
+    <div>
+      <%= link_to "See your experiences", dashboard_path %>
+    </div>
 
-
-<p>Language preferences: <%= @iteration.event.language %></p>
-<p>Audience type: <%= @iteration.bookings.audience %></p>
-
-<%= link_to, "See your experiences", dashboard_path %>
+  </div>
+</div>
 
 <%= render "shared/footer"  %>
