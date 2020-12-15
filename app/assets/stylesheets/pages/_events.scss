@@ -1,17 +1,16 @@
 .show-banner{
-    height: 200px;
-    background-size: cover;
-
+  height: 200px;
+  background-size: cover;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
 }
 
 .opacity-animation {
-    animation: opacity linear 1s;
+  animation: opacity linear 1s;
 }
 
 .past-event {
