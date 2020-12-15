@@ -7,13 +7,13 @@
   position: relative;
   margin-top: 16px;
 }
+
 .line {
   position: absolute;
   top: 50%;
   z-index: 1;
   border-bottom: 1px solid $gray-transparent;
   width: 80%;
-
 }
 
 .pearl {
@@ -29,10 +29,16 @@
   display: flex;
   align-items: center;
   z-index: 10;
+  text-decoration: none;
 }
 
 .pearl.active {
   color: #fff;
   border: 1px solid $primary;
   background-color: $primary;
+  text-decoration: none;
+  z-index: 10;
+  &:hover {
+    opacity: 0.9;
+  }
 }

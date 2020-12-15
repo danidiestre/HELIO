@@ -7,8 +7,8 @@
       <p class="ml-4 mt-2 subtitle">The price of the ticket will be maximum the budget that you choose</p>
       <div>
         <div class="d-flex">
-          <h1 id="budgetJs">60€/</h1>
-          <h5 class="budget-person">per person</h5>
+          <h1 id="budgetJs">60/</h1>
+          <h5 class="budget-person">€/ per person</h5>
         </div>
         <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 60, step: 5} %>
         <%= f.input :cancellation_insurance, as: :hidden, input_html: { value: "0" } %>
