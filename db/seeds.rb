@@ -107,7 +107,7 @@ event_2 = Event.create(
   category_id: Category.find_by(name:'Theatre').id
 )
 
-event_2_photo = URI.open('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80')
+event_2_photo = URI.open('https://www.tonimoog.com/wp-content/uploads/2020/03/FORTNIQUE-bcn.jpg')
 event_2.photo.attach(io: event_2_photo, filename: 'event2.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_2.id, price: 18, start_date: DateTime.new(2021,1,25,17))
