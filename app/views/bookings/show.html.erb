@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="form-wrapper px-2">
+    <div class="event-card mt-4" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)"></div>
+    
+    <div>
+      <h4> <%= @event.title %> </h4>
+      <h4><%= @booking.start_date %></h4>
+    </div>
+      
+    <div class="container">
+      <div class="d-flex">
+          <div>
+            <p><%= @event.address %></p>      
+          </div>
+      
+          <div class="qr-code" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1QjcJ7T4Av3QDBvYz6tHXg5_KOCs_yh4JQ&usqp=CAU')">
+          </div>
+      </div>
+    </div>
+
+    <div>
+      <%= link_to "See your experiences", dashboard_path %>
+    </div>
+
+  </div>
+</div>
+
+<%= render "shared/footer"  %>
