@@ -30,7 +30,7 @@
                       <p>less than 24 hours for your Helio experience!</p>
                     <% else %>
                       <h5>Surprise, surprise!</h5>
-                      <p>Time until your next Helio experience!</p>
+                      <%=link_to "Time until your next Helio experience!", event_iteration_path(booking.iteration.event, booking.iteration) %>
                     <% end %>
                   </div>
                 </div>
