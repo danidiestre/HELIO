@@ -47,7 +47,15 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <h6 class="mb-0"> <strong><%= r.booking.user.first_name %></strong></h6>
                     <div class="numbers">
-                      <%= '<i class="fas fa-star fa-xs"></i>'.html_safe * r.rating %>
+                    <div>
+                      <%# <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="2" data-reviews-target="stars"></span>
+                      <span class="fa fa-star checked" data-action="click->reviews#changeRating" data-value="3" data-reviews-target="stars"></span>
+                      <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="4" data-reviews-target="stars"></span>
+                      <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="5" data-reviews-target="stars"></span> %>
+                    
+                      <%= ('<i class="fas fa-star fa-xs"></i>' * r.rating).html_safe %>
+
+                    </div>
                     </div>
                 </div>
                   <p><%= r.description.truncate(60, omission: '...')  %></p>
