@@ -1,11 +1,28 @@
-<div class="container mt-4 mb-5">
-  <div class="form mt-3">
-<h1>Rate your Helio experience!</h1>
-<%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :rating, collection: 0..5 %>
-  <%= f.input :description %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
+<div class="container reviews-new" data-controller="reviews">
+  <div class="row">
+    <div class="col-12 mt-4">
+      <div>
+        <h1>Rate your Helio experience!</h1>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <%= simple_form_for [@booking, @review] do |f| %>
+        
+        <%= f.input :rating, as: :hidden %>                
+        
+        <div class = "ml-3">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="1" data-reviews-target="stars"></span>
+            <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="2" data-reviews-target="stars"></span>
+            <span class="fa fa-star checked" data-action="click->reviews#changeRating" data-value="3" data-reviews-target="stars"></span>
+            <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="4" data-reviews-target="stars"></span>
+            <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="5" data-reviews-target="stars"></span>
+        </div>
+        <div class="py-5">
+          <%= f.input :description %>
+          <%= f.submit class: "btn btn-primary"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-</div>
-

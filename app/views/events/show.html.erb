@@ -1,81 +1,53 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12 mt-4">
-            <div class="bg-white p-3 mb-3">
-                <h3><%= @event.title %></h3>
-            </div>
-            <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')">
-            </div>
-            <div class="bg-white p-3">
-                <p><%= @event.description %></p>
-            </div>
-            <div class="bg-white p-3 mt-3">
-                <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
-            </div>
 
-            <div>
-<%#               <%= link_to "Review the experience", booking_reviews_path, class: "button-rounded" %>
-            </div>
 
-            <div id="map"
-                class="map-show-page"
-                style="width: 100%; height: 500px;"
-                data-markers="<%= @markers.to_json %>"
-                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
+<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')"></div>
+<div class="container bg-white">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="px-2 pt-4 mb-4 title-event"><%= @event.title %></h4>
+      <div class="mb-3 p-2 mt-2">
+        <div class="d-flex justify-content-between mb-4">
+          <p class="details"><%= @event.language.capitalize %></p>
+          <p class="details"><%= @event.category.name %></p>
+          <p class="details"><%= @event.audience.capitalize %></p>
         </div>
-        <div class="mt-5">
-          <h2>Reviews</h2>
-
-        </div>
-         <div class="col-12">
-           <div class="general-card review-card p-1 w-100">
-             <div class="d-flex justify-content-center">
-               <div class="d-flex align-items-center review-pic">
-                 <img src="https://dieteticallyspeaking.com/wp-content/uploads/2017/01/profile-square.jpg" alt="" class="avatar-small">
-               </div>
-               <div class="review-text">
-                 <div class="d-flex justify-content-between align-items-center">
-                   <h6 class="mb-0"> <strong>Bruna</strong></h6>
-                     <div class="numbers">
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                     </div>
-                 </div>
-                   <p class="pt-2">Amazing experience, i'll definitely use Helio again</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="col-12">
-           <div class="general-card review-card p-1 w-100">
-             <div class="d-flex justify-content-center">
-               <div class="d-flex align-items-center review-pic">
-                 <img src="https://dieteticallyspeaking.com/wp-content/uploads/2017/01/profile-square.jpg" alt="" class="avatar-small">
-               </div>
-               <div class="review-text">
-                 <div class="d-flex justify-content-between align-items-center">
-                   <h6 class="mb-0"> <strong>Bruna</strong></h6>
-                     <div class="numbers">
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                       <i class="fas fa-star fa-xs"></i>
-                     </div>
-                 </div>
-                   <p class="pt-2">Amazing experience, i'll definitely use Helio again</p>
-               </div>
-             </div>
-           </div>
-         </div>
-        <%#= link_to "Add a review", new_booking_review_path(@booking.iteration.event) %>
-
-
-
+        <p><%= @event.description %></p>
+      </div>
+      <div class="p-3 mt-3">
+        <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
+      </div>
+      <div id="map" class="map-show-page" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+
+
+    <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
+    <% if @reviews.count == 0 %>
+    <p class="ml-3">This event doesn't have any review yet.</p>
+    <% else %>
+      <% @reviews.each do |r| %>
+        <div class="col-12">
+          <div class="general-card review-card p-1 w-100">
+            <div class="d-flex justify-content-center">
+              <div class="d-flex align-items-center review-pic">
+                <%= cl_image_tag  r.booking.user.avatar.key, class: "avatar-small"%>
+              </div>
+              <div class="review-text">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h6 class="mb-0"> <strong><%= r.booking.user.first_name %></strong></h6>
+                    <div class="numbers">
+                      <%= '<i class="fas fa-star fa-xs"></i>'.html_safe * r.rating %>
+                    </div>
+                </div>
+                  <p><%= r.description.truncate(60, omission: '...')  %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+    <% end %>
+  </div>
 </div>
+
+
 <%= render "shared/footer"  %>
