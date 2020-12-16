@@ -347,6 +347,10 @@ Review_3 = Review.create(
 p "Created #{Review.count} reviews"
 
 
+###################################################
+
+qr = URI.open('https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+event_8.photo.attach(io: event_8_photo, filename: 'event8.jpg', content_type: 'image/jpg')
 
 
 ####################################################
