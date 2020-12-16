@@ -32,6 +32,10 @@ gem 'devise_invitable', '~> 2.0.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#pdf generator for tickets
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

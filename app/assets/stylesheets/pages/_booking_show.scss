@@ -1,4 +1,9 @@
 .qr-code {
+  background-size: cover;
   width: 80px;
   height: 80px;
+}
+
+.qr-box {
+  justify-content: space-between;
 }
