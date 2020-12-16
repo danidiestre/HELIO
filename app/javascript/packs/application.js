@@ -31,7 +31,8 @@ import { initFlatpickr } from '../plugins/init_flatpickr';
 import { countDown } from '../functions/countdown';
 import { initMapbox } from '../plugins/init_mapbox';
 import { displaySentences, myFunction } from '../functions/loading';
-import { initSlider } from '../plugins/init_rangeslider';
+import { initSlider } from '../functions/slider';
+// import { initSlider } from '../plugins/init_rangeslider';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -42,6 +43,7 @@ document.addEventListener('turbolinks:load', () => {
   displaySentences();
   myFunction();
   initSlider();
+  // initSlider();
 });
 
 import "controllers"
