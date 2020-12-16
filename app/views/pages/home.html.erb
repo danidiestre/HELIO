@@ -18,7 +18,7 @@
           <div class="tab-content p-3" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
+                <%= f.input :city, label: "Which City?", collection: ["Barcelona","Madrid"] %>
                 <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
                 <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
               <% end %>
