@@ -12,6 +12,7 @@
           <p class="details"><%= @event.audience.capitalize %></p>
         </div>
         <p><%= @event.description %></p>
+        <div class="sharethis-inline-share-buttons py-2"></div>
       </div>
       <div class="p-3 mt-3">
         <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
@@ -48,6 +49,5 @@
     <% end %>
   </div>
 </div>
-
 
 <%= render "shared/footer"  %>
