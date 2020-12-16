@@ -22,9 +22,18 @@
 }
 
 .details {
-  background-color: $primary;
+  background-color: white;
+  border: 1px solid $primary;
   border-radius: 4px;
-  padding: 6px 10px;
-  color: white;
+  padding: 4px 4%;
+}
+
+.read-more {
+  color: $primary;
+}
+
+.map-show-page {
+  width: 100vw;
+  height: 50vh;
 }
 
