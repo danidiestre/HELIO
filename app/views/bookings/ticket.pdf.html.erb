@@ -10,7 +10,7 @@
 
         <div class="mt-5">
           <h1> <%= event.title.capitalize %> </h1>
-          <h2><%= booking.start_date %></h2>
+          <h2><%= iteration.start_date.strftime("%e/%m/%Y, %l:%M %p") %></h2>
         </div>
 
         <div class="dot-gray-bg">
@@ -44,6 +44,17 @@
            <div class="dot-black">
              :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
            </div>
+
+            <div class="mt-4">
+              <h4>Ticket owner: <%= booking.user.first_name %> <%= booking.user.last_name %></h4>
+              <h4> <%= booking.user.email %> </h4>
+            </div>
+
+            <div class="dot-gray-bg">
+              .
+            </div>
+              
+            <div>
 
             <div class="qr-code my-5" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1QjcJ7T4Av3QDBvYz6tHXg5_KOCs_yh4JQ&usqp=CAU')">
             </div>
