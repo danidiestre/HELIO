@@ -7,7 +7,6 @@
 # To learn more, check out the README:
 #
 # https://github.com/mileszs/wicked_pdf/blob/master/README.md
-
 WickedPdf.config = {
   encoding: 'utf8'
   # exe_path: '/usr/local/bin/wkhtmltopdf',
