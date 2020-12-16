@@ -1,5 +1,4 @@
 
-
 <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')"></div>
 <div class="container bg-white">
   <div class="row">
@@ -11,21 +10,33 @@
           <p class="details"><%= @event.category.name %></p>
           <p class="details"><%= @event.audience.capitalize %></p>
         </div>
-        <p><%= @event.description %></p>
-        <div class="sharethis-inline-share-buttons py-2"></div>
+        <div>
+          <% if @event.description.length > 250 %>
+            <div id="event-description" data-description="<%= @event.description %>">
+              <%= truncate(@event.description, length: 250) %>
+            </div>
+            <div class="read-more">Read more</div>
+          <% else %>
+            <%= @event.description %>
+          <% end %>
+        </div>
       </div>
       <div class="p-3 mt-3">
         <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
       </div>
-      <div id="map" class="map-show-page" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+  </div>
+</div>
+<div id="map" class="map-show-page" style="width: 100vw; height: 50vh;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-
-    <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
-    <% if @reviews.count == 0 %>
-    <p class="ml-3">This event doesn't have any review yet.</p>
-    <% else %>
-      <% @reviews.each do |r| %>
+<div class="container bg-white">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mt-5 mb-3 title">Reviews</h2>
+      <% if @reviews.count == 0 %>
+      <p class="pb-4">This event doesn't have any reviews yet.</p>
+      <% else %>
+        <% @reviews.each do |r| %>
         <div class="col-12">
           <div class="general-card review-card p-1 w-100">
             <div class="d-flex justify-content-center">
@@ -44,10 +55,12 @@
             </div>
           </div>
         </div>
-
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
 <%= render "shared/footer"  %>
+
+
