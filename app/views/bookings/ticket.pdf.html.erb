@@ -1,36 +1,51 @@
 <html>
-    <head>
-        <%= wicked_pdf_stylesheet_link_tag "application" -%>
+  <head>
+    <%= wicked_pdf_stylesheet_link_tag "application" -%>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper px-2">
+        <div class="event-card mt-4" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)">
+        </div>
+            
+        <div>
+          <h4> <%= @event.title.capitalize %> </h4>
+          <h4><%= @booking.start_date %></h4>
+        </div>
 
-    </head>
-    <body>
-        
+        <div class="dot-gray-bg">
+          .
+        </div>
+            
         <div class="container">
-        <div class="form-wrapper px-2">
-            <div class="event-card mt-4" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)"></div>
-            
+          <div class="row qr-box">
             <div>
-            <h4> <%= @event.title %> </h4>
-            <h4><%= @booking.start_date %></h4>
+              <p><%= @event.address %></p>      
             </div>
-            
-            <div class="container">
-            <div class="row qr-box">
-                <div>
-                    <p><%= @event.address %></p>      
-                </div>
-            
-                <div class="qr-code" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1QjcJ7T4Av3QDBvYz6tHXg5_KOCs_yh4JQ&usqp=CAU')">
-                </div>
-            </div>
+              
+            <div>
+              <p>Total price: <%= @booking.budget %>€ x <%= @booking.participants %> = <%= @booking.budget * @booking.participants %>€</p>
             </div>
 
-            <div>
-            <%= link_to "See your experiences", dashboard_path %>
+
+            <div class="dot-gray-bg">
+              .
+            </div>
+            <div class="qr-code" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1QjcJ7T4Av3QDBvYz6tHXg5_KOCs_yh4JQ&usqp=CAU')">
             </div>
 
-        </div>
+            <div class="dot-gray-bg">
+              .
+            </div>
+          </div>
         </div>
 
-    </body>
+        <div>
+          <%= link_to "See your experiences", dashboard_path %>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
 </html>
