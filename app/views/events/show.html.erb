@@ -9,14 +9,16 @@
           <p class="details"><%= @event.category.name %></p>
           <p class="details"><%= @event.audience.capitalize %></p>
         </div>
-        <div id="event-description" data-description="<%= @event.description %>">
+        <div>
           <% if @event.description.length > 250 %>
-            <%= truncate(@event.description, length: 250) %>
-            <%= link_to 'Read more', '', class: "read-more" %>
+            <div id="event-description" data-description="<%= @event.description %>">
+              <%= truncate(@event.description, length: 250) %>
+            </div>
+            <div class="read-more">Read more</div>
           <% else %>
             <%= @event.description %>
           <% end %>
-        <div>
+        </div>
       </div>
       <div class="p-3 mt-3">
         <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
