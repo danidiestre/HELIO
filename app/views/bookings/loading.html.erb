@@ -14,14 +14,16 @@
       <div></div>
       <div></div>
     </div>
-    <h6 id="loading-sentence" data-sentences="<%= ["Searching for events in #{@booking.city}", "Searching for events within #{@booking.budget}€", "Searching for events with #{@booking.audiences.first} audience"].to_json %>">
+    <h6 id="loading-sentence" data-sentences="<%= ["Searching for events in #{@booking.city}", "Searching for events within #{@booking.budget}€", "Searching events for #{@booking.audiences.first}"].to_json %>">
       Finding your dream event...
     </h6>
   </div>
 
   <div style="display:none;" id="myDiv" class="animate-bottom">
     <div class="container confirmation">
-      <h4>We succesfully found your perfect surprise event!</h4>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player id="animation" src="https://assets8.lottiefiles.com/packages/lf20_yRlEmx.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay></lottie-player>
+      <h4 class="text-loading">We succesfully found your perfect surprise event!</h4>
       <i class="far fa-check-circle"></i>
       <%= link_to "See events", dashboard_path, class: "button-rounded d-block btn-budget" %>
     </div>

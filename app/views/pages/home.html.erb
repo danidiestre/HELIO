@@ -1,7 +1,7 @@
 <div class="home-banner">
   <div class= "text-home pl-4">
     <h1>Discover surprise cultural experiences</h1>
-    <h4>Have all details 24h before it starts</h4>
+    <h4 class="text-align-left">Have all details 24h before it starts</h4>
   </div>
   <div class="container">
     <div class="row ">
@@ -36,7 +36,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="container pb-4">
@@ -108,7 +107,7 @@
                         <%= '<i class="fas fa-star fa-xs"></i>'.html_safe * r.rating %>
                       </div>
                   </div>
-                    <p><%= r.description.truncate(75, omission: '...')  %></p>
+                    <p><%= r.description.truncate(60, omission: '...')  %></p>
                 </div>
               </div>
             </div>
@@ -118,6 +117,7 @@
         <div class="col-12 mt-3 w-100">
           <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 " %>
         </div>
+    </div>
   </div>
 </div>
 <%= render "shared/footer"  %>

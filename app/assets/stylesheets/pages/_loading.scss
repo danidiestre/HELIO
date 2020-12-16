@@ -91,7 +91,8 @@
 }
 
 .fa-check-circle {
-  font-size: 60px;
+  font-size: 80px;
+  color: $primary;
   margin-top: 16px;
 }
 
@@ -100,12 +101,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 168px;
+  margin-top: 190px;
 }
 
-h4 {
+.text-loading {
   text-align: center;
   display: flex;
   text-align: center;
+  z-index: 10;
+}
+
+#animation {
+  position: fixed;
+  top: 0;
 }
 
