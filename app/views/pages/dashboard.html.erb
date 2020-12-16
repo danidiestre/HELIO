@@ -52,7 +52,7 @@
                     <div class="ml-3 flex-grow-1">
                       <h5 class="mb-3"><%= link_to booking.iteration.event.title.truncate(24), event_path(booking.iteration.event) %></h5>
                       <% if booking.review.nil?%>
-                      <%= link_to "Write a review", new_booking_review_path(booking), class: "button-rounded" %>
+                      <%= link_to "Write a review", new_booking_review_path(booking), class: "link-review" %>
                       <% end %>
                     </div>
                   </div>
