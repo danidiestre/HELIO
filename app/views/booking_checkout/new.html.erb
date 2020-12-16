@@ -1,26 +1,38 @@
 <div class="d-flex justify-content-around background">
   <div class="general-card summary">
-    <h2>Order Summary</h2>
-    <p>Your event will be happening between the <%= @booking.start_date %> and <%= @booking.end_date %> in <%= @booking.city%>.</p>
-    <div class="d-flex language">
-      <p>Language preferences:&nbsp;</p>
-      <% @booking.languages.each do |l|  %>
-        <%= l.capitalize %>
-      <% end %>
+    <h2 class="py-4">Order Summary</h2>
+    <div class="d-flex my-3">
+      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+      <div class="info pl-2">
+        <h5>Between</h5>
+        <p><%= @booking.start_date %> and <%= @booking.end_date %></p>
+      </div>
     </div>
-    <div class="d-flex audience">
-      <p>Audience type:&nbsp;</p>
-      <% @booking.audiences.each do |a| %>
-        <%= a.capitalize %>
-      <% end %>
+    <div class="d-flex my-3">
+      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+      <div class="info pl-2">
+        <h5>City:</h5>
+        <p><%= @booking.city%></p>
+      </div>
     </div>
-    <div >
-      <p>Total price:&nbsp; <%= @booking.budget %>€ x <%= @booking.participants %> =&nbsp;<%= @booking.budget * @booking.participants %>€</p>
+    <div class="d-flex my-3">
+      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+      <div class="info pl-2">
+        <h5>Languages:</h5>
+        <p><%= @booking.languages.join("&nbsp;or&nbsp;").html_safe  %></p>
+      </div>
     </div>
-    <p>To finalize your order, please proceed to payment.</p>
-    <p>Further info will follow 24h before your event. Until then, enjoy the suspence!</p>
+    <div class="d-flex my-3">
+      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+      <div class="info pl-2">
+        <h5>Audience:</h5>
+        <p><%= @booking.audiences.first %></p>
+      </div>
+    </div>
+    <h3 class="p-3">Total price: <%= @booking.budget * @booking.participants %>€</h3>
   </div>
 </div>
+
 <button class= "button-rounded d-block btn-budget pay-btn">
   PAY
 </button>
