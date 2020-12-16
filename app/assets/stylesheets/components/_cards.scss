@@ -9,6 +9,7 @@
   height: 140px;
   padding: 24px;
   padding-top: 30px;
+  background-color: white;
 }
 
 .steps {
@@ -60,6 +61,7 @@
   height: 140px;
   position: relative;
   margin: 8px 0;
+  background-color: white;
 }
 
 .numbers {
@@ -72,7 +74,7 @@
 }
 
 .fa-star {
-  color:#01A0BA;
+  color:grey;
 }
 
 .fa-user-check {
@@ -139,6 +141,7 @@ input:checked + label {
 }
 .countdown.soon{
   background-color: $primary;
+  width: 150px;
 }
 .text-countdown-card {
   padding: 10px;

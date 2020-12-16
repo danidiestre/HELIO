@@ -3,6 +3,8 @@ import { Controller } from "stimulus"
 export default class extends Controller {
     static targets = [ "listItems" ]
 
+    
+
     filter(e) {
         if (this.categories.includes(e.target.dataset.category)){
             this.categories = this.categories.filter((value) => {

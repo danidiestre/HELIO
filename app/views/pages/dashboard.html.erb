@@ -27,10 +27,10 @@
                   <div class="card-product-info">
                     <% if booking.event_is_tomorrow? %>
                       <h5><%= link_to booking.iteration.event.title, event_path(booking.iteration.event) %></h5>
-                      <p>less than 24 hours for your Helio experience!</p>
+                      <%=link_to "less than 24 hours for your Helio experience!", booking_path(booking, format: :pdf) %>
                     <% else %>
                       <h5>Surprise, surprise!</h5>
-                      <%=link_to "Time until your next Helio experience!", event_iteration_path(booking.iteration.event, booking.iteration) %>
+                      "Time until your next Helio experience!"
                     <% end %>
                   </div>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="ml-3 flex-grow-1">
                       <h5 class="mb-3"><%= link_to booking.iteration.event.title.truncate(24), event_path(booking.iteration.event) %></h5>
                       <% if booking.review.nil?%>
-                      <%= link_to "Write a review", new_booking_review_path(booking), class: "button-rounded" %>
+                      <%= link_to "Write a review  ", new_booking_review_path(booking) %><i class="fas fa-pencil-alt"></i>
                       <% end %>
                     </div>
                   </div>

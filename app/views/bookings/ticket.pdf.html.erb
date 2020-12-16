@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <%= wicked_pdf_stylesheet_link_tag "application" -%>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper px-2">
+        <div class="ticket-picture mt-4" style="background-image: url(<%= cl_image_path iteration.event.photo.key %>)">
+        </div>
+
+        <div class="mt-5">
+          <h1> <%= event.title.capitalize %> </h1>
+          <h2><%= booking.start_date %></h2>
+        </div>
+
+        <div class="dot-gray-bg">
+          .
+        </div>
+            
+        <div class="container">
+          <div class="row qr-box">
+
+            <div class="dot-black">
+              :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            </div>
+
+            <div class="mt-4">
+              <h3><%= event.address %></h3>      
+            </div>
+
+            <div class="dot-gray-bg">
+              .
+            </div>
+              
+            <div>
+              <h3>Total price: <%= booking.budget %>€ x <%= booking.participants %> = <%= booking.budget * booking.participants %>€</h3>
+            </div>
+
+            <div class="dot-gray-bg">
+              .
+            </div>
+
+            
+           <div class="dot-black">
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+           </div>
+
+            <div class="qr-code my-5" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1QjcJ7T4Av3QDBvYz6tHXg5_KOCs_yh4JQ&usqp=CAU')">
+            </div>
+
+            <div class="dot-gray-bg">
+              .
+            </div>
+
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
