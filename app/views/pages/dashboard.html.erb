@@ -27,10 +27,12 @@
                   <div class="card-product-info">
                     <% if booking.event_is_tomorrow? %>
                       <h5><%= link_to booking.iteration.event.title, event_path(booking.iteration.event) %></h5>
-                      <%=link_to "less than 24 hours for your Helio experience!", booking_path(booking, format: :pdf) %>
+                      <p><%=link_to "See ticket", booking_path(booking, format: :pdf), target: "_blank" %></p>
+
                     <% else %>
                       <h5>Surprise, surprise!</h5>
-                      "Time until your next Helio experience!"
+                      <p>"Time until your next Helio experience!"</p>
+
                     <% end %>
                   </div>
                 </div>
