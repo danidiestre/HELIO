@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "helio_ticket",  template: "bookings/ticket.pdf.html.erb"   # Excluding ".pdf" extension.
+        render pdf: "helio_ticket", template: "bookings/ticket.pdf.html.erb"   # Excluding ".pdf" extension.
       end
     end
   end
