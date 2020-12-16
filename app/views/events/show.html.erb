@@ -9,16 +9,10 @@
           <p class="details"><%= @event.category.name %></p>
           <p class="details"><%= @event.audience.capitalize %></p>
         </div>
-        <div>
+        <div id="event-description" data-description="<%= @event.description %>">
           <% if @event.description.length > 250 %>
             <%= truncate(@event.description, length: 250) %>
-            <%= link_to '...Read more', '', class: "read-more-#{@event.description}" %>
-            <script>
-              $('.read-more-<%= @event.description %>').on('click', function(e) {
-                e.preventDefault()
-                $(this).parent().html('<%= escape_javascript @event.description %>')
-              })
-            </script>
+            <%= link_to 'Read more', '', class: "read-more" %>
           <% else %>
             <%= @event.description %>
           <% end %>
@@ -32,7 +26,7 @@
 
     <h2 class="mt-5 mb-3 title">Reviews</h2>
     <% if @reviews.count == 0 %>
-    <p class="">This event doesn't have any review yet.</p>
+    <p class="">This event doesn't have any reviews yet.</p>
     <% else %>
       <% @reviews.each do |r| %>
         <div class="col-12">

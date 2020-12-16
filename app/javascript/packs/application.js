@@ -32,6 +32,7 @@ import { countDown } from '../functions/countdown';
 import { initMapbox } from '../plugins/init_mapbox';
 import { displaySentences, myFunction } from '../functions/loading';
 import { initSlider } from '../plugins/init_rangeslider';
+import { readMore } from '../functions/truncate';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -41,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   displaySentences();
   myFunction();
+  readMore();
   initSlider();
 });
 
