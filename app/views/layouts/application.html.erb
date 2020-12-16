@@ -6,10 +6,10 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= yield(:head) %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.css" integrity="sha512-FkNnPJevAkIHB3NqUiMadWNcoMcOCPQUMyF55JeAFZmPcSR6wK6TgZ0qL6bMrRqGNaaVS8CAwBYceORhdTUILQ==" crossorigin="anonymous" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fda247359355a00124f7dd7&product=inline-share-buttons" async="async"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fda247359355a00124f7dd7&product=inline-share-buttons" async="async" data-turbolinks-track="reload"></script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 

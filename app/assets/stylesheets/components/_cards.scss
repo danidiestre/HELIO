@@ -130,7 +130,8 @@ input:checked + label {
 
 .countdown {
   height: 100%;
-  width: 130px;
+  width: 100px;
+  min-width: 100px;
   display:block;
   justify-content: center;
   text-align: center;
@@ -141,7 +142,6 @@ input:checked + label {
 }
 .countdown.soon{
   background-color: $primary;
-  width: 150px;
 }
 .text-countdown-card {
   padding: 10px;

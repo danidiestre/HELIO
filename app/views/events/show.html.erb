@@ -1,4 +1,6 @@
-
+<%= content_for(:head) do %>
+  <meta name="turbolinks-visit-control" content="reload">
+<% end %>
 
 <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')"></div>
 <div class="container bg-white">
@@ -12,6 +14,7 @@
           <p class="details"><%= @event.audience.capitalize %></p>
         </div>
         <p><%= @event.description %></p>
+
         <div class="sharethis-inline-share-buttons py-2"></div>
       </div>
       <div class="p-3 mt-3">
