@@ -30,9 +30,9 @@
       <div id="map" class="map-show-page" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
 
-    <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
+    <h2 class="mt-5 mb-3 title">Reviews</h2>
     <% if @reviews.count == 0 %>
-    <p class="ml-3">This event doesn't have any review yet.</p>
+    <p class="">This event doesn't have any review yet.</p>
     <% else %>
       <% @reviews.each do |r| %>
         <div class="col-12">
