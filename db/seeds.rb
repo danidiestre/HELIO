@@ -107,7 +107,7 @@ event_2 = Event.create(
   category_id: Category.find_by(name:'Theatre').id
 )
 
-event_2_photo = URI.open('https://images.unsplash.com/photo-1506882741710-98761c574b48?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+event_2_photo = URI.open('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80')
 event_2.photo.attach(io: event_2_photo, filename: 'event2.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_2.id, price: 18, start_date: DateTime.new(2021,1,25,17))
@@ -124,7 +124,7 @@ event_3 = Event.create(
   category_id: Category.find_by(name:'Magic').id
 )
 
-event_3_photo = URI.open('https://images.unsplash.com/photo-1508310621848-9b567e9621bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1017&q=80')
+event_3_photo = URI.open('https://lh3.googleusercontent.com/proxy/XwTx2qLCml6owq-ipIwjzmrrbAesTFPd8olv4BMHEVTRQCnei4Pfg_Qvoagdqtu9nG-sXbBFNIH-FTLhqrH48rRJkbtW3Rh6eVx6bCb_z7_Q6FIQXnqHAKZcliMRrQ')
 event_3.photo.attach(io: event_3_photo, filename: 'event3.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_3.id, price: 31, start_date: DateTime.new(2021,1,10,17))
@@ -141,7 +141,7 @@ event_4 = Event.create(
   category_id: Category.find_by(name:'Monologues').id
 )
 
-event_4_photo = URI.open('https://images.unsplash.com/photo-1453946610176-6be21147c400?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+event_4_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/2/8/8/309/949457/vertic_880_0.jpg')
 event_4.photo.attach(io: event_4_photo, filename: 'event4.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_4.id, price: 8, start_date: DateTime.new(2021,1,5,17))
@@ -158,7 +158,7 @@ event_5 = Event.create(
   category_id: Category.find_by(name:'Improv').id
 )
 
-event_5_photo = URI.open('https://images.unsplash.com/photo-1484876065684-b683cf17d276?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
+event_5_photo = URI.open('https://www.shbarcelona.es/blog/es/wp-content/uploads/2015/12/teatro-de-improvisaci%C3%B3n-en-barcelona-2.jpg')
 event_5.photo.attach(io: event_5_photo, filename: 'event5.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_5.id, price: 8, start_date: DateTime.new(2021,2,5,17))
@@ -174,7 +174,7 @@ event_6 = Event.create(
   audience: 'adults',
   category_id: Category.find_by(name:'Dance').id
 )
-event_6_photo = URI.open('https://images.unsplash.com/photo-1603187405780-3becb5aee688?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=683&q=80')
+event_6_photo = URI.open('https://www.65ymas.com/uploads/s1/22/50/3/teatro-flamenco-de-madrid-sebastia-n-rocotovich-teatro-flamenco-madrid.jpeg')
 event_6.photo.attach(io: event_6_photo, filename: 'event6.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_6.id, price: 18, start_date: DateTime.new(2020,12,10,19))
@@ -192,7 +192,7 @@ event_7 = Event.create(
   category_id: Category.find_by(name:'Concerts').id
 )
 
-event_7_photo = URI.open('https://images.unsplash.com/photo-1553236152-72dd67ab92ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+event_7_photo = URI.open('https://static2.ideal.es/www/multimedia/201809/22/media/granada/GALERIA-sergio/PMZ210918sergio_dalma%200272.jpg')
 event_7.photo.attach(io: event_7_photo, filename: 'event7.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_7.id, price: 25, start_date: DateTime.new(2020,12,17,19))
@@ -209,7 +209,7 @@ event_8 = Event.create(
   category_id: Category.find_by(name:'Show + Dinner').id
 )
 
-event_8_photo = URI.open('https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+event_8_photo = URI.open('https://res.cloudinary.com/tf-lab/image/upload/restaurant/678e947e-ff4e-4a7d-bb94-2fbd505115d3/434d46da-8b19-4e68-baf5-853033ac2184.jpg')
 event_8.photo.attach(io: event_8_photo, filename: 'event8.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_8.id, price: 25, start_date: DateTime.new(2020,12,10,19))
@@ -226,7 +226,7 @@ event_9 = Event.create(
   category_id: Category.find_by(name:'Festivals').id
 )
 
-event_9_photo = URI.open('https://images.unsplash.com/photo-1521489507529-79e5c49b86de?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80')
+event_9_photo = URI.open('https://lh3.googleusercontent.com/proxy/RmKN-P-XaMYfv4GEG6RR7rSrwmydNs7mrPcmVaXIv4hll_jYB3lXHsFFpxc3Ogm7gqL4TWK9khhirRtEl4RFOpfClIhv_LpHF-IcpwXwRmh_4xlt9gq32jXbXr7nONaN4Uf48MoHrA1utC2oMN-EIR01WQ')
 event_9.photo.attach(io: event_9_photo, filename: 'event9.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_9.id, price: 45, start_date: DateTime.new(2020,12,20,19))
@@ -243,7 +243,7 @@ event_10 = Event.create(
   category_id: Category.find_by(name:'Classical Music + Opera').id
 )
 
-event_10_photo = URI.open('https://images.unsplash.com/flagged/photo-1576081823157-b020106d528f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80')
+event_10_photo = URI.open('https://www.esmadrid.com/sites/default/files/eventos/eventos/callas.jpg')
 event_10.photo.attach(io: event_10_photo, filename: 'event10.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_10.id, price: 69, start_date: DateTime.new(2020,12,19,19))
