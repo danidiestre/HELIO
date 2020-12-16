@@ -281,7 +281,7 @@ p "Created #{User.count} users"
 
 ####################################################
 
-Booking_1 = Booking.create(
+booking_1 = Booking.create(
   user_id: rocio.id,
   iteration_id: Iteration.all.sample.id,
   start_date: DateTime.new(2020,12,10,19),
@@ -294,8 +294,10 @@ Booking_1 = Booking.create(
   city: "Barcelona",
   iteration: recent_iteration
 )
+booking_1 = URI.open('https://res.cloudinary.com/brunascomor/image/upload/v1608115297/qr-helio.png')
+booking_1.photo.attach(io: booking_1_qr, filename: 'booking_qr_1.jpg', content_type: 'image/jpg')
 
-Booking_2 = Booking.create(
+booking_2 = Booking.create(
   user_id: bruna.id,
   iteration_id: Iteration.all.sample.id,
   start_date: DateTime.new(2020,12,18,19),
@@ -307,8 +309,10 @@ Booking_2 = Booking.create(
   exclude_category_ids: nil,
   city: "Barcelona",
 )
+booking_2 = URI.open('https://res.cloudinary.com/brunascomor/image/upload/v1608115297/qr-helio.png')
+booking_2.photo.attach(io: booking_2_qr, filename: 'booking_qr_2.jpg', content_type: 'image/jpg')
 
-Booking_3 = Booking.create(
+booking_3 = Booking.create(
   user_id: dani.id,
   iteration_id: Iteration.all.sample.id,
   start_date: DateTime.new(2020,12,12,19),
@@ -320,6 +324,9 @@ Booking_3 = Booking.create(
   exclude_category_ids: nil,
   city: "Barcelona",
 )
+
+booking_3 = URI.open('https://res.cloudinary.com/brunascomor/image/upload/v1608115297/qr-helio.png')
+booking_3.photo.attach(io: booking_3_qr, filename: 'booking_qr_3.jpg', content_type: 'image/jpg')
 
 p "Created #{Booking.count} bookings"
 
@@ -347,6 +354,10 @@ Review_3 = Review.create(
 p "Created #{Review.count} reviews"
 
 
+###################################################
+
+qr = URI.open('https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+event_8.photo.attach(io: event_8_photo, filename: 'event8.jpg', content_type: 'image/jpg')
 
 
 ####################################################

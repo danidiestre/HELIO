@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="form-wrapper px-2">
+    <div class="event-card mt-4" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)"></div>
+    
+    <div>
+      <h4> <%= @event.title %> </h4>
+      <h4><%= @booking.start_date %></h4>
+    </div>
+      
+    <div>
+      <p><%= @event.address %></p>      
+    </div>
+
+    <div>
+      <%= link_to "See your experiences", dashboard_path %>
+    </div>
+
+    <div class="event-card mt-4" style="background-image: url(<%= cl_image_path @iteration.event.photo.key %>)"></div>
+
+  </div>
+</div>
+
+<%= render "shared/footer"  %>
