@@ -1,0 +1,33 @@
+
+.dot-black {
+    color: black;
+  }
+  
+  .dot-white {
+    color: white;
+  }
+  
+  .dot-gray-bg {
+    color: #F4F4F4;
+  }
+
+  .qr-code {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .qr-box {
+    justify-content: space-between;
+  }
+  
+  .ticket-picture {
+    background-size: cover;
+    height: 400px;
+  }
+
+  .form-wrapper {
+    min-height: calc(100vh - 190px);
+    display: flex;
+    flex-direction: column;
+}
