@@ -1,5 +1,5 @@
 .rangeslider__fill {
-  background: #00A0BA;
+  background: $primary;
   height: 10px;
 }
 .rangeslider {
@@ -23,8 +23,6 @@
   text-align: center;
   padding: 30px 10px 40px 0px;
 }
-
-
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
