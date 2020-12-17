@@ -27,5 +27,6 @@ class Booking < ApplicationRecord
     iterations = iterations.joins(:event).where(events: { language: languages  })
     iterations = iterations.joins(:event).where(events: { audience: audiences  })
     self.iteration = iterations.sample || Iteration.all.sample
+    self.total_price_cents = iteration.price * participants * 100
   end
 end

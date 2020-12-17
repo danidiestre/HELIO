@@ -1,0 +1,5 @@
+meta_product_name: "Helio App"
+meta_title: "Find new events - Discover your culture"
+meta_description: "Helio is a mobile app that allows young professionals to discover new and unique experiences around them."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@helioevents"   # required for Twitter Cards
