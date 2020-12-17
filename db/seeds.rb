@@ -124,7 +124,7 @@ event_3 = Event.create(
   category_id: Category.find_by(name:'Magic').id
 )
 
-event_3_photo = URI.open('https://lh3.googleusercontent.com/proxy/XwTx2qLCml6owq-ipIwjzmrrbAesTFPd8olv4BMHEVTRQCnei4Pfg_Qvoagdqtu9nG-sXbBFNIH-FTLhqrH48rRJkbtW3Rh6eVx6bCb_z7_Q6FIQXnqHAKZcliMRrQ')
+event_3_photo = URI.open('https://www.metropoliabierta.com/uploads/s1/66/21/13/magopop_9_1200x480.jpeg')
 event_3.photo.attach(io: event_3_photo, filename: 'event3.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_3.id, price: 31, start_date: DateTime.new(2020,12,19,17))
@@ -177,8 +177,8 @@ event_6 = Event.create(
 event_6_photo = URI.open('https://www.65ymas.com/uploads/s1/22/50/3/teatro-flamenco-de-madrid-sebastia-n-rocotovich-teatro-flamenco-madrid.jpeg')
 event_6.photo.attach(io: event_6_photo, filename: 'event6.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_6.id, price: 18, start_date: DateTime.new(2020,12,20,19))
-Iteration.create(event_id: event_6.id, price: 20, start_date: DateTime.new(2020,12,20,24))
+Iteration.create(event_id: event_6.id, price: 18, start_date: DateTime.new(2020,12,17,19))
+Iteration.create(event_id: event_6.id, price: 20, start_date: DateTime.new(2020,12,18,24))
 
 #########################
 
@@ -226,7 +226,7 @@ event_9 = Event.create(
   category_id: Category.find_by(name:'Festivals').id
 )
 
-event_9_photo = URI.open('https://lh3.googleusercontent.com/proxy/RmKN-P-XaMYfv4GEG6RR7rSrwmydNs7mrPcmVaXIv4hll_jYB3lXHsFFpxc3Ogm7gqL4TWK9khhirRtEl4RFOpfClIhv_LpHF-IcpwXwRmh_4xlt9gq32jXbXr7nONaN4Uf48MoHrA1utC2oMN-EIR01WQ')
+event_9_photo = URI.open('https://www.cadenadial.com/wp-content/uploads/2018/10/india-si-601x300.png')
 event_9.photo.attach(io: event_9_photo, filename: 'event9.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_9.id, price: 45, start_date: DateTime.new(2020,12,20,19))
@@ -254,6 +254,128 @@ p "Also created #{Event.count} Events with #{Iteration.count} Iterations"
 
 
 ####################################################
+
+event_11 = Event.create(
+  title:'Tinder Sorpresa - Andreu Casanova, en Madrid',
+  description: "Hoy en día ligar ya no es lo que era… ¡es mucho mejor! Andreu Casanova te invita a realizar un safari cómico por toda la selva de aplicaciones para ligar que están tan de moda en los últimos tiempos. Tinder Sorpresa es un desternillante monólogo que cambiará tu concepto sobre las apps de ligoteo. ¡No te cansarás de reír con él! ¡No te hagas el sueco! Da igual que estés soltero o en pareja; seguro que sabes cómo funciona esta nueva forma de buscar el amor (o lo que surja). No te preocupes: si todavía tienes dudas, Andreu Casanova, a través de sus propias experiencias vitales, te explicará sus anécdotas más divertidas y resolverá las cuestiones más inquietantes del ligoteo virtual. Andreu Casanova regresa a los escenarios después del éxito que alcanzó con la primera y la segunda parte de Cincuenta sombras de Andreu. ¡Haz match y acude a esta cita con el humor en Arlequín Gran Vía Teatro!",
+  language: 'spanish',
+  address: 'C/ San Bernardo, 5 (Madrid)',
+  audience: 'Adults',
+  category_id: Category.find_by(name:'Monologues').id
+)
+
+event_11_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/4/7654/1123422/vertic_880_0.jpg')
+event_11.photo.attach(io: event_11_photo, filename: 'event11.jpg', content_type: 'image/jpg')
+
+Iteration.create(event_id: event_11.id, price: 20, start_date: DateTime.new(2020,12,20,19))
+Iteration.create(event_id: event_11.id, price: 30, start_date: DateTime.new(2020,12,21,20))
+
+event_12 = Event.create(
+  title:'La Jaula de las locas',
+  description: "Ven a descubrir La jaula de las locas, dirigida y protagonizada por Àngel Llàcer. No te pierdas esta versión de uno de los musicales más influyentes de la historia. ¡Ya puedes comprar tus entradas antes de la última función del 24 de febrero. Es improrrogable! ¡La vida empieza hoy! La apacible vida de pareja de Albin y Georges, propietarios del club nocturno La Cage aux Folles de Saint Tropez, se ve totalmente alterada por una noticia inesperada. Jean Michel, el hijo de Georges, se va a casar con la hija de un diputado ultraconservador, acérrimo defensor de los valores más tradicionales en la vida familiar. El encuentro explosivo entre dos familias tan distintas desata una divertidísima comedia llena de amor y de situaciones delirantes. Inspirada en la popular obra de Jean Poiret, el musical es fruto del talento de Jerry Herman y Harvey Fierstein. Con nueve premios Tony y tres Drama Desk Award, La Jaula de las Locas se ha representado ininterrumpidamente por todo el mundo desde su estreno. Esta temporada, llega al Teatro Tívoli en una espectacular versión dirigida por Àngel Llàcer y Manu Guix. La Jaula de las Locas es un gran canto a la libertad individual y colectiva. Una atrevida puesta en escena, sorprendentes coreografías, exuberante diseño de vestuario y una temática universal, lo convierten en uno de los musicales más aclamados de la historia. Cada función transforma La Jaula en una fiesta, una celebración de la joie de vivre que se sabe cómo empieza, ¡pero nunca como acaba!",
+  language: 'spanish',
+  address: 'Caspe, 12 (Barcelona)',
+  audience: 'Adults',
+  category_id: Category.find_by(name:'Dance').id
+)
+
+event_12_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/1/2601/901036/vertic_880_0.jpg')
+event_12.photo.attach(io: event_12_photo, filename: 'event12.jpg', content_type: 'image/jpg')
+
+Iteration.create(event_id: event_12.id, price: 20, start_date: DateTime.new(2020,12,21,20))
+Iteration.create(event_id: event_12.id, price: 30, start_date: DateTime.new(2020,12,22,20))
+
+
+event_13 = Event.create(
+  title:'Escape Room, en Madrid',
+  description: "No te pierdas espectáculos de la talla de Escape Room en el Teatro Fígaro. Escape Room, una comedia de Joel Joan y Héctor Claramunt, con Antonio Molero, Leo Rivera, Kira Miró y Marina San José. Salir de Escape Room no será nada fácil y el juego se convertirá en un infierno que pondrá a prueba la amistad hasta límites insospechados. Aunque no lo parezca ... ¡Una comedia de miedo! ",
+  language: 'spanish',
+  address: 'Doctor Cortezo, 5 (Madrid)',
+  audience: 'Adults',
+  category_id: Category.find_by(name:'Theatre').id
+)
+
+event_13_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/4/0564/1084229/vertic_880_0.jpg')
+event_13.photo.attach(io: event_13_photo, filename: 'event13.jpg', content_type: 'image/jpg')
+
+Iteration.create(event_id: event_13.id, price: 20, start_date: DateTime.new(2020,12,24,20))
+Iteration.create(event_id: event_13.id, price: 30, start_date: DateTime.new(2020,12,25,20))
+
+
+event_14 = Event.create(
+  title:'Turandot, Gran Liceu',
+  description: "Exactly twenty years after the reopening of the Liceu (October 7, 1999) we collaborated on the Opera Turandot by Franc Aleu, one of the best operas of all time, the last and posthumous opera by Giacomo Puccini. We’ve produced several LED costumes designed by Chu Uroz and also we’ve been taking care of the whole Audivisual technical setup and other multimedia elements like Robots arms controlled with a custom app developed adhoc. A visually fascinating spectacle in his scenographic conception, Franc Aleu’s debut as a stage director, and with a self-illuminated costume with LED technology, where light plays a fundamental role in the service of a late-day and innovative opera in many aspects, achieved through a great technological deployment in which robotics, visuals and interactivity intertwine to narrate the bloodthirsty legend of Turandot. The “ice princess” returns to the Rambla theater under the skin of the great Iréne Theorin in the first cast and Lise Lindstrom in the second. Next to her, Jorge de León, Gregory Kunde, Ermonela Jaho and Anita Hartig in two luxury deals",
+  language: 'spanish',
+  address: 'La Rambla, 51 (Barcelona)',
+  audience: 'Adults',
+  category_id: Category.find_by(name:'Classical Music + Opera').id
+)
+
+event_14_photo = URI.open('https://eyesbergstudio.files.wordpress.com/2019/12/zentauroepp50295998-icult-turandot-liceu191007230028-1570482203442.jpg')
+event_14.photo.attach(io: event_14_photo, filename: 'event14.jpg', content_type: 'image/jpg')
+
+Iteration.create(event_id: event_14.id, price: 20, start_date: DateTime.new(2020,12,21,20))
+Iteration.create(event_id: event_14.id, price: 30, start_date: DateTime.new(2020,12,18,20))
+
+
+event_15 = Event.create(
+  title:'Carlos Latre - One Show Man',
+  description: "El mejor imitador del país, Carlos Latre, comienza su gira presentando One Man Show, un monólogo que hace repaso de toda la actualidad del país a través de brillantes imitaciones de personajes del momento. ¡Reserva ya tu sitio en el Teatre Coliseum! Carlos Latre consigue, en tan solo 75 minutos, imitar hasta 100 personajes distintos. ¡Una auténtica locura! Messi, Pedro Sánchez, Salvador Illa… ¡Y como no, también al personaje más mediático del momento, Fernando Simón! Carlos Latre se desdobla en un sinfín de personas creando parodias inimaginables, que mantiene al espectador al borde del colapso. ¡Déjate sorprender! Vive el monólogo de Carlos Latre, un verdadero espectáculo que te llenará de energía, creatividad y buen rollo.",
+  language: 'spanish',
+  address: 'Gran Vía, 595 (Barcelona)',
+  audience: 'Adults',
+  category_id: Category.find_by(name:'Theatre').id
+)
+
+event_15_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/5/2040/1159245/vertic_880_0.jpg')
+event_15.photo.attach(io: event_15_photo, filename: 'event15.jpg', content_type: 'image/jpg')
+
+Iteration.create(event_id: event_15.id, price: 20, start_date: DateTime.new(2020,12,18,22))
+Iteration.create(event_id: event_15.id, price: 30, start_date: DateTime.new(2020,12,19,17))
+
+
+
+
+event_16 = Event.create(
+  title:'La Función que sale mal',
+  description: "El mejor imitador del país, Carlos Latre, comienza su gira presentando One Man Show, un monólogo que hace repaso de toda la actualidad del país a través de brillantes imitaciones de personajes del momento. ¡Reserva ya tu sitio en el Teatre Coliseum! Carlos Latre consigue, en tan solo 75 minutos, imitar hasta 100 personajes distintos. ¡Una auténtica locura! Messi, Pedro Sánchez, Salvador Illa… ¡Y como no, también al personaje más mediático del momento, Fernando Simón! Carlos Latre se desdobla en un sinfín de personas creando parodias inimaginables, que mantiene al espectador al borde del colapso. ¡Déjate sorprender! Vive el monólogo de Carlos Latre, un verdadero espectáculo que te llenará de energía, creatividad y buen rollo.",
+  language: 'spanish',
+  address: 'Gran Vía, 595 (Barcelona)',
+  audience: 'Adults',
+  category_id: Category.find_by(name:'Theatre').id
+)
+
+event_16_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/5/2040/1159245/vertic_880_0.jpg')
+event_16.photo.attach(io: event_16_photo, filename: 'event15.jpg', content_type: 'image/jpg')
+
+Iteration.create(event_id: event_16.id, price: 20, start_date: DateTime.new(2020,12,18,22))
+Iteration.create(event_id: event_16.id, price: 30, start_date: DateTime.new(2020,12,19,17))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################################################
 
 
 avatar_ana = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQES3TPGourBwg/profile-displayphoto-shrink_800_800/0/1517466023378?e=1612396800&v=beta&t=rrMXlDr6agrpQS0_YnrFKHCxuWHfpaxhW2sDoMtiVR4')
