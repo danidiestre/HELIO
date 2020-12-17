@@ -9,6 +9,7 @@
   height: 140px;
   padding: 24px;
   padding-top: 30px;
+  background-color: white;
 }
 
 .steps {
@@ -60,6 +61,7 @@
   height: 140px;
   position: relative;
   margin: 8px 0;
+  background-color: white;
 }
 
 .numbers {
@@ -67,12 +69,12 @@
   color:#01A0BA;
   font-weight: bold;
   position: absolute;
-  top: 20px;
+  top: 12px;
   right: 18px;
 }
 
-.fa-star {
-  color:#01A0BA;
+.star {
+  color: $primary;
 }
 
 .fa-user-check {
@@ -81,8 +83,7 @@
 }
 
 .review-text {
-  padding: 22px;
-  padding-top: 28px;
+  padding: 25px 20px;
   position: absolute;
   left: 64px;
   top: 6px;
@@ -95,6 +96,10 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.user-name {
+  margin-bottom: 4px;
 }
 
 // Link to see al past events & all reviews
@@ -128,7 +133,8 @@ input:checked + label {
 
 .countdown {
   height: 100%;
-  width: 130px;
+  width: 100px;
+  min-width: 100px;
   display:block;
   justify-content: center;
   text-align: center;
@@ -139,7 +145,6 @@ input:checked + label {
 }
 .countdown.soon{
   background-color: $primary;
-  width: 155px;
 }
 .text-countdown-card {
   padding: 10px;

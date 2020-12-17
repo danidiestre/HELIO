@@ -1,5 +1,5 @@
 .show-banner{
-  height: 200px;
+  height: 35vh;
   background-size: cover;
 }
 
@@ -16,3 +16,24 @@
 .past-event {
   min-height: calc(100vh - 160px);
 }
+
+.title-event {
+  text-align: center;
+}
+
+.details {
+  background-color: white;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  padding: 4px 5%;
+}
+
+.read-more {
+  color: $primary;
+}
+
+.map-show-page {
+  width: 100vw;
+  height: 50vh;
+}
+

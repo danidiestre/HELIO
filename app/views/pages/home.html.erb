@@ -18,7 +18,7 @@
           <div class="tab-content p-3" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
+                <%= f.input :city, label: "Which City?", collection: ["Barcelona","Madrid"] %>
                 <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
                 <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
               <% end %>
@@ -68,10 +68,10 @@
         <p>Have a great time with you and your special ones!</p>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 mt-3">
       <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
     </div>
-    <h2 class="mt-5 mb-3 ml-3 title">Past Events</h2>
+    <h2 class="mt-5 mb-3 ml-4 title">Past Events</h2>
     <div class="col-12">
         <% i = 0 %>
         <% @events.each do |event| %>
@@ -102,19 +102,19 @@
                 </div>
                 <div class="review-text">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h6 class="mb-0"> <strong><%= r.booking.user.first_name %></strong></h6>
-                      <div class="numbers">
-                        <%= '<i class="fas fa-star fa-xs"></i>'.html_safe * r.rating %>
-                      </div>
+                    <h6 class="user-name"><strong><%= r.booking.user.first_name %></strong></h6>
+                    <div class="numbers">
+                      <%= '<i class="fas fa-star fa-xs star"></i>'.html_safe * r.rating %>
+                    </div>
                   </div>
-                    <p><%= r.description.truncate(60, omission: '...')  %></p>
+                  <p><%= r.description.truncate(60, omission: '...') %></p>
                 </div>
               </div>
             </div>
           </div>
         <% end %>
 
-        <div class="col-12 mt-3 w-100">
+        <div class="col-12 mt-5 w-100">
           <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 " %>
         </div>
     </div>

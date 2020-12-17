@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :booking_options, only: [:new, :create]
   resources :booking_budgets, only: [:new, :create]
 
-  resources :bookings, only: [:create] do
+  resources :bookings, only: [:create, :show] do
     resources :booking_checkout, only: [:new, :create]
     resources :reviews, only: [:new, :create]
     member do
@@ -18,9 +18,8 @@ Rails.application.routes.draw do
   end
 
   resources :events, only: [:show, :index] do
-    resources :iterations, only: :show
-  mount StripeEvent::Engine, at: '/stripe-webhooks'
   end
-  
+
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 
 end

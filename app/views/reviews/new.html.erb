@@ -1,11 +1,31 @@
-<div class="container mt-4 mb-5">
-  <div class="form mt-3">
-<h1>Rate your Helio experience!</h1>
-<%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :rating, collection: 0..5 %>
-  <%= f.input :description %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
-</div>
-</div>
+<div class="container reviews-new" data-controller="reviews">
+  <div class="row">
+    <div class="col-12 mt-4">
+      <div>
+        <h2>Give a review of your Helio experience!</h2>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= simple_form_for [@booking, @review] do |f| %>
 
+        <%= f.input :rating, as: :hidden, value: 3 %>
+
+        <div class="my-3">
+          <h4>Rate your experience:</h4>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="1" data-reviews-target="stars"></span>
+            <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="2" data-reviews-target="stars"></span>
+            <span class="fa fa-star checked" data-action="click->reviews#changeRating" data-value="3" data-reviews-target="stars"></span>
+            <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="4" data-reviews-target="stars"></span>
+            <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="5" data-reviews-target="stars"></span>
+        </div>
+        <div class = "my-3 py-3">
+         <h4><%= f.input :description, as: :text %></h4>
+          <%=  f.submit class: "button-rounded"%>
+          <h4><%= link_to '<i class="fas fa-undo-alt"></i> Back'.html_safe, dashboard_path %></h4>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

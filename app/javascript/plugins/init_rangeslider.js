@@ -1,6 +1,6 @@
 import rangesliderJs from 'rangeslider-js'
 
-const initSlider = () => {
+const initSliders = () => {
   const inputs = document.querySelectorAll('input[type="range"]');
   if (inputs && inputs.length > 0) {
     rangesliderJs.create(inputs,
@@ -17,4 +17,4 @@ const initSlider = () => {
   }
 };
 
-export { initSlider };
+export { initSliders };
