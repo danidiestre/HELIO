@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    background-color: #4ea9e0;
+    color: #2e2e2e;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
@@ -23,18 +23,12 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    border-top: #5c5353 solid 4px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-color: white;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
   }
 
   .rails-default-error-page div.dialog > p {
@@ -51,6 +45,12 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  .gif-position {
+    position: center;
+    width: auto;
+    height: 400px;
+  }
   </style>
 </head>
 
@@ -58,10 +58,15 @@
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+      <h1>Ops, this page does not exist.</h1>
+      <p>Maybe you typed somehting wrong? Maybe we moved it?</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+
+    <div class="gif-position" style="background-image: url(https://crochet.land/wp-content/uploads/2020/12/4041-gif.gif)">
+    </div>
+
+    <p>If you need some help finding your way to an Helio experience, ask us at letsgo@helio.event </p>
   </div>
+
 </body>
 </html>
