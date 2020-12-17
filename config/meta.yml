@@ -1,5 +1,5 @@
-meta_product_name: "Product Name"
-meta_title: "Product name - Product tagline"
-meta_description: "Relevant description"
+meta_product_name: "Helio App"
+meta_title: "Find new events - Discover your culture"
+meta_description: "Helio is a mobile app that allows young professionals to discover new and unique experiences around them."
 meta_image: "cover.png" # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"   # required for Twitter Cards
+twitter_account: "@helioevents"   # required for Twitter Cards
