@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.booking = @booking
     if @review.save
-      redirect_to root_path
+      redirect_to event_path(@booking.iteration.event)
     else
       render :new
 
