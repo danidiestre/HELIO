@@ -58,7 +58,7 @@
 // Reviews card
 
 .review-card {
-  height: 140px;
+  padding: 10px 20px;
   position: relative;
   margin: 8px 0;
   background-color: white;
@@ -68,7 +68,6 @@
   font-size: 20px;
   color:#01A0BA;
   font-weight: bold;
-  position: absolute;
   top: 14px;
   right: 18px;
 }
@@ -90,7 +89,7 @@
 }
 
 .avatar-small {
-  position: absolute;
+
   left: 12px;
   top: 42px;
   width: 60px;
