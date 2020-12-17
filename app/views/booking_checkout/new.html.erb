@@ -1,47 +1,72 @@
-<div class="d-flex justify-content-around background">
-  <div class="general-card summary">
-    <h2 class="py-4">Order Summary</h2>
-    <div class="d-flex my-3">
-      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
-      <div class="info pl-2">
-        <h5>Between</h5>
-        <p><%= @booking.start_date %> and <%= @booking.end_date %></p>
+<div class="container onload='myFunction()'">
+  <div class="loading-page" id="loader">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h6 id="loading-sentence" data-sentences="<%= ["Searching for events in #{@booking.city}", "Searching for events within #{@booking.budget}€", "Searching events for #{@booking.audiences.first}"].to_json %>">
+      Finding your dream event...
+    </h6>
+  </div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+    <div class="d-flex justify-content-around background">
+      <div class="general-card summary">
+        <h2 class="py-4">Order Summary</h2>
+        <div class="d-flex my-3">
+          <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+          <div class="info pl-2">
+            <h5>Between</h5>
+            <p><%= @booking.start_date %> and <%= @booking.end_date %></p>
+          </div>
+        </div>
+        <div class="d-flex my-3">
+          <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+          <div class="info pl-2">
+            <h5>City:</h5>
+            <p><%= @booking.city%></p>
+          </div>
+        </div>
+        <div class="d-flex my-3">
+          <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+          <div class="info pl-2">
+            <h5>Languages:</h5>
+            <p><%= @booking.languages.join("&nbsp;or&nbsp;").html_safe  %></p>
+          </div>
+        </div>
+        <div class="d-flex my-3">
+          <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
+          <div class="info pl-2">
+            <h5>Audience:</h5>
+            <p><%= @booking.audiences.first %></p>
+          </div>
+        </div>
+        <h3 class="p-3">Total price: <%= @booking.iteration.price * @booking.participants %>€</h3>
       </div>
     </div>
-    <div class="d-flex my-3">
-      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
-      <div class="info pl-2">
-        <h5>City:</h5>
-        <p><%= @booking.city%></p>
-      </div>
-    </div>
-    <div class="d-flex my-3">
-      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
-      <div class="info pl-2">
-        <h5>Languages:</h5>
-        <p><%= @booking.languages.join("&nbsp;-&nbsp;").html_safe  %></p>
-      </div>
-    </div>
-    <div class="d-flex my-3">
-      <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
-      <div class="info pl-2">
-        <h5>Audience:</h5>
-        <p><%= @booking.audiences.first %></p>
-      </div>
-    </div>
-    <h3 class="p-3">Total price: <%= @booking.budget * @booking.participants %>€</h3>
+
+    <button class= "button-rounded d-block btn-budget pay-btn">
+      PAY
+    </button>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      const paymentButton = document.querySelector(".pay-btn");
+      paymentButton.addEventListener('click', () => {
+        const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+        stripe.redirectToCheckout({
+          sessionId: '<%= @booking.checkout_session_id %>'
+        });
+      });
+    </script>
   </div>
 </div>
-<input class="button-rounded fixed-button pay-btn" type="submit" value="Pay" name="commit">
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-  const paymentButton = document.querySelector(".pay-btn");
-  paymentButton.addEventListener('click', () => {
-    const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-    stripe.redirectToCheckout({
-      sessionId: '<%= @booking.checkout_session_id %>'
-    });
-  });
-</script>
-
-
