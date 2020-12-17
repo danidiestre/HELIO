@@ -7,10 +7,10 @@
     </div>
     <div class="col-12">
       <%= simple_form_for [@booking, @review] do |f| %>
-        
-        <%= f.input :rating, as: :hidden, value: 3 %>                
-        
-        <div class="my-3"> 
+
+        <%= f.input :rating, as: :hidden, value: 3 %>
+
+        <div class="my-3">
           <h4>Rate your experience:</h4>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="1" data-reviews-target="stars"></span>
@@ -22,7 +22,7 @@
         <div class = "my-3 py-3">
          <h4><%= f.input :description, as: :text %></h4>
           <%=  f.submit class: "button-rounded"%>
-          <h4><%= link_to '<i class="fas fa-undo-alt"></i> Back'.html_safe, dashboard_path %></h4>       
+          <h4><%= link_to '<i class="fas fa-undo-alt"></i> Back'.html_safe, dashboard_path %></h4>
         </div>
 
       <% end %>

@@ -1,8 +1,6 @@
-
 <%= content_for(:head) do %>
   <meta name="turbolinks-visit-control" content="reload">
 <% end %>
-
 
 <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')"></div>
 <div class="container bg-white">
@@ -38,12 +36,12 @@
 <div class="container bg-white">
   <div class="row">
     <div class="col-12">
-      <h2 class="mt-5 mb-3 title">Reviews</h2>
+      <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
       <% if @reviews.count == 0 %>
-      <p class="pb-4">This event doesn't have any reviews yet.</p>
+      <p class="pb-4 ml-3">This event doesn't have any reviews yet.</p>
       <% else %>
         <% @reviews.each do |r| %>
-        <div class="col-12">
+        <div class="col-12 mb-3">
           <div class="general-card review-card p-1 w-100">
             <div class="d-flex justify-content-center">
               <div class="d-flex align-items-center review-pic">
@@ -51,15 +49,11 @@
               </div>
               <div class="review-text">
                 <div class="d-flex justify-content-between align-items-center">
-                  <h6 class="mb-0"> <strong><%= r.booking.user.first_name %></strong></h6>
+                  <h6 class="mb-1"> <strong><%= r.booking.user.first_name %></strong></h6>
                     <div class="numbers">
                     <div>
-                      <%# <span class="fa fa-star checked" data-action="click->reviews#changeRating"  data-value="2" data-reviews-target="stars"></span>
-                      <span class="fa fa-star checked" data-action="click->reviews#changeRating" data-value="3" data-reviews-target="stars"></span>
-                      <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="4" data-reviews-target="stars"></span>
-                      <span class="fa fa-star" data-action="click->reviews#changeRating" data-value="5" data-reviews-target="stars"></span> %>
                       <% if r.rating != nil %>
-                        <%= ('<i class="fas fa-star fa-xs"></i>' * r.rating).html_safe %>
+                        <%= ('<i class="fas fa-star fa-xs star"></i>' * r.rating).html_safe %>
                       <% end %>
                     </div>
                     </div>
