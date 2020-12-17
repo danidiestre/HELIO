@@ -345,7 +345,7 @@ event_16 = Event.create(
   category_id: Category.find_by(name:'Theatre').id
 )
 
-event_16_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/5/2040/1159245/vertic_880_0.jpg')
+event_16_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/4/7455/1122333/vertic_880_0.jpg')
 event_16.photo.attach(io: event_16_photo, filename: 'event15.jpg', content_type: 'image/jpg')
 
 Iteration.create(event_id: event_16.id, price: 20, start_date: DateTime.new(2020,12,18,22))
