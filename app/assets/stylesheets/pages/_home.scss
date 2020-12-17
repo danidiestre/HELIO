@@ -50,11 +50,16 @@
   font-weight: light;
 }
 
+.email.optional {
+  color: $gray;
+  font-weight: light;
+}
+
 .past-event-card-home {
   text-align: left;
 }
 
-#booking_initial_data_city, #booking_initial_data_participants {
+#booking_initial_data_city, #booking_initial_data_participants, #booking_initial_data_guest_email {
   background-color: #f4f4f4;
 }
 

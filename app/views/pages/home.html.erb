@@ -27,7 +27,7 @@
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
                 <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
                 <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
-                <%= f.input :guest_email, label: "Guest Email: (Person receiving the gift, will only receive emails once bookings is confirmed)" %>
+                <%= f.input :guest_email, label: "Gift recipient email" %>
                 <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
