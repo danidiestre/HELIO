@@ -18,7 +18,7 @@
 
             <% @upcoming_bookings.each do |booking| %>
               <div class="general-card card-product my-3">
-                <div class="countdown <%= "soon" if booking.event_is_tomorrow? %>" data-start-date="<%= booking.iteration.start_date %>">
+                <div class="countdown <%= "soon" if booking.event_is_tomorrow? %>" data-start-date="<%= booking.iteration.start_date.strftime('%FT%T%:z') %>">
                   <h6 class="days">6d</h6>
                   <h5><strong class="time">20:35</strong></h5>
                   <h6 class="seconds">45s</h6>
