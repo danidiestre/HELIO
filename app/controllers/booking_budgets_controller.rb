@@ -9,8 +9,7 @@ class BookingBudgetsController < ApplicationController
       session[:booking_params].merge!({
         budget: @booking_budgets.budget,
         cancellation_insurance:  @booking_budgets.cancellation_insurance,
-        state: "pending",
-        total_price_cents: @booking_budgets.total_price_cents(session[:booking_params]["participants"].to_i)
+        state: "pending"
       })
 
       @booking = Booking.new(session[:booking_params])
@@ -20,7 +19,6 @@ class BookingBudgetsController < ApplicationController
         @booking.user = User.find_by_email(session[:guest_email]) || User.invite!(email: session[:guest_email])
       end
       @booking.save!
-
       session[:booking_params] = nil
       redirect_to new_booking_booking_checkout_path(@booking)
     else
