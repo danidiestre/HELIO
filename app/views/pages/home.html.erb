@@ -102,9 +102,9 @@
                 </div>
                 <div class="review-text">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h6 class="mb-0"> <strong><%= r.booking.user.first_name %></strong></h6>
+                    <h6 class="user-name"><strong><%= r.booking.user.first_name %></strong></h6>
                     <div class="numbers">
-                      <%= '<i class="fas fa-star fa-xs"></i>'.html_safe * r.rating %>
+                      <%= '<i class="fas fa-star fa-xs star"></i>'.html_safe * r.rating %>
                     </div>
                   </div>
                   <p><%= r.description.truncate(60, omission: '...') %></p>
