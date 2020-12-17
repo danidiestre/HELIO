@@ -69,12 +69,12 @@
   color:#01A0BA;
   font-weight: bold;
   position: absolute;
-  top: 20px;
+  top: 12px;
   right: 18px;
 }
 
-.fa-star {
-  color:grey;
+.star {
+  color: $primary;
 }
 
 .fa-user-check {
@@ -83,8 +83,7 @@
 }
 
 .review-text {
-  padding: 22px;
-  padding-top: 28px;
+  padding: 25px 20px;
   position: absolute;
   left: 64px;
   top: 6px;
@@ -97,6 +96,10 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.user-name {
+  margin-bottom: 4px;
 }
 
 // Link to see al past events & all reviews
