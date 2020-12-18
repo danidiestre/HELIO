@@ -41,7 +41,7 @@
 
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-            <% if @upcoming_bookings.count == 0 %>
+            <% if @past_bookings.count == 0 %>
               <p>You have not being to an experience yet.</p>
             <% end %>
             <% @past_bookings.each do |booking| %>
