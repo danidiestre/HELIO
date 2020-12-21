@@ -127,8 +127,8 @@ event_3 = Event.create(
 event_3_photo = URI.open('https://www.metropoliabierta.com/uploads/s1/66/21/13/magopop_9_1200x480.jpeg')
 event_3.photo.attach(io: event_3_photo, filename: 'event3.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2020,12,18,23))
-Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2020,12,19,10))
+Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2020,12,21,23))
+Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2020,12,22,15))
 
 #########################
 
@@ -405,7 +405,7 @@ p "Created #{User.count} users"
 
 Booking_1 = Booking.create(
   user_id: rocio.id,
-  iteration_id: Iteration.all.sample.id,
+  iteration_id: event_9.iterations.first.id,
   start_date: DateTime.new(2020,12,10,19),
   end_date: DateTime.new(2020,12,25,20),
   budget: 70,
@@ -419,7 +419,7 @@ Booking_1 = Booking.create(
 
 Booking_2 = Booking.create(
   user_id: bruna.id,
-  iteration_id: Iteration.all.sample.id,
+  iteration_id: event_3.iterations.first.id,
   start_date: DateTime.new(2020,12,18,19),
   end_date: DateTime.new(2020,12,22,20),
   budget: 100,
@@ -431,7 +431,7 @@ Booking_2 = Booking.create(
 )
 
 Booking_3 = Booking.create(
-  user_id: jaume.id,
+  user_id: dani.id,
   iteration_id: event_9.iterations.first.id,
   start_date: DateTime.new(2020,12,16,19),
   end_date: DateTime.new(2020,12,18,19),
@@ -444,7 +444,7 @@ Booking_3 = Booking.create(
 )
 
 Booking_4 = Booking.create(
-  user_id: jaume.id,
+  user_id: dani.id,
   iteration_id: event_3.iterations.first.id,
   start_date: DateTime.new(2020,12,16,19),
   end_date: DateTime.new(2020,12,18,19),
@@ -473,6 +473,7 @@ Review_2 = Review.create(
   rating: 5,
   description: "Brilliant app! Helio assigns you a wonderful mystery event. If you like surprises and culture, this is the place for you. I was lucky enough to receive tickets for the fantastic Cuarteto Casals at the l'Auditori in Barcelona, and will definitely book again.",
 )
+
 
 
 
