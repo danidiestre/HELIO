@@ -1,16 +1,16 @@
 <%= render "shared/progressbar", step: 4 %>
 <div class="container">
   <%= simple_form_for @booking_budgets do |f| %>
-    <h2 class="mt-3">Choose your budget</h2>
-    <p class="mt-2 subtitle">The price of the ticket will be maximum the budget that you choose</p>
+    <h2 class="mt-3">Escoje lo que pagarás</h2>
+    <p class="mt-2 subtitle">El precio del evento que te toque será como máximo el precio que pongas. El precio es por persona</p>
     <div id="sliderRange">
       <div class="d-flex">
         <h1 id="budgetJs">60</h1>
-        <h5 class="budget-person">€/ per person</h5>
+        <h5 class="budget-person">€/ por persona</h5>
       </div id="slider-slider">
       <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 60, step: 5, id: "test-slidey"} %>
       <%= f.input :cancellation_insurance, as: :hidden, input_html: { value: "0" } %>
     </div>
-    <input class="button-rounded d-block fixed-button" type="submit" value="Next" name="commit">
+    <input class="button-rounded d-block fixed-button" type="submit" value="SIGUIENTE" name="commit">
   <% end %>
 </div>

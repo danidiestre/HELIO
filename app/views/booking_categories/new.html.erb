@@ -2,8 +2,8 @@
 <div class="container">
   <div class="form-wrapper">
     <div class="mt-2">
-      <h2 class="mt-3">Exclude categories</h2>
-      <p class="mb-0">Select categories you don't like:</p>
+      <h2 class="mt-3">Elimina categorias</h2>
+      <p class="mb-0">Elimina las categorias que no te gusten. Si te gustan todas, no elimines ninguna y pasa al siguiente paso.</p>
     </div>
     <%= simple_form_for @booking_categories do |f|%>
       <div class="row">
@@ -17,7 +17,7 @@
           </div>
         <% end %>
       </div>
-      <input id="button-category" class="button-rounded my-3" type="submit" value="Next" name="commit">
+      <input id="button-category" class="button-rounded my-3" type="submit" value="SIGUIENTE" name="commit">
     <% end %>
   </div>
 </div>

@@ -36,9 +36,9 @@
 <div class="container bg-white">
   <div class="row review-row">
     <div class="col-12 review-col">
-      <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
+      <h2 class="mt-5 mb-3 ml-3 title">Opiniones</h2>
       <% if @reviews.count == 0 %>
-      <p class="pb-4 ml-3">This event doesn't have any reviews yet.</p>
+      <p class="pb-4 ml-3">Este evento aún no tiene opiniones.</p>
       <% else %>
         <% @reviews.each do |r| %>
           <%= render "reviews/card", r: r %>
