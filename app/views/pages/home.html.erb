@@ -1,7 +1,7 @@
 <div class="home-banner">
   <div class= "text-home pl-4">
-    <h1>Discover surprise cultural experiences</h1>
-    <h4 class="text-align-left">Have all details 24h before it starts</h4>
+    <h1>Experiencias culturales sorpresa</h1>
+    <h4 class="text-align-left">Descubre tu evento 24 horas antes de que empiece</h4>
   </div>
   <div class="container">
     <div class="row ">
@@ -9,26 +9,26 @@
         <div class = "center-block">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="form-tag" >
-              <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Book</a>
+              <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reservar</a>
             </li>
             <li class="form-tag">
-              <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Buy as a gift</a>
+              <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Regalar</a>
             </li>
           </ul>
           <div class="tab-content p-3" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "Which City?", collection: ["Barcelona","Madrid"] %>
-                <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
-                <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
+                <%= f.input :city, label: "¿Qué ciudad?", collection: ["Barcelona","Madrid"] %>
+                <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %>
+                <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "Which City?", collection: ["Madrid", "Barcelona"] %>
-                <%= f.input :participants, label: "How many people?", collection: ["1", "2", "3", "4"] %>
-                <%= f.input :guest_email, label: "Gift recipient email" %>
-                <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
+                <%= f.input :city, label: "¿Qué ciudad?", collection: ["Madrid", "Barcelona"] %>
+                <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %>
+                <%= f.input :guest_email, label: "Email del invitado" %>
+                <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
           </div>
@@ -39,39 +39,39 @@
 </div>
 
 <div class="container pb-4">
-  <h2 class="ml-2 mt-5 mb-3 title">How does Helio work?</h2>
+  <h2 class="ml-2 mt-5 mb-3 title">¿Cómo funciona Helio?</h2>
   <div class="row">
     <div class="col-12">
       <div class="general-card instructions-card mb-3 mx-2">
         <div class="d-flex">
           <h5 class="steps"> 1. </h5>
-          <h5 class="ml-2">Choose a City</h5>
+          <h5 class="ml-2">Escoje la ciudad</h5>
         </div>
-        <p>Pick your city, pick your place and find where you want to go!</p>
+        <p>Escoje la ciudad dónde quieres disfrutar de tu experiencia</p>
       </div>
     </div>
     <div class="col-12">
       <div class="general-card instructions-card mb-3 mx-2">
         <div class="d-flex">
           <h5 class="steps"> 2. </h5>
-          <h5 class="ml-2">Select your preferences</h5>
+          <h5 class="ml-2">Selecciona tus preferencias</h5>
         </div>
-        <p>Find what you like, and remove what you don't - it's that simple.</p>
+        <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
       </div>
     </div>
     <div class="col-12">
       <div class="general-card instructions-card mb-3 mx-2">
         <div class="d-flex">
           <h5 class="steps"> 3. </h5>
-          <h5 class="ml-2">Have fun!</h5>
+          <h5 class="ml-2">¡A disfrutar!</h5>
         </div>
-        <p>Have a great time with you and your special ones!</p>
+        <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
       </div>
     </div>
     <div class="col-12 mt-3">
-      <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
+      <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
     </div>
-    <h2 class="mt-5 mb-3 ml-4 title">Past Events</h2>
+    <h2 class="mt-5 mb-3 ml-4 title">Eventos Pasados</h2>
     <div class="col-12">
         <% i = 0 %>
         <% @events.each do |event| %>
@@ -90,15 +90,15 @@
         <% end %>
 
     <div class="col-12 linky">
-      <%= link_to "See all Past Events →", events_path, class: "ml-3" %>
+      <%= link_to "Ver más eventos pasados →", events_path, class: "ml-3" %>
     </div>
-      <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
+      <h2 class="mt-5 mb-3 ml-3 title">¿Qué dicen sobre Helio?</h2>
         <% @reviews.each do |r| %>
           <%= render "reviews/card", r: r %>
         <% end %>
 
         <div class="col-12 mt-5 w-100">
-          <%= link_to "Get Started", root_path, class: "btn btn-primary d-block mt-2 " %>
+          <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 " %>
         </div>
     </div>
   </div>
