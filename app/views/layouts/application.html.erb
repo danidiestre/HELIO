@@ -33,6 +33,28 @@
     <%= favicon_link_tag %>
   </head>
 
+  <style>
+
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (max-width: 767px) {
+      .home-banner-desktop{
+        display: none;
+      }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 1023px) {
+      .home-banner{
+        display: none;
+      }
+    }
+    @media only screen and (min-width: 1200px) {...}
+
+
+  
+  </style>
+
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>

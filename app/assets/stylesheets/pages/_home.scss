@@ -5,6 +5,14 @@
   background-position: center;
 }
 
+.home-banner-desktop {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 .center-block {
   background: #FFFFFF;
   box-sizing: border-box;
@@ -15,6 +23,59 @@
   margin-bottom: 30px;
   box-shadow: 0 2px 49px 20px rgba(0,0,0,.07);
 }
+
+.center-block-desktop {
+  background: #FFFFFF;
+  box-sizing: border-box;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 49px 20px rgba(0,0,0,.07);
+}
+
+.desktop-booking{
+  background-color: white;
+  height: 99px;
+  width: 100%;
+  border-radius: 7px;
+  border-top-left-radius: 0;
+  background: #fff;
+  box-shadow: 0 2px 49px 20px rgba(0,0,0,.07);
+  padding: 10px 46px;
+  margin-left: 15px;
+}
+
+.desktop-banner{
+  min-height: 220px;
+}
+.button-desktop{
+  margin: 17px;
+  padding: 6px;
+}
+
+
+.text-home-desktop{
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .text-home{
   padding-top: 50px;
