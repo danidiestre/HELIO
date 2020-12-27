@@ -14,47 +14,49 @@
       <div></div>
       <div></div>
     </div>
-    <h6 id="loading-sentence" data-sentences="<%= ["Searching for events in #{@booking.city}", "Searching for events within #{@booking.budget}€", "Searching events for #{@booking.audiences.first}"].to_json %>">
-      Finding your dream event...
+    <h6 id="loading-sentence" data-sentences="<%= ["Buscando eventos en #{@booking.city}", "Buscando eventos de máximo #{@booking.budget}€/pers", "Buscando eventos para #{@booking.audiences.first}"].to_json %>">
+      Buscando tu evento soñado...
     </h6>
   </div>
 </div>
 <div style="display:none;" id="myDiv" class="container">
   <div class="d-flex justify-content-around background">
     <div class="general-card summary">
-      <h2 class="py-4">Order Summary</h2>
+      <h2 class="py-4">Resumen de tu pedido</h2>
       <div class="d-flex my-3">
         <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
         <div class="info pl-2">
-          <h5>Between</h5>
-          <p><%= @booking.start_date %> and <%= @booking.end_date %></p>
+          <h5>Entre</h5>
+          <p><%= @booking.start_date %> y <%= @booking.end_date %></p>
         </div>
       </div>
       <div class="d-flex my-3">
         <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
         <div class="info pl-2">
-          <h5>City:</h5>
+          <h5>Ciudad:</h5>
           <p><%= @booking.city%></p>
         </div>
       </div>
       <div class="d-flex my-3">
         <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
         <div class="info pl-2">
-          <h5>Languages:</h5>
+          <h5>Lenguajes:</h5>
           <p><%= @booking.languages.map(&:capitalize).join("&nbsp;-&nbsp;").html_safe  %></p>
         </div>
       </div>
       <div class="d-flex my-3">
         <div class="fontawesome d-flex justify-content-center align-items-center"><i class="far fa-check-circle"></i></div>
         <div class="info pl-2">
-          <h5>Audience:</h5>
+          <h5>Tipo de público:</h5>
           <p><%= @booking.audiences.first.capitalize %></p>
         </div>
       </div>
-      <h3 class="p-3">Total price: <%= @booking.iteration.price * @booking.participants %>€</h3>
+      <h3 class="p-3">Precio total: </h3>
+      <p><%= @booking.iteration.price %>€ x <%= @booking.participants %> personas </p>
+      <h3><%= @booking.iteration.price * @booking.participants %>€</h3>
     </div>
   </div>
-  <input class="button-rounded my-3 pay-btn fixed-button" type="submit" value="Pay" name="commit">
+  <input class="button-rounded my-3 pay-btn fixed-button" type="submit" value="PAGAR" name="commit">
   <script src="https://js.stripe.com/v3/"></script>
   <script>
     const paymentButton = document.querySelector(".pay-btn");

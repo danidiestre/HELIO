@@ -4,10 +4,10 @@
 
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="pills-upcoming-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Upcoming Events</a>
+            <a class="nav-link active" id="pills-upcoming-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Próximos eventos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-past-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Past Events</a>
+            <a class="nav-link" id="pills-past-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Eventos pasados</a>
           </li>
 
         </ul>
@@ -29,8 +29,8 @@
                       <p><%=link_to "See ticket", booking_path(booking, format: :pdf), target: "_blank" %></p>
 
                     <% else %>
-                      <h5>Surprise, surprise!</h5>
-                      <p>"Time until your next Helio experience!"</p>
+                      <h5>SORPRESA!</h5>
+                      <p>"Tiempo hasta tu experiencia Helio!"</p>
 
                     <% end %>
                   </div>
@@ -42,7 +42,7 @@
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
             <% if @past_bookings.count == 0 %>
-              <p>You have not being to an experience yet.</p>
+              <p>Aún no has ido a ningún evento con Helio.</p>
             <% end %>
             <% @past_bookings.each do |booking| %>
               <div class="general-card card-product my-3">
