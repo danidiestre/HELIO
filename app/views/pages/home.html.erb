@@ -64,10 +64,10 @@
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
           <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
             <div class="row">
-              <div class="col border-right">
+              <div class="col border-right cuantos-desktop">
                 <%= f.input :city, label: "¿Qué ciudad?", collection: ["Barcelona","Madrid"] %>            
               </div>
-              <div class="col border-right">
+              <div class="col border-right ciudad-desktop">
                 <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %>          
               </div>
               <div class="col button-desktop">
@@ -78,20 +78,18 @@
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <%= f.input :city, label: "¿Qué ciudad?", collection: ["Madrid", "Barcelona"] %>          
-                  </div>
-                  <div class="col">
-                    <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %> 
-                  </div>
-                  <div class="col">
-                    <%= f.input :guest_email, label: "Email del invitado" %>
-                  </div>
-                  <div class="col">
-                    <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
-                  </div>
+              <div class="row">
+                <div class="col">
+                  <%= f.input :city, label: "¿Qué ciudad?", collection: ["Madrid", "Barcelona"] %>          
+                </div>
+                <div class="col">
+                  <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %> 
+                </div>
+                <div class="col">
+                  <%= f.input :guest_email, label: "Email del invitado" %>
+                </div>
+                <div class="col">
+                  <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
                 </div>
               </div>
             <% end %>
@@ -101,46 +99,88 @@
   </div>
 </div>
 
-<div class="container pb-4">
-  <h2 class="ml-2 mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
-  <div class="row">
-    <div class="col-12">
-      <div class="general-card instructions-card mb-3 mx-2">
-        <div class="d-flex">
-          <h5 class="steps"> 1. </h5>
-          <h5 class="ml-2">Escoje la ciudad</h5>
+<div class="como-funciona">
+  <div class="container pb-4">
+    <h2 class="ml-2 mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
+    <div class="row">
+      <div class="col-12">
+        <div class="general-card instructions-card mb-3 mx-2">
+          <div class="d-flex">
+            <h5 class="steps"> 1. </h5>
+            <h5 class="ml-2">Escoje la ciudad</h5>
+          </div>
+          <p>Escoje la ciudad dónde quieres disfrutar de tu experiencia</p>
         </div>
-        <p>Escoje la ciudad dónde quieres disfrutar de tu experiencia</p>
+      </div>
+      <div class="col-12">
+        <div class="general-card instructions-card mb-3 mx-2">
+          <div class="d-flex">
+            <h5 class="steps"> 2. </h5>
+            <h5 class="ml-2">Selecciona tus preferencias</h5>
+          </div>
+          <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="general-card instructions-card mb-3 mx-2">
+          <div class="d-flex">
+            <h5 class="steps"> 3. </h5>
+            <h5 class="ml-2">¡A disfrutar!</h5>
+          </div>
+          <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
       </div>
     </div>
-    <div class="col-12">
-      <div class="general-card instructions-card mb-3 mx-2">
-        <div class="d-flex">
-          <h5 class="steps"> 2. </h5>
-          <h5 class="ml-2">Selecciona tus preferencias</h5>
+  </div>
+</div>
+
+<div class="como-funciona-desktop">
+  <div class="container pb-4">
+    <h2 class="ml-2 mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
+    <div class="row">
+      <div class="col">
+        <div class="general-card instructions-card-desktop mb-3 mx-2">
+          <div class="d-flex">
+            <h5 class="steps"> 1. </h5>
+            <h5 class="ml-2">Escoje la ciudad</h5>
+          </div>
+          <p>Escoje la ciudad dónde quieres disfrutar de tu experiencia</p>
         </div>
-        <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
+      </div>
+      <div class="col">
+        <div class="general-card instructions-card-desktop mb-3 mx-2">
+          <div class="d-flex">
+            <h5 class="steps"> 2. </h5>
+            <h5 class="ml-2">Selecciona tus preferencias</h5>
+          </div>
+          <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="general-card instructions-card-desktop mb-3 mx-2">
+          <div class="d-flex">
+            <h5 class="steps"> 3. </h5>
+            <h5 class="ml-2">¡A disfrutar!</h5>
+          </div>
+          <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
+        </div>
       </div>
     </div>
-    <div class="col-12">
-      <div class="general-card instructions-card mb-3 mx-2">
-        <div class="d-flex">
-          <h5 class="steps"> 3. </h5>
-          <h5 class="ml-2">¡A disfrutar!</h5>
-        </div>
-        <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
-      </div>
-    </div>
-    <div class="col-12 mt-3">
-      <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
-    </div>
+  </div>
+</div>
+
+<div class="eventos-pasados-desktop">
+  <div class="container pb-4">
     <h2 class="mt-5 mb-3 ml-4 title">Eventos Pasados</h2>
-    <div class="col-12">
-        <% i = 0 %>
-        <% @events.each do |event| %>
-          <% i = i + 1 %>
-          <% if i <= 3 %>
-            <div class="col-12 mb-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
+    <% @events.take(4).in_groups_of(2,false).each do |group| %>
+      <div class="row">
+        <% group.each do |event| %>
+          <div class='col-md-6'>
+
+            <div class="col-12 my-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
               <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
                 <h4 class="past-event-card-home"><%= event.title %></h4>
                 <p><%= event.description.truncate(70) %></p>
@@ -149,12 +189,46 @@
                 </div>
               </div>
             </div>
-          <% end %>
+          </div>
         <% end %>
-
+      </div>
+    <% end %>
     <div class="col-12 linky">
       <%= link_to "Ver más eventos pasados →", events_path, class: "ml-3" %>
     </div>
+    </div>
+  </div>
+</div>
+
+<div class="eventos-pasados">
+  <div class="container pb-4">
+    <div class="row">
+      <h2 class="mt-5 mb-3 ml-4 title">Eventos Pasados</h2>
+      <div class="col-12">
+        <% @events.take(3).each do |event| %>
+          <div class="col-12 mb-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
+            <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
+              <h4 class="past-event-card-home"><%= event.title %></h4>
+              <p><%= event.description.truncate(70) %></p>
+              <div class="d-flex justify-content-between">
+                <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        <% end %>
+      </div>
+      <div class="col-12 linky">
+        <%= link_to "Ver más eventos pasados →", events_path, class: "ml-3" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="que-dicen">
+  <div class="container pb-4">
+    <div class="row"> 
       <h2 class="mt-5 mb-3 ml-3 title">¿Qué dicen sobre Helio?</h2>
         <% @reviews.each do |r| %>
           <%= render "reviews/card", r: r %>
@@ -162,8 +236,35 @@
 
         <div class="col-12 mt-5 w-100">
           <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 " %>
-        </div>
+        </div>  
     </div>
   </div>
 </div>
+
+<div class="que-dicen-desktop">
+  <div class="container pb-4">
+    <h2 class="mt-5 mb-3 ml-3 title">¿Qué dicen sobre Helio?</h2>
+      <% @reviews.take(6).in_groups_of(3,false).each do |group| %>
+        <div class= "row">
+          <% group.each do |r| %>
+            <div class='col-md-6'>
+              <%= render "reviews/card", r: r %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+        
+  
+      <div class= "d-flex justify-content-center">
+        <div class="mt-4 w-50">
+          <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 " %>
+        </div>  
+      </div>
+  </div>
+</div>
+
+
+
+
+
 <%= render "shared/footer"  %>

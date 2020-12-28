@@ -11,7 +11,14 @@
   padding-top: 30px;
   background-color: white;
 }
+.instructions-card-desktop{
 
+  height: 190px;
+  padding: 39px;
+  padding-top: 30px;
+  background-color: white;
+  
+}
 .steps {
   font-size: 20px;
   color:#01A0BA;
@@ -138,7 +145,7 @@ input:checked + label {
   display:block;
   justify-content: center;
   text-align: center;
-  vertical-align: middle;
+/*   vertical-align: middle; */
   background-color: black;
   color: white;
   padding-top: 12px;

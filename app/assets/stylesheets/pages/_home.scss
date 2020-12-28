@@ -28,7 +28,6 @@
   background: #FFFFFF;
   box-sizing: border-box;
   justify-content: center;
-  overflow: hidden;
   border-radius: 7px;
   padding-bottom: 10px;
   margin-bottom: 30px;
@@ -47,6 +46,9 @@
   margin-left: 15px;
 }
 
+.como-funciona-desktop{
+  margin-top: 50px;
+}
 .desktop-banner{
   min-height: 220px;
 }
@@ -54,8 +56,6 @@
   margin: 17px;
   padding: 6px;
 }
-
-
 .text-home-desktop{
   padding-top: 50px;
   padding-bottom: 20px;
@@ -63,19 +63,9 @@
   padding-right: 10px;
   color: #FFFFFF;
   font-weight: bold;
+  margin-left: 108px;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .text-home{
   padding-top: 50px;
@@ -85,6 +75,7 @@
   color: #FFFFFF;
   font-weight: bold;
 }
+
 
 .form-tag {
   width: 50%;
