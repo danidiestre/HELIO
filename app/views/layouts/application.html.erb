@@ -38,6 +38,7 @@
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (max-width: 767px) {
+
       .home-banner-desktop{
         display: none;
       }
@@ -50,10 +51,13 @@
       .eventos-pasados-desktop{
         display: none;
       }
+      .navbar-desktop{
+        display:none;
+      }
     }
 
     /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 1023px) {
+    @media only screen and (min-width: 767px) {
       .home-banner{
         display: none;
       }
@@ -77,7 +81,8 @@
   <body>
     
 
-    <%= render 'shared/navbar' %> 
+
+    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
