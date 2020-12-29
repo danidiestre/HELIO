@@ -261,7 +261,7 @@
 <div class="que-dicen-desktop">
   <div class="container pb-4">
     <h2 class="mt-5 mb-3 ml-3 title">¿Qué dicen sobre Helio?</h2>
-      <% @reviews.take(6).in_groups_of(3,false).each do |group| %>
+      <% @reviews.in_groups_of(2,false).each do |group| %>
         <div class= "row">
           <% group.each do |r| %>
             <div class='col-md-6'>
