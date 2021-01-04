@@ -10,8 +10,10 @@
 }
 
 .form-group.string.optional {
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: -20px;
-  margin-left: 17px;
+  margin-bottom: 10%;
 }
 
 .pick-dates-desktop{
@@ -20,10 +22,16 @@
   justify-content: center;
   margin-left: 25%;
   margin-right: 25%;
+  padding-bottom: 3%;
 }
 
 .form-container-desktop {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.button-desktop-dates{
+  display: flex;
+  justify-content: center;
 }

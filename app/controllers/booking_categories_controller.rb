@@ -17,6 +17,10 @@ class BookingCategoriesController < ApplicationController
     end
   end
 
+  def index
+    @bookings_categories = BookingCategory.all
+  end
+
   private
 
   def booking_categories_params
