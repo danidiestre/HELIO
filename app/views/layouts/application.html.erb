@@ -33,10 +33,72 @@
     <%= favicon_link_tag %>
   </head>
 
+  <style>
+
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (max-width: 767px) {
+
+      .home-banner-desktop{
+        display: none;
+      }
+      .como-funciona-desktop{
+        display: none;
+      }
+      .que-dicen-desktop{
+        display: none;
+      }
+      .eventos-pasados-desktop{
+        display: none;
+      }
+      .navbar-desktop{
+        display: none;
+      }
+      .pick-dates-desktop{
+        display: none;
+      }
+      .exclude-categories-desktop{
+        display: none;
+      }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 767px) {
+      .home-banner{
+        display: none;
+      }
+      .como-funciona{
+        display: none;
+      }
+
+      .que-dicen{
+        display: none;
+      }
+      .eventos-pasados{
+        display: none;
+      }
+      .navbar-mobile{
+        display: none;
+      }
+      .pick-dates{
+        display: none;
+      }
+      .exclude-categories{
+        display: none;
+      }
+    }
+  
+  </style>
+
   <body>
+    
+
+
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
   </body>
 </html>
+
+
