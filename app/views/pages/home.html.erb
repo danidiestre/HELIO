@@ -1,17 +1,29 @@
 <div class= "navbar-desktop">
-  <nav class="navbar navbar-expand navbar-dark fixed-top">
-      <div class="navbar-brand">
-        <%= link_to "helio", root_path, class: "navbar-brand" %>
+  <nav class="navbar navbar-expand fixed-top">
+      <div class="navbar-brand pt-0">
+        <%= link_to "helio", root_path, class: "navbar-brand pt-0" %>
       </div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link d-flex justify-content-denter" href="#">¿ Cómo funciona ?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link p-2" href="https://www.helio.events/events">Eventos Pasados</a>
-        </li>
+
+      <ul class="navbar-nav ml-auto align-content-right mr-5">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", root_path, class: "nav-link button-secondary ml-1" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Dashboard", dashboard_path, class: "nav-link button-secondary ml-1" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link button-secondary ml-1" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", user_session_path, class: "nav-link button-secondary" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link button-secondary-background ml-1" %>
+          </li>
+        <% end %>
       </ul>
-    </div>
   </nav>
 </div>
 
@@ -57,9 +69,9 @@
 
 
 <div class="home-banner-desktop">
-  <div class= "text-home-desktop pl-4">
+  <div class= "container text-home-desktop">
     <h1>Experiencias culturales sorpresa</h1>
-    <h4 class="text-align-left">Descubre tu evento 24 horas antes de que empiece</h4>
+    <h4>Descubre tu evento 24 horas antes de que empiece</h4>
   </div>
 
 
@@ -118,7 +130,7 @@
 
 <div class="como-funciona">
   <div class="container pb-4">
-    <h2 class="ml-2 mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
+    <h2 class="mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
     <div class="row">
       <div class="col-12">
         <div class="general-card instructions-card mb-3 mx-2">
@@ -191,7 +203,7 @@
 
 <div class="eventos-pasados-desktop">
   <div class="container pb-4">
-    <h2 class="mt-5 mb-3 ml-4 title">Eventos Pasados</h2>
+    <h2 class="mt-5 mb-3 title">Eventos Pasados</h2>
     <% @events.take(4).in_groups_of(2,false).each do |group| %>
       <div class="row">
         <% group.each do |event| %>
@@ -260,7 +272,7 @@
 
 <div class="que-dicen-desktop">
   <div class="container pb-4">
-    <h2 class="mt-5 mb-3 ml-3 title">¿Qué dicen sobre Helio?</h2>
+    <h2 class="mt-5 mb-3 title">¿Qué dicen sobre Helio?</h2>
       <% @reviews.in_groups_of(2,false).each do |group| %>
         <div class= "row">
           <% group.each do |r| %>
