@@ -21,7 +21,10 @@
 
 @import "flatpickr/dist/flatpickr";
 
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 .hidden {
   visibility: hidden;
