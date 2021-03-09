@@ -11,18 +11,24 @@
 
 .instructions-card {
   height: 140px;
-  padding: 24px;
-  padding-top: 30px;
+  padding: 0 16px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
-.instructions-card-desktop{
 
+.instructions-card-desktop {
   height: 190px;
-  padding: 39px;
-  padding-top: 30px;
+  padding: 32px;
   background-color: white;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
+
 .steps {
   font-size: 20px;
   color:#01A0BA;
