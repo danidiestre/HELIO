@@ -201,34 +201,6 @@
   </div>
 </div>
 
-<div class="eventos-pasados-desktop">
-  <div class="container pb-4">
-    <h2 class="mt-5 mb-3 title">Eventos Pasados</h2>
-    <% @events.take(4).in_groups_of(2,false).each do |group| %>
-      <div class="row">
-        <% group.each do |event| %>
-          <div class='col-md-6'>
-
-            <div class="col-12 my-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
-              <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
-                <h4 class="past-event-card-home"><%= event.title %></h4>
-                <p><%= event.description.truncate(70) %></p>
-                <div class="d-flex justify-content-between">
-                  <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-    <div class="col-12 linky">
-      <%= link_to "Ver más eventos pasados →", events_path, class: "ml-3" %>
-    </div>
-    </div>
-  </div>
-</div>
-
 <div class="eventos-pasados">
   <div class="container pb-4">
     <div class="row">
