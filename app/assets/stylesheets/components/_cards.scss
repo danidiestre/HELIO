@@ -1,6 +1,10 @@
 .general-card {
   box-shadow: 1px 1px 10px $gray-border;
   border-radius: 4px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 // Instructions card
@@ -33,8 +37,8 @@
   background-size: cover;
 }
 
-.event-card-description{
-  padding-right: 18px;
+.fa-chevron-circle-right:hover {
+  color: white;
 }
 
 .fa-chevron-circle-right {
