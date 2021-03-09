@@ -179,16 +179,17 @@ input:checked + label {
 // Dashboard Cards with Picture
 
 .card-product {
-  overflow: hidden;
   height: 100px;
   background: white;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 
 .card-product img {
   height: 100%;
-  width: 150px;
+  width: 20%;
   object-fit: center;
   align-items: stretch;
   text-align: center;
@@ -209,15 +210,32 @@ input:checked + label {
   color: $primary;
 }
 
-.event-image {
-  width: 100px;
-  height: 100%;
-  background-size: cover;
-  background-position-x: center;
+// Dashboard card
+
+.dashboard-card {
+  height: 110px;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.link-review {
-  display: block;
-  font-weight: bolder;
-  text-decoration: underline;
+.dashboard-card-info {
+  padding-left: 16px;
+  width: 80%;
+  &:hover {
+    text-decoration: none;
+  }
 }
+
+.dashboard-card-image {
+  height: 100%;
+  width: 132px;
+  background-position: center;
+  background-size: cover;
+}
+
+.past-event-link:hover {
+  text-decoration: none;
+}
+
