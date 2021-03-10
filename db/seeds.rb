@@ -378,24 +378,24 @@ Iteration.create(event_id: event_16.id, price: 21, start_date: DateTime.new(2020
 ###################################################
 
 
-avatar_ana = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQES3TPGourBwg/profile-displayphoto-shrink_800_800/0/1517466023378?e=1612396800&v=beta&t=rrMXlDr6agrpQS0_YnrFKHCxuWHfpaxhW2sDoMtiVR4')
+avatar_ana = URI.open('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80')
 ana = User.create!(email: "ana@gmail.com", password: "password", first_name: "Ana", last_name: "Bajo")
 ana.avatar.attach(io: avatar_ana, filename: 'ana.png', content_type: 'image/png')
 
 rocio = User.create!(email: 'rocio@gmail.com', password: 'password', first_name: "Rocio", last_name:"Nadal")
-avatar_rocio = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQHWSUqNdAXHcQ/profile-displayphoto-shrink_800_800/0/1596640241152?e=1612396800&v=beta&t=MXHi43SBRu6f1nRNdK06yfoTH3khbirL4fLfzMH1pbU')
+avatar_rocio = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQHWSUqNdAXHcQ/profile-displayphoto-shrink_800_800/0/1596640241152?e=1620864000&v=beta&t=OH0Zphp2p76o3iLBW-Y4wCTjUjLSnzRFk8_sWtusbjo')
 rocio.avatar.attach(io: avatar_rocio, filename: 'rocio.png', content_type: 'image/png')
 
 dani = User.create!(email: "dani@gmail.com", password: "password", first_name: "Dani", last_name: "Diestre")
-avatar_dani = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQEK9HaUmStSVA/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=dgCFjJPjYrJOVYgifWDWqACUU2Rvg2wneJUVIFO-jb0')
+avatar_dani = URI.open('https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 dani.avatar.attach(io: avatar_dani, filename: 'dani.png', content_type: 'image/png')
 
 bruna = User.create!(email: "bruna@gmail.com", password: "password", first_name: "Bruna", last_name: "Scopel")
-avatar_bruna = URI.open('https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/86697044_3433571363324662_8857190224778756096_o.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=2TkTxmqmjCYAX9x3D4V&_nc_ht=scontent-mad1-1.xx&oh=3e33322ca309d6094de856549efdffe5&oe=5FEFE3BD')
+avatar_bruna = URI.open('https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 bruna.avatar.attach(io: avatar_bruna, filename: 'bruna.png', content_type: 'image/png')
 
 jaume = User.create!(email: "jaume@gmail.com", password: "password", first_name: "Jaume", last_name: "Ros")
-avatar_jaume = URI.open('https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/102261476_4326706187354465_4726682033989961974_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=g5gFygsSFvsAX8dd2L9&_nc_ht=scontent-mad1-1.xx&oh=8463412a9d20c5e0835fc02d5acb70a7&oe=5FEE13D7')
+avatar_jaume = URI.open('https://images.unsplash.com/photo-1494708001911-679f5d15a946?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 jaume.avatar.attach(io: avatar_jaume, filename: 'jaume.png', content_type: 'image/png')
 
 

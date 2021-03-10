@@ -1,24 +1,34 @@
 .general-card {
   box-shadow: 1px 1px 10px $gray-border;
   border-radius: 4px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 // Instructions card
 
 .instructions-card {
   height: 140px;
-  padding: 24px;
-  padding-top: 30px;
+  padding: 0 16px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
-.instructions-card-desktop{
 
+.instructions-card-desktop {
   height: 190px;
-  padding: 39px;
-  padding-top: 30px;
+  padding: 32px;
   background-color: white;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
+
 .steps {
   font-size: 20px;
   color:#01A0BA;
@@ -31,6 +41,10 @@
   height: 180px;
   position: relative;
   background-size: cover;
+}
+
+.fa-chevron-circle-right:hover {
+  color: white;
 }
 
 .fa-chevron-circle-right {
@@ -165,16 +179,17 @@ input:checked + label {
 // Dashboard Cards with Picture
 
 .card-product {
-  overflow: hidden;
   height: 100px;
   background: white;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 
 .card-product img {
   height: 100%;
-  width: 150px;
+  width: 20%;
   object-fit: center;
   align-items: stretch;
   text-align: center;
@@ -195,15 +210,32 @@ input:checked + label {
   color: $primary;
 }
 
-.event-image {
-  width: 100px;
-  height: 100%;
-  background-size: cover;
-  background-position-x: center;
+// Dashboard card
+
+.dashboard-card {
+  height: 110px;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.link-review {
-  display: block;
-  font-weight: bolder;
-  text-decoration: underline;
+.dashboard-card-info {
+  padding-left: 16px;
+  width: 80%;
+  &:hover {
+    text-decoration: none;
+  }
 }
+
+.dashboard-card-image {
+  height: 100%;
+  width: 132px;
+  background-position: center;
+  background-size: cover;
+}
+
+.past-event-link:hover {
+  text-decoration: none;
+}
+

@@ -20,7 +20,7 @@
             <%= link_to "Login", user_session_path, class: "nav-link button-secondary ml-1" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link button-secondary-background ml-1" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link button-secondary ml-1" %>
           </li>
         <% end %>
       </ul>
@@ -44,6 +44,7 @@
               <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Regalar</a>
             </li>
           </ul>
+          <%# Reservar %>
           <div class="tab-content p-3" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
@@ -52,6 +53,7 @@
                 <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
+            <%# Regalar %>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
                 <%= f.input :city, label: "¿Qué ciudad?", collection: ["Madrid", "Barcelona"] %>
@@ -61,6 +63,7 @@
               <% end %>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -73,21 +76,18 @@
     <h1>Experiencias culturales sorpresa</h1>
     <h4>Descubre tu evento 24 horas antes de que empiece</h4>
   </div>
-
-
-      
   <div class="container desktop-banner">
     <div class="col-4">
       <ul class="nav nav-pills " id="pills-tab" role="tablist">
         <li class="form-tag" >
-            <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reservar</a>
+          <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reservar</a>
         </li>
         <li class="form-tag">
-            <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Regalar</a>
-        </li>
+          <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Regalar</a>        </li>
       </ul>
     </div>
 
+    <%# Reservar %>
     <div class="desktop-booking">      
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -105,6 +105,8 @@
             </div>
           <% end %>
         </div>
+
+        <%# Regalar %>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
               <div class="row">
@@ -133,7 +135,7 @@
     <h2 class="mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
     <div class="row">
       <div class="col-12">
-        <div class="general-card instructions-card mb-3 mx-2">
+        <div class="general-card instructions-card mb-3">
           <div class="d-flex">
             <h5 class="steps"> 1. </h5>
             <h5 class="ml-2">Escoje la ciudad</h5>
@@ -142,16 +144,16 @@
         </div>
       </div>
       <div class="col-12">
-        <div class="general-card instructions-card mb-3 mx-2">
+        <div class="general-card instructions-card mb-3">
           <div class="d-flex">
             <h5 class="steps"> 2. </h5>
-            <h5 class="ml-2">Selecciona tus preferencias</h5>
+            <h5 class="ml-2">Selecciona preferencias</h5>
           </div>
           <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
         </div>
       </div>
       <div class="col-12">
-        <div class="general-card instructions-card mb-3 mx-2">
+        <div class="general-card instructions-card mb-3">
           <div class="d-flex">
             <h5 class="steps"> 3. </h5>
             <h5 class="ml-2">¡A disfrutar!</h5>
@@ -159,8 +161,8 @@
           <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
         </div>
       </div>
-      <div class="col-12 mt-3">
-        <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 mx-2" %>
+      <div class="col-12 mt-2">
+        <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2" %>
       </div>
     </div>
   </div>
@@ -168,10 +170,10 @@
 
 <div class="como-funciona-desktop">
   <div class="container pb-4">
-    <h2 class="ml-2 mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
+    <h2 class="my-4">¿Cómo funciona Helio?</h2>
     <div class="row">
       <div class="col">
-        <div class="general-card instructions-card-desktop mb-3 mx-2">
+        <div class="general-card instructions-card-desktop mb-3">
           <div class="d-flex">
             <h5 class="steps"> 1. </h5>
             <h5 class="ml-2">Escoje la ciudad</h5>
@@ -180,16 +182,16 @@
         </div>
       </div>
       <div class="col">
-        <div class="general-card instructions-card-desktop mb-3 mx-2">
+        <div class="general-card instructions-card-desktop mb-3">
           <div class="d-flex">
             <h5 class="steps"> 2. </h5>
-            <h5 class="ml-2">Selecciona tus preferencias</h5>
+            <h5 class="ml-2">Selecciona preferencias</h5>
           </div>
           <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
         </div>
       </div>
       <div class="col">
-        <div class="general-card instructions-card-desktop mb-3 mx-2">
+        <div class="general-card instructions-card-desktop mb-3">
           <div class="d-flex">
             <h5 class="steps"> 3. </h5>
             <h5 class="ml-2">¡A disfrutar!</h5>
@@ -201,18 +203,41 @@
   </div>
 </div>
 
-<div class="eventos-pasados-desktop">
+<div class="eventos-pasados">
   <div class="container pb-4">
-    <h2 class="mt-5 mb-3 title">Eventos Pasados</h2>
+    <h2 class="my-3">Eventos Pasados</h2>
+    <div class="row">
+      <div class="col-12">
+        <% @events.take(3).each do |event| %>
+          <div class="col-12 mb-3 opacity-animation p-0" data-category="<%= event.category.id %>" data-events-target="listItems" >
+            <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
+              <h4 class="past-event-card-home"><%= event.title %></h4>
+              <p class="pr-4 mb-0"><%= event.description.truncate(70) %></p>
+              <div class="d-flex justify-content-between">
+                <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 linky">
+        <%= link_to "Ver más eventos pasados →", events_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="eventos-pasados-desktop">
+  <div class="container">
+    <h2 class="my-4">Eventos Pasados</h2>
     <% @events.take(4).in_groups_of(2,false).each do |group| %>
       <div class="row">
         <% group.each do |event| %>
           <div class='col-md-6'>
-
-            <div class="col-12 my-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
+            <div class="col-12 my-3 opacity-animation p-0" data-category="<%= event.category.id %>" data-events-target="listItems" >
               <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
                 <h4 class="past-event-card-home"><%= event.title %></h4>
-                <p><%= event.description.truncate(70) %></p>
+                <p class="pr-4 mb-0"><%= event.description.truncate(75) %></p>
                 <div class="d-flex justify-content-between">
                   <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
                 </div>
@@ -223,37 +248,11 @@
       </div>
     <% end %>
     <div class="col-12 linky">
-      <%= link_to "Ver más eventos pasados →", events_path, class: "ml-3" %>
+      <%= link_to "Ver más eventos pasados →", events_path %>
     </div>
     </div>
   </div>
 </div>
-
-<div class="eventos-pasados">
-  <div class="container pb-4">
-    <div class="row">
-      <h2 class="mt-5 mb-3 ml-4 title">Eventos Pasados</h2>
-      <div class="col-12">
-        <% @events.take(3).each do |event| %>
-          <div class="col-12 mb-3 opacity-animation" data-category="<%= event.category.id %>" data-events-target="listItems" >
-            <div class="general-card event-title event-card p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key %>')">
-              <h4 class="past-event-card-home"><%= event.title %></h4>
-              <p><%= event.description.truncate(70) %></p>
-              <div class="d-flex justify-content-between">
-                <a href="events/<%=event.id%>"><i class="fas fa-chevron-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-        <% end %>
-      </div>
-      <div class="col-12 linky">
-        <%= link_to "Ver más eventos pasados →", events_path, class: "ml-3" %>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <div class="que-dicen">
   <div class="container pb-4">
@@ -262,9 +261,8 @@
         <% @reviews.each do |r| %>
           <%= render "reviews/card", r: r %>
         <% end %>
-
-        <div class="col-12 mt-5 w-100">
-          <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2 " %>
+        <div class="col-12 mt-2 w-100">
+          <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block " %>
         </div>  
     </div>
   </div>
@@ -272,7 +270,7 @@
 
 <div class="que-dicen-desktop">
   <div class="container pb-4">
-    <h2 class="mt-5 mb-3 title">¿Qué dicen sobre Helio?</h2>
+    <h2 class="my-4">¿Qué dicen sobre Helio?</h2>
       <% @reviews.in_groups_of(2,false).each do |group| %>
         <div class= "row">
           <% group.each do |r| %>
@@ -282,8 +280,6 @@
           <% end %>
         </div>
       <% end %>
-        
-  
       <div class= "d-flex justify-content-center">
         <div class="mt-4">
           <%= link_to "EMPEZAR", root_path, class: "button-rounded-desktop fixed-button-desktop d-block justify-content-center mt-2 " %>
@@ -291,6 +287,5 @@
       </div>
   </div>
 </div>
-
 
 <%= render "shared/footer"  %>

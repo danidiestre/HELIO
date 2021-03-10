@@ -1,19 +1,21 @@
-<div class="col-12 review-container">
-  <div class="general-card review-card w-100">
-    <div class="d-flex">
-      <div class="d-flex align-items-center review-pic">
-        <%= cl_image_tag  r.booking.user.avatar.key, class: "avatar-small"%>
-      </div>
-      <div class="flex-grow-1 px-3">
-        <div class="d-flex justify-content-between align-items-center">
-          <h6 class="user-name"> <strong><%= r.booking.user.first_name %></strong></h6>
-          <div class="numbers">
-            <% if r.rating != nil %>
-              <%= ('<i class="fas fa-star fa-xs star"></i>' * r.rating).html_safe %>
-            <% end %>
-          </div>
+<div class="container">
+  <div class="col-12 review-container p-0">
+    <div class="general-card review-card w-100">
+      <div class="d-flex">
+        <div class="d-flex align-items-center review-pic">
+          <%= cl_image_tag  r.booking.user.avatar.key, class: "avatar-small"%>
         </div>
-       <p><%= r.description.truncate(55, omission: '...')  %></p>
+        <div class="flex-grow-1 px-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="user-name"> <strong><%= r.booking.user.first_name %></strong></h6>
+            <div class="numbers">
+              <% if r.rating != nil %>
+                <%= ('<i class="fas fa-star fa-xs star"></i>' * r.rating).html_safe %>
+              <% end %>
+            </div>
+          </div>
+        <p><%= r.description.truncate(70, omission: '...')  %></p>
+        </div>
       </div>
     </div>
   </div>
