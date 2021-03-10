@@ -1,16 +1,52 @@
-<%= render "shared/progressbar", step: 4 %>
-<div class="container">
-  <%= simple_form_for @booking_budgets do |f| %>
-    <h2 class="mt-3">Escoje lo que pagarás</h2>
-    <p class="mt-2 subtitle">El precio del evento que te toque será como máximo el precio que pongas. El precio es por persona</p>
-    <div id="sliderRange">
-      <div class="d-flex">
-        <h1 id="budgetJs">60</h1>
-        <h5 class="budget-person">€/ por persona</h5>
-      </div id="slider-slider">
-      <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 60, step: 5, id: "test-slidey"} %>
-      <%= f.input :cancellation_insurance, as: :hidden, input_html: { value: "0" } %>
+<div class= "navbar-desktop">
+  <nav class="navbar navbar-expand fixed-top">
+    <div class="navbar-brand pt-0">
+      <%= link_to "helio", root_path, class: "navbar-brand pt-0" %>
     </div>
-    <input class="button-rounded d-block fixed-button" type="submit" value="SIGUIENTE" name="commit">
-  <% end %>
+    <ul class="navbar-nav ml-auto align-content-right mr-5">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Dashboard", dashboard_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link button-secondary ml-1" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", user_session_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+
+<div class="booking-dates">
+  <%= render "shared/progressbar", step: 4 %>
+  <div class="booking-container">
+    <%= simple_form_for @booking_budgets do |f| %>
+      <h2>Escoje lo que pagarás</h2>
+      <p class="mt-2 mb-0">El precio del evento será como máximo el precio que selecciones.</p>
+      <div id="sliderRange">
+        <div class="row">
+          <div class="col-8 budget-data">
+            <h1 id="budgetJs">80</h1>
+            <h5 class="budget-person ml-2">€/ por persona</h5>
+          </div>
+        </div>
+        <div id="slider-slider" class=>
+          <%= f.input :budget, label: false, input_html: { type: "range", min: 40, max: 120,  value: 80, step: 5, id: "test-slidey"} %>
+          <%= f.input :cancellation_insurance, as: :hidden, input_html: { value: "0" } %>
+        </div>
+      </div>
+      <div class="options-btn-container-desktop">
+          <input class="button-rounded fixed-button options-btn-desktop mt-4" type="submit" value="SIGUIENTE" name="commit">
+        </div>
+    <% end %>
+  </div>
 </div>
