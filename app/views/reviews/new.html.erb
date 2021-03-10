@@ -1,3 +1,31 @@
+<div class= "navbar-desktop">
+  <nav class="navbar navbar-expand fixed-top">
+    <div class="navbar-brand pt-0">
+      <%= link_to "helio", root_path, class: "navbar-brand pt-0" %>
+    </div>
+    <ul class="navbar-nav ml-auto align-content-right mr-5">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Dashboard", dashboard_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link button-secondary ml-1" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", user_session_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+
 <div class="container reviews-new" data-controller="reviews">
   <div class="row justify-content-center">
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-xs-8 my-5">
