@@ -1,34 +1,26 @@
 <div class="container reviews-new" data-controller="reviews">
-  <div class="row">
-    <div class="col-12 mt-4">
-      <div>
-        <h2>Cómo fué tu experiencia con Helio ?</h2>
-      </div>
-    </div>
-    <div class="col-12">
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-xs-8 my-5">
+      <h3 class="mb-3">How was your experience with Helio?</h3>
+      <h4 class="my-3">Rate your experience:</h4>
       <%= simple_form_for [@booking, @review] do |f| %>
-
-        <%= f.input :rating, as: :hidden, input_html: { value: 3 }%>
-
-        <div class="my-3">
-          <h4>Valora tu experiencia:</h4>
+        <%= f.input :rating, as: :hidden, input_html: { value: 3 }, class: "my-2"%>
+        <div style="margin: 40px auto">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <div class="d-flex justify-content-around">
+          <div class="d-flex justify-content-between">
             <i class="fa fa-star checked fa-2x" data-action="click->reviews#changeRating"  data-value="1" data-reviews-target="stars"></i>
             <i class="fa fa-star checked fa-2x" data-action="click->reviews#changeRating"  data-value="2" data-reviews-target="stars"></i>
             <i class="fa fa-star checked fa-2x" data-action="click->reviews#changeRating" data-value="3" data-reviews-target="stars"></i>
             <i class="fa fa-star fa-2x" data-action="click->reviews#changeRating" data-value="4" data-reviews-target="stars"></i>
             <i class="fa fa-star fa-2x" data-action="click->reviews#changeRating" data-value="5" data-reviews-target="stars"></i>
-
           </div>
         </div>
-        <div class = "my-3 py-3">
-         <h4><%= f.input :description, as: :text %></h4>
-          <%=  f.submit class: "button-rounded mb-3"%>
-          <h4><%= link_to '<i class="fas fa-undo-alt"></i> Back'.html_safe, dashboard_path %></h4>
+        <div>
+         <h4><%= f.input :description, as: :text, class: "mr-4" %></h4>
+          <%=  f.submit class: "review-btn mb-4" %>
         </div>
-
       <% end %>
+      <h4><%= link_to '<i class="fas fa-undo-alt"></i> Back'.html_safe, dashboard_path, class: "text-dark" %></h4>
     </div>
   </div>
 </div>
