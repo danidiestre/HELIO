@@ -1,3 +1,16 @@
+.budget-data {
+  width: 100%;
+  margin: 16px auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.form-control {
+  margin: 32px auto;
+}
+
 .rangeslider__fill {
   background: $primary;
   height: 10px;
@@ -16,12 +29,10 @@
 }
 #budgetJs {
   text-align: center;
-  padding: 20px 10px 40px 70px;
 }
 
 .budget-person {
   text-align: center;
-  padding: 30px 10px 40px 0px;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
