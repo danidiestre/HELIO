@@ -19,6 +19,7 @@
     </h6>
   </div>
 </div>
+
 <div style="display:none;" id="myDiv" class="container">
   <div class="d-flex justify-content-around booking-checkout">
     <div class="general-card summary">
@@ -53,20 +54,20 @@
       </div>
       <h3 class="px-3 pt-3">Total price: <%= @booking.iteration.price * @booking.participants %>€</h3>
       <p class="px-3">(<%= @booking.iteration.price %>€ x <%= @booking.participants %> persons)</p>
-  <div class="checkout-btn-center">
-    <input class="button-rounded fixed-button checkout-btn-desktop mt-4" type="submit" value="PAY" name="commit">
-  </div>
+      <div class="checkout-btn-center">
+        <input class="button-rounded fixed-button checkout-btn-desktop mt-4" type="submit" value="PAY" name="commit">
+      </div>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.querySelector(".checkout-btn-desktop");
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @booking.checkout_session_id %>'
+          });
+        });
+      </script>
     </div>
   </div>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script>
-    const paymentButton = document.querySelector(".pay-btn");
-    paymentButton.addEventListener('click', () => {
-      const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-      stripe.redirectToCheckout({
-        sessionId: '<%= @booking.checkout_session_id %>'
-      });
-    });
-  </script>
 </div>
 
