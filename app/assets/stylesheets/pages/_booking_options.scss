@@ -1,6 +1,7 @@
 h3 {
   margin-bottom: 0;
 }
+
 .languages {
   justify-content: space-between;
   margin-left: 0px;
@@ -11,17 +12,15 @@ input:checked + label.lingo {
 }
 
 .lingo {
-  background-size: cover;
+  color: white;
+  padding: 16px;
+  height: 80px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-weight: bold;
-  height: 80px;
-  width: 110px;
   opacity: 0.4;
 }
-
 
 .english {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1575902384581-eec5cdff9edb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80);
@@ -43,7 +42,6 @@ input:checked + label.lingo {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),  url(https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80);
 }
 
-
 .audiences {
   justify-content: space-between;
 }
@@ -53,14 +51,54 @@ input:checked + label.age {
 }
 
 .age {
-
+  color: white;
+  font-weight: bold;
+  height: 80px;
+  padding: 44px;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-weight: bold;
-  height: 80px;
-  width: 110px;
   opacity: 0.4;
+}
+
+@media (min-width: 700px) {
+  .booking-dates {
+    background-color: #fff;
+    justify-content: center;
+    margin: 24px 25%;
+  } .options-btn-desktop {
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: 600;
+      background-color: #01a0ba;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      width: 20vw;
+      margin: 16px;
+  } .fixed-button {
+      position: unset;
+  } .options-btn-container-desktop {
+      text-align: center;
+      margin: 8px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .lingo {
+    width: 130px;
+  } .age {
+      width: 200px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .lingo {
+    width: 180px;
+  } .age {
+      width: 280px;
+      height: 108px;
+  }
 }
