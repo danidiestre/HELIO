@@ -29,8 +29,8 @@
 
 <div class="home-banner">
   <div class= "text-home pl-4">
-    <h1>Experiencias culturales sorpresa</h1>
-    <h4 class="text-align-left">Descubre tu evento 24 horas antes de que empiece</h4>
+    <h1>Surprise cultural experiences</h1>
+    <h4>Discover your event 24 hours before it starts</h4>
   </div>
   <div class="container">
     <div class="row ">
@@ -38,28 +38,28 @@
         <div class = "center-block">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="form-tag" >
-              <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reservar</a>
+              <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reserve</a>
             </li>
             <li class="form-tag">
-              <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Regalar</a>
+              <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Gift</a>
             </li>
           </ul>
           <%# Reservar %>
           <div class="tab-content p-3" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "¿Qué ciudad?", collection: ["Barcelona","Madrid"] %>
-                <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %>
-                <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
+                <%= f.input :city, label: "What city?", collection: ["Barcelona","Madrid"] %>
+                <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %>
+                <%= f.button :submit, 'START', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
             <%# Regalar %>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
-                <%= f.input :city, label: "¿Qué ciudad?", collection: ["Madrid", "Barcelona"] %>
-                <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %>
-                <%= f.input :guest_email, label: "Email del invitado" %>
-                <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
+                <%= f.input :city, label: "What city?", collection: ["Madrid", "Barcelona"] %>
+                <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %>
+                <%= f.input :guest_email, label: "Invite guest email" %>
+                <%= f.button :submit, 'START', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
           </div>
@@ -73,17 +73,18 @@
 
 <div class="home-banner-desktop">
   <div class= "container text-home-desktop">
-    <h1>Experiencias culturales sorpresa</h1>
-    <h4>Descubre tu evento 24 horas antes de que empiece</h4>
+    <h1 class="ml-4">Surprise cultural experiences</h1>
+    <h4 class="ml-4">Discover your event 24 hours before it starts</h4>
   </div>
   <div class="container desktop-banner">
     <div class="col-4">
       <ul class="nav nav-pills " id="pills-tab" role="tablist">
         <li class="form-tag" >
-          <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reservar</a>
+          <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reserve</a>
         </li>
         <li class="form-tag">
-          <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Regalar</a>        </li>
+          <a class="" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Gift</a>
+        </li>
       </ul>
     </div>
 
@@ -94,13 +95,13 @@
           <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
             <div class="row">
               <div class="col border-right cuantos-desktop">
-                <%= f.input :city, label: "¿Qué ciudad?", collection: ["Barcelona","Madrid"] %>            
+                <%= f.input :city, label: "What city?", collection: ["Barcelona","Madrid"] %>            
               </div>
               <div class="col border-right ciudad-desktop">
-                <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %>          
+                <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %>          
               </div>
               <div class="col button-desktop">
-                <%= f.button :submit, 'EMPEZAR', class: "button-rounded-desktop"%>            
+                <%= f.button :submit, 'START', class: "button-rounded-desktop"%>            
               </div>
             </div>
           <% end %>
@@ -111,16 +112,16 @@
             <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
               <div class="row">
                 <div class="col">
-                  <%= f.input :city, label: "¿Qué ciudad?", collection: ["Madrid", "Barcelona"] %>          
+                  <%= f.input :city, label: "What city?", collection: ["Madrid", "Barcelona"] %>          
                 </div>
                 <div class="col">
-                  <%= f.input :participants, label: "¿Cuántos sóis?", collection: ["1", "2", "3", "4"] %> 
+                  <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %> 
                 </div>
                 <div class="col">
-                  <%= f.input :guest_email, label: "Email del invitado" %>
+                  <%= f.input :guest_email, label: "Invite guest email" %>
                 </div>
                 <div class="col">
-                  <%= f.button :submit, 'EMPEZAR', class: "btn btn-primary w-100"%>
+                  <%= f.button :submit, 'START', class: "btn btn-primary w-100"%>
                 </div>
               </div>
             <% end %>
@@ -132,33 +133,33 @@
 
 <div class="como-funciona">
   <div class="container pb-4">
-    <h2 class="mt-4 mb-3 title">¿Cómo funciona Helio?</h2>
+    <h2 class="mt-4 mb-3 title">How does Helio work?</h2>
     <div class="row">
       <div class="col-12">
         <div class="general-card instructions-card mb-3">
           <div class="d-flex">
             <h5 class="steps"> 1. </h5>
-            <h5 class="ml-2">Escoje la ciudad</h5>
+            <h5 class="ml-2">Choose the city</h5>
           </div>
-          <p>Escoje la ciudad dónde quieres disfrutar de tu experiencia</p>
+          <p>Choose the city where you want to enjoy your experience</p>
         </div>
       </div>
       <div class="col-12">
         <div class="general-card instructions-card mb-3">
           <div class="d-flex">
             <h5 class="steps"> 2. </h5>
-            <h5 class="ml-2">Selecciona preferencias</h5>
+            <h5 class="ml-2">Select preferences</h5>
           </div>
-          <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
+          <p>Pick what you like and discard what you don't like - it's that easy</p>
         </div>
       </div>
       <div class="col-12">
         <div class="general-card instructions-card mb-3">
           <div class="d-flex">
             <h5 class="steps"> 3. </h5>
-            <h5 class="ml-2">¡A disfrutar!</h5>
+            <h5 class="ml-2">Let's enjoy!</h5>
           </div>
-          <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
+          <p>Have fun with yours and enjoy the best Helio experience</p>
         </div>
       </div>
       <div class="col-12 mt-2">

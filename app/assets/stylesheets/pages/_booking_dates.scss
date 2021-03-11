@@ -4,21 +4,11 @@
   align-items: center;
 }
 
-.form-control {
-  padding: 0;
-}
-
-.form-group {
-  margin-top: -22px;
-}
-
-@media (min-width: 800px) {
-  .form-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
+.calendar-desktop {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .booking-container {
