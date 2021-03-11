@@ -1,52 +1,75 @@
-<%= content_for(:head) do %>
-  <meta name="turbolinks-visit-control" content="reload">
-<% end %>
-
-<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')"></div>
-<div class="container bg-white">
-  <div class="row">
-    <div class="col-12">
-      <h4 class="px-2 pt-4 mb-4 title-event"><%= @event.title %></h4>
-      <div class="mb-3 p-2 mt-2">
-        <div class="d-flex justify-content-between mb-4">
-          <p class="details"><%= @event.language.capitalize %></p>
-          <p class="details"><%= @event.category.name %></p>
-          <p class="details"><%= @event.audience.capitalize %></p>
-        </div>
-        <div>
-          <% if @event.description.length > 250 %>
-            <div id="event-description" data-description="<%= @event.description %>">
-              <%= truncate(@event.description, length: 250) %>
-            </div>
-            <div class="read-more">Read more</div>
-          <% else %>
-            <%= @event.description %>
-          <% end %>
-        </div>
-        <div class="sharethis-inline-share-buttons py-3"></div>
-      </div>
-      <div class="p-3 mt-3">
-        <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
-      </div>
+<div class= "navbar-desktop">
+  <nav class="navbar navbar-expand fixed-top">
+    <div class="navbar-brand pt-0">
+      <%= link_to "helio", root_path, class: "navbar-brand pt-0" %>
     </div>
-  </div>
-</div>
-<div id="map" class="map-show-page" style="width: 100vw; height: 50vh;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-<div class="container bg-white">
-  <div class="row review-row">
-    <div class="col-12 review-col">
-      <h2 class="mt-5 mb-3 ml-3 title">Opiniones</h2>
-      <% if @reviews.count == 0 %>
-      <p class="pb-4 ml-3">Este evento aún no tiene opiniones.</p>
+    <ul class="navbar-nav ml-auto align-content-right mr-5">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Dashboard", dashboard_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link button-secondary ml-1" %>
+        </li>
       <% else %>
-        <% @reviews.each do |r| %>
-          <%= render "reviews/card", r: r %>
-        <% end %>
+        <li class="nav-item">
+          <%= link_to "Login", user_session_path, class: "nav-link button-secondary ml-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link button-secondary ml-1" %>
+        </li>
       <% end %>
+    </ul>
+  </nav>
+</div>
+
+  <div class="row bg-white">
+    <div class="col-12">
+      <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.photo.key %>')"></div>
+        <div class="container">
+          <h4 class="px-2 pt-4 mb-4 title-event"><%= @event.title %></h4>
+          <div class="mb-3 p-2 mt-2">
+            <div class="d-flex justify-content-between mb-4">
+              <p class="details"><%= @event.language.capitalize %></p>
+              <p class="details"><%= @event.category.name %></p>
+              <p class="details"><%= @event.audience.capitalize %></p>
+            </div>
+            <div>
+              <% if @event.description.length > 250 %>
+                <div id="event-description" data-description="<%= @event.description %>">
+                  <%= truncate(@event.description, length: 250) %>
+                </div>
+                <div class="read-more">Read more</div>
+              <% else %>
+                <%= @event.description %>
+              <% end %>
+            </div>
+            <div class="sharethis-inline-share-buttons py-3"></div>
+          </div>
+          <div class="p-3 mt-3">
+            <p><i class="fas fa-map-marker-alt pr-2"></i><%= @event.address %></p>
+          </div>
+        </div>
+          <div id="map" class="map-show-page" style="width: 100vw; height: 50vh;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+          <div class="row">
+            <div class="col-12">
+              <div class="container">
+                <h2 class="mt-5 mb-3 ml-3 title">Reviews</h2>
+                <% if @reviews.count == 0 %>
+                <p class="pb-4 ml-3">This event has no reviews yet.</p>
+                <% else %>
+                  <% @reviews.each do |r| %>
+                    <%= render "reviews/card", r: r %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
-</div>
 
 <%= render "shared/footer"  %>
 

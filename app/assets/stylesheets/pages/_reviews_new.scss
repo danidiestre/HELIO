@@ -16,3 +16,12 @@
 .review-col{
   margin-bottom: 30px;
 }
+#review_description {
+  margin: 18px auto;
+}
+@media (min-width: 700px) {
+  #review_description {
+    margin: 0;
+    padding: 0;
+  }
+}
