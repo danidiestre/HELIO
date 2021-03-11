@@ -30,8 +30,8 @@
   <%= render "shared/progressbar", step: 2 %>
   <div class="form-wrapper">
     <div class="booking-container">
-      <h3>Elimina categorias</h3>
-      <p class="mb-0 mt-2">Elimina las categorias que no te gusten. Si te gustan todas, no elimines ninguna y pasa al siguiente paso.</p>
+      <h3>Discard categories</h3>
+      <p class="mb-0 mt-2">Discard the categories that you don't like. If you like all of them, don't discard any and go to the next step</p>
       <%= simple_form_for @booking_categories do |f|%>
         <div class="row mb-5">
           <% Category.all.each do |cat| %>
@@ -45,7 +45,7 @@
           <% end %>
         </div>
         <div class="options-btn-container-desktop">
-        <input class="button-rounded fixed-button options-btn-desktop" type="submit" value="SIGUIENTE" name="commit">
+        <input class="button-rounded fixed-button options-btn-desktop" type="submit" value="NEXT" name="commit">
         </div>
       <% end %>
     </div>
