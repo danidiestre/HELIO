@@ -29,8 +29,8 @@
 <div class="booking-dates">
   <%= render "shared/progressbar", step: 3 %>
   <div class="booking-container">
-    <h3>Más opciones</h3>
-    <p class="mb-0 mt-2">Descarta el/los lenguajes que no quieras</p>
+    <h3>More options</h3>
+    <p class="mb-0 mt-2">Discard the language or languages you don't want</p>
       <%= simple_form_for @booking_options do |f|%>
         <div class="d-flex languages">
           <% ['english', 'spanish', 'catalan'].each do |lan| %>
@@ -42,7 +42,7 @@
             </div>
           <% end %>
         </div>
-        <h6 class="mt-4">Selecciona tipo de público</h6>
+        <p class="mt-4 mb-0">Select type of audience</p>
         <div class="d-flex audiences">
           <% ['adults', 'all ages'].each_with_index do |aud, index| %>
             <div>
@@ -54,7 +54,7 @@
           <% end %>
         </div>
         <div class="options-btn-container-desktop">
-          <input class="button-rounded fixed-button options-btn-desktop" type="submit" value="SIGUIENTE" name="commit">
+          <input class="button-rounded fixed-button options-btn-desktop" type="submit" value="NEXT" name="commit">
         </div>
       <% end %>
   </div>
