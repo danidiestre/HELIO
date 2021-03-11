@@ -50,7 +50,7 @@
               <%= simple_form_for @booking_initial_data, url: booking_initial_data_path do |f|%>
                 <%= f.input :city, label: "What city?", collection: ["Barcelona","Madrid"] %>
                 <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %>
-                <%= f.button :submit, 'START', class: "btn btn-primary w-100"%>
+                <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
             <%# Regalar %>
@@ -59,7 +59,7 @@
                 <%= f.input :city, label: "What city?", collection: ["Madrid", "Barcelona"] %>
                 <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %>
                 <%= f.input :guest_email, label: "Invite guest email" %>
-                <%= f.button :submit, 'START', class: "btn btn-primary w-100"%>
+                <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
               <% end %>
             </div>
           </div>
@@ -101,7 +101,7 @@
                 <%= f.input :participants, label: "How many?", collection: ["1", "2", "3", "4"] %>          
               </div>
               <div class="col button-desktop">
-                <%= f.button :submit, 'START', class: "button-rounded-desktop"%>            
+                <%= f.button :submit, 'GET STARTED', class: "button-rounded-desktop"%>            
               </div>
             </div>
           <% end %>
@@ -121,7 +121,7 @@
                   <%= f.input :guest_email, label: "Invite guest email" %>
                 </div>
                 <div class="col">
-                  <%= f.button :submit, 'START', class: "btn btn-primary w-100"%>
+                  <%= f.button :submit, 'GET STARTED', class: "btn btn-primary w-100"%>
                 </div>
               </div>
             <% end %>
@@ -159,11 +159,11 @@
             <h5 class="steps"> 3. </h5>
             <h5 class="ml-2">Let's enjoy!</h5>
           </div>
-          <p>Have fun with yours and enjoy the best Helio experience</p>
+          <p>Have fun with friends and family and enjoy the best Helio experience</p>
         </div>
       </div>
       <div class="col-12 mt-2">
-        <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block mt-2" %>
+        <%= link_to "GET STARTED", root_path, class: "btn btn-primary d-block mt-2" %>
       </div>
     </div>
   </div>
@@ -171,33 +171,33 @@
 
 <div class="como-funciona-desktop">
   <div class="container pb-4">
-    <h2 class="my-4">¿Cómo funciona Helio?</h2>
+    <h2 class="my-4">How does Helio work?</h2>
     <div class="row">
       <div class="col">
         <div class="general-card instructions-card-desktop mb-3">
           <div class="d-flex">
             <h5 class="steps"> 1. </h5>
-            <h5 class="ml-2">Escoje la ciudad</h5>
+            <h5 class="ml-2">Choose the city</h5>
           </div>
-          <p>Escoje la ciudad dónde quieres disfrutar de tu experiencia</p>
+          <p>Choose the city where you want to enjoy your experience</p>
         </div>
       </div>
       <div class="col">
         <div class="general-card instructions-card-desktop mb-3">
           <div class="d-flex">
             <h5 class="steps"> 2. </h5>
-            <h5 class="ml-2">Selecciona preferencias</h5>
+            <h5 class="ml-2">Select preferences</h5>
           </div>
-          <p>Escoje lo que te gusta y descarta lo que no te gusta - así de fácil.</p>
+          <p>Pick what you like and discard what you don't like - it's that easy</p>
         </div>
       </div>
       <div class="col">
         <div class="general-card instructions-card-desktop mb-3">
           <div class="d-flex">
             <h5 class="steps"> 3. </h5>
-            <h5 class="ml-2">¡A disfrutar!</h5>
+            <h5 class="ml-2">Let's enjoy!</h5>
           </div>
-          <p>Pásatelo bien con los tuyos y disfruta de la mejor experiencia Helio.</p>
+          <p>Have fun with friends and family and enjoy the best Helio experience</p>
         </div>
       </div>
     </div>
@@ -206,7 +206,7 @@
 
 <div class="eventos-pasados">
   <div class="container pb-4">
-    <h2 class="my-3">Eventos Pasados</h2>
+    <h2 class="my-3">Past events</h2>
     <div class="row">
       <div class="col-12">
         <% @events.take(3).each do |event| %>
@@ -222,7 +222,7 @@
         <% end %>
       </div>
       <div class="col-12 linky">
-        <%= link_to "Ver más eventos pasados →", events_path %>
+        <%= link_to "See more past events →", events_path %>
       </div>
     </div>
   </div>
@@ -230,7 +230,7 @@
 
 <div class="eventos-pasados-desktop">
   <div class="container">
-    <h2 class="my-4 mt-5">Eventos Pasados</h2>
+    <h2 class="my-4 mt-5">Past events</h2>
     <% @events.take(4).in_groups_of(2,false).each do |group| %>
       <div class="row">
         <% group.each do |event| %>
@@ -249,7 +249,7 @@
       </div>
     <% end %>
     <div class="col-12 linky">
-      <%= link_to "Ver más eventos pasados →", events_path, style: "font-size: 24px" %>
+      <%= link_to "See more past events →", events_path, style: "font-size: 24px" %>
     </div>
     </div>
   </div>
@@ -258,12 +258,12 @@
 <div class="que-dicen">
   <div class="container pb-4">
     <div class="row"> 
-      <h2 class="mt-5 mb-3 ml-3 title">¿Qué dicen sobre Helio?</h2>
+      <h2 class="mt-5 mb-3 ml-3 title">What do people say about Helio?</h2>
         <% @reviews.each do |r| %>
           <%= render "reviews/card", r: r %>
         <% end %>
         <div class="col-12 mt-2 w-100">
-          <%= link_to "EMPEZAR", root_path, class: "btn btn-primary d-block " %>
+          <%= link_to "GET STARTED", root_path, class: "btn btn-primary d-block " %>
         </div>  
     </div>
   </div>
@@ -271,7 +271,7 @@
 
 <div class="que-dicen-desktop">
   <div class="container pb-4">
-    <h2 class="my-4 mt-5">¿Qué dicen sobre Helio?</h2>
+    <h2 class="my-4 mt-5">What do people say about Helio?</h2>
       <% @reviews.in_groups_of(2,false).each do |group| %>
         <div class= "row">
           <% group.each do |r| %>
@@ -283,7 +283,7 @@
       <% end %>
       <div class= "d-flex justify-content-center">
         <div class="mt-4">
-          <%= link_to "EMPEZAR", root_path, class: "button-rounded-desktop fixed-button-desktop d-block justify-content-center mt-2 " %>
+          <%= link_to "GET STARTED", root_path, class: "button-rounded-desktop fixed-button-desktop d-block justify-content-center mt-2 " %>
         </div>  
       </div>
   </div>
