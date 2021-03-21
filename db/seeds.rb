@@ -87,8 +87,8 @@ event_1 = Event.create(
 event_1_photo = URI.open('https://images.unsplash.com/photo-1585699324551-f6c309eedeca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 event_1.photo.attach(io: event_1_photo, filename: 'event1.jpg', content_type: 'image/jpg')
 
-recent_iteration = Iteration.create(event_id: event_1.id, price: 20, start_date: DateTime.new(2020,12,18,19))
-Iteration.create(event_id: event_1.id, price: 20, start_date: DateTime.new(2020,12,19,17))
+recent_iteration = Iteration.create(event_id: event_1.id, price: 20, start_date: DateTime.new(2021,3,25,19))
+Iteration.create(event_id: event_1.id, price: 20, start_date: DateTime.new(2021,3,28,17))
 
 #########################
 
@@ -104,8 +104,8 @@ event_2 = Event.create(
 event_2_photo = URI.open('https://www.tonimoog.com/wp-content/uploads/2020/03/FORTNIQUE-bcn.jpg')
 event_2.photo.attach(io: event_2_photo, filename: 'event2.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_2.id, price: 22, start_date: DateTime.new(2020,12,20,17))
-Iteration.create(event_id: event_2.id, price: 23, start_date: DateTime.new(2020,12,19,17))
+Iteration.create(event_id: event_2.id, price: 22, start_date: DateTime.new(2021,3,28,17))
+Iteration.create(event_id: event_2.id, price: 23, start_date: DateTime.new(2021,3,29,17))
 
 #########################
 
@@ -121,8 +121,8 @@ event_3 = Event.create(
 event_3_photo = URI.open('https://www.metropoliabierta.com/uploads/s1/66/21/13/magopop_9_1200x480.jpeg')
 event_3.photo.attach(io: event_3_photo, filename: 'event3.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2020,12,18,23))
-Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2020,12,19,10))
+Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2021,3,28,23))
+Iteration.create(event_id: event_3.id, price: 24, start_date: DateTime.new(2021,3,30,10))
 
 #########################
 
@@ -138,8 +138,8 @@ event_4 = Event.create(
 event_4_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/2/8/8/309/949457/vertic_880_0.jpg')
 event_4.photo.attach(io: event_4_photo, filename: 'event4.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_4.id, price: 25, start_date: DateTime.new(2020,12,22,17))
-Iteration.create(event_id: event_4.id, price: 25, start_date: DateTime.new(2020,12,21,19))
+Iteration.create(event_id: event_4.id, price: 25, start_date: DateTime.new(2021,3,23,17))
+Iteration.create(event_id: event_4.id, price: 25, start_date: DateTime.new(2021,3,24,19))
 
 #########################
 
@@ -155,8 +155,8 @@ event_5 = Event.create(
 event_5_photo = URI.open('https://www.shbarcelona.es/blog/es/wp-content/uploads/2015/12/teatro-de-improvisaci%C3%B3n-en-barcelona-2.jpg')
 event_5.photo.attach(io: event_5_photo, filename: 'event5.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_5.id, price: 26, start_date: DateTime.new(2020,12,25,17))
-Iteration.create(event_id: event_5.id, price: 26, start_date: DateTime.new(2020,12,25,19))
+Iteration.create(event_id: event_5.id, price: 26, start_date: DateTime.new(2021,3,25,17))
+Iteration.create(event_id: event_5.id, price: 26, start_date: DateTime.new(2021,3,25,19))
 
 #########################
 
@@ -172,8 +172,8 @@ event_6 = Event.create(
 event_6_photo = URI.open('https://www.65ymas.com/uploads/s1/22/50/3/teatro-flamenco-de-madrid-sebastia-n-rocotovich-teatro-flamenco-madrid.jpeg')
 event_6.photo.attach(io: event_6_photo, filename: 'event6.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_6.id, price: 27, start_date: DateTime.new(2020,12,17,19))
-Iteration.create(event_id: event_6.id, price: 27, start_date: DateTime.new(2020,12,18,24))
+Iteration.create(event_id: event_6.id, price: 27, start_date: DateTime.new(2021,3,21,19))
+Iteration.create(event_id: event_6.id, price: 27, start_date: DateTime.new(2021,3,21,24))
 
 #########################
 
@@ -190,8 +190,8 @@ event_7 = Event.create(
 event_7_photo = URI.open('https://static2.ideal.es/www/multimedia/201809/22/media/granada/GALERIA-sergio/PMZ210918sergio_dalma%200272.jpg')
 event_7.photo.attach(io: event_7_photo, filename: 'event7.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_7.id, price: 28, start_date: DateTime.new(2020,12,20,19))
-Iteration.create(event_id: event_7.id, price: 28, start_date: DateTime.new(2020,12,21,18))
+Iteration.create(event_id: event_7.id, price: 28, start_date: DateTime.new(2021,3,23,19))
+Iteration.create(event_id: event_7.id, price: 28, start_date: DateTime.new(2021,3,22,18))
 
 #########################
 
@@ -201,14 +201,14 @@ event_8 = Event.create(
   language: 'spanish',
   address: 'Gran Vía, 572 (Barcelona)',
   audience: 'adults',
-  category_id: Category.find_by(name:'Show + Dinner').id
+  category_id: Category.find_by(name:'Monologues').id
 )
 
 event_8_photo = URI.open('https://res.cloudinary.com/tf-lab/image/upload/restaurant/678e947e-ff4e-4a7d-bb94-2fbd505115d3/434d46da-8b19-4e68-baf5-853033ac2184.jpg')
 event_8.photo.attach(io: event_8_photo, filename: 'event8.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_8.id, price: 21, start_date: DateTime.new(2020,12,24,19))
-Iteration.create(event_id: event_8.id, price: 23, start_date: DateTime.new(2020,12,26,18))
+Iteration.create(event_id: event_8.id, price: 21, start_date: DateTime.new(2021,3,24,19))
+Iteration.create(event_id: event_8.id, price: 23, start_date: DateTime.new(2021,3,26,18))
 
 #########################
 
@@ -224,8 +224,8 @@ event_9 = Event.create(
 event_9_photo = URI.open('https://www.cadenadial.com/wp-content/uploads/2018/10/india-si-601x300.png')
 event_9.photo.attach(io: event_9_photo, filename: 'event9.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_9.id, price: 25, start_date: DateTime.new(2020,12,17,19))
-Iteration.create(event_id: event_9.id, price: 27, start_date: DateTime.new(2020,12,17,18))
+Iteration.create(event_id: event_9.id, price: 25, start_date: DateTime.new(2021,3,27,19))
+Iteration.create(event_id: event_9.id, price: 27, start_date: DateTime.new(2021,3,28,18))
 
 #########################
 
@@ -235,14 +235,13 @@ event_10 = Event.create(
   language: 'spanish',
   address: 'Cuesta de San Vicente, 44 (Madrid)',
   audience: 'Adults',
-  category_id: Category.find_by(name:'Classical Music + Opera').id
-)
+  category_id: Category.find_by(name:'Monologues').id)
 
 event_10_photo = URI.open('https://www.esmadrid.com/sites/default/files/eventos/eventos/callas.jpg')
 event_10.photo.attach(io: event_10_photo, filename: 'event10.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_10.id, price: 24, start_date: DateTime.new(2020,12,27,19))
-Iteration.create(event_id: event_10.id, price: 24, start_date: DateTime.new(2020,12,25,20))
+Iteration.create(event_id: event_10.id, price: 24, start_date: DateTime.new(2021,3,17,19))
+Iteration.create(event_id: event_10.id, price: 24, start_date: DateTime.new(2021,3,18,20))
 
 
 p "Also created #{Event.count} Events with #{Iteration.count} Iterations"
@@ -262,8 +261,8 @@ event_11 = Event.create(
 event_11_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/4/7654/1123422/vertic_880_0.jpg')
 event_11.photo.attach(io: event_11_photo, filename: 'event11.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_11.id, price: 24, start_date: DateTime.new(2020,12,20,19))
-Iteration.create(event_id: event_11.id, price: 21, start_date: DateTime.new(2020,12,21,20))
+Iteration.create(event_id: event_11.id, price: 24, start_date: DateTime.new(2021,3,23,19))
+Iteration.create(event_id: event_11.id, price: 21, start_date: DateTime.new(2021,3,25,20))
 
 event_12 = Event.create(
   title:'The Cage of the Crazy',
@@ -277,8 +276,8 @@ event_12 = Event.create(
 event_12_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/1/2601/901036/vertic_880_0.jpg')
 event_12.photo.attach(io: event_12_photo, filename: 'event12.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_12.id, price: 24, start_date: DateTime.new(2020,12,21,20))
-Iteration.create(event_id: event_12.id, price: 24, start_date: DateTime.new(2020,12,22,20))
+Iteration.create(event_id: event_12.id, price: 24, start_date: DateTime.new(2021,3,25,20))
+Iteration.create(event_id: event_12.id, price: 24, start_date: DateTime.new(2021,3,24,20))
 
 
 event_13 = Event.create(
@@ -293,8 +292,8 @@ event_13 = Event.create(
 event_13_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/4/0564/1084229/vertic_880_0.jpg')
 event_13.photo.attach(io: event_13_photo, filename: 'event13.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_13.id, price: 24, start_date: DateTime.new(2020,12,24,20))
-Iteration.create(event_id: event_13.id, price: 26, start_date: DateTime.new(2020,12,25,20))
+Iteration.create(event_id: event_13.id, price: 24, start_date: DateTime.new(2021,3,24,20))
+Iteration.create(event_id: event_13.id, price: 26, start_date: DateTime.new(2021,3,25,20))
 
 
 event_14 = Event.create(
@@ -303,14 +302,13 @@ event_14 = Event.create(
   language: 'spanish',
   address: 'La Rambla, 51 (Barcelona)',
   audience: 'Adults',
-  category_id: Category.find_by(name:'Classical Music + Opera').id
-)
+  category_id: Category.find_by(name:'Monologues').id)
 
 event_14_photo = URI.open('https://eyesbergstudio.files.wordpress.com/2019/12/zentauroepp50295998-icult-turandot-liceu191007230028-1570482203442.jpg')
 event_14.photo.attach(io: event_14_photo, filename: 'event14.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_14.id, price: 30, start_date: DateTime.new(2020,12,18,23))
-Iteration.create(event_id: event_14.id, price: 28, start_date: DateTime.new(2020,12,19,10))
+Iteration.create(event_id: event_14.id, price: 30, start_date: DateTime.new(2021,3,24,23))
+Iteration.create(event_id: event_14.id, price: 28, start_date: DateTime.new(2021,3,22,10))
 
 
 event_15 = Event.create(
@@ -325,8 +323,8 @@ event_15 = Event.create(
 event_15_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/5/2040/1159245/vertic_880_0.jpg')
 event_15.photo.attach(io: event_15_photo, filename: 'event15.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_15.id, price: 27, start_date: DateTime.new(2020,12,18,22))
-Iteration.create(event_id: event_15.id, price: 24, start_date: DateTime.new(2020,12,19,17))
+Iteration.create(event_id: event_15.id, price: 27, start_date: DateTime.new(2021,3,17,22))
+Iteration.create(event_id: event_15.id, price: 24, start_date: DateTime.new(2021,3,18,17))
 
 
 event_16 = Event.create(
@@ -341,8 +339,8 @@ event_16 = Event.create(
 event_16_photo = URI.open('https://cdn.atrapalo.com/common/photo/event/4/8/4/7455/1122333/vertic_880_0.jpg')
 event_16.photo.attach(io: event_16_photo, filename: 'event15.jpg', content_type: 'image/jpg')
 
-Iteration.create(event_id: event_16.id, price: 24, start_date: DateTime.new(2020,12,18,22))
-Iteration.create(event_id: event_16.id, price: 21, start_date: DateTime.new(2020,12,19,17))
+Iteration.create(event_id: event_16.id, price: 24, start_date: DateTime.new(2021,3,24,22))
+Iteration.create(event_id: event_16.id, price: 21, start_date: DateTime.new(2021,3,25,17))
 
 ###################################################
 
@@ -371,10 +369,10 @@ p "Created #{User.count} users"
 ####################################################
 
 Booking_1 = Booking.create(
-  user_id: rocio.id,
-  iteration_id: Iteration.all.sample.id,
-  start_date: DateTime.new(2020,12,10,19),
-  end_date: DateTime.new(2020,12,25,20),
+  user_id: dani.id,
+  iteration_id: event_10.iterations.first.id,
+  start_date: DateTime.new(2021,3,17,19),
+  end_date: DateTime.new(2021,3,18,20),
   budget: 70,
   languages: ["spanish"],
   audiences: ["adults"],
@@ -385,10 +383,10 @@ Booking_1 = Booking.create(
 )
 
 Booking_2 = Booking.create(
-  user_id: bruna.id,
-  iteration_id: Iteration.all.sample.id,
-  start_date: DateTime.new(2020,12,18,19),
-  end_date: DateTime.new(2020,12,22,20),
+  user_id: dani.id,
+  iteration_id: event_15.iterations.first.id,
+  start_date: DateTime.new(2020,12,17,19),
+  end_date: DateTime.new(2020,12,18,20),
   budget: 100,
   languages: ["spanish"],
   audiences: ["adults"],
@@ -398,10 +396,10 @@ Booking_2 = Booking.create(
 )
 
 Booking_3 = Booking.create(
-  user_id: jaume.id,
+  user_id: dani.id,
   iteration_id: event_9.iterations.first.id,
-  start_date: DateTime.new(2020,12,16,19),
-  end_date: DateTime.new(2020,12,18,19),
+  start_date: DateTime.new(2021,3,23,19),
+  end_date: DateTime.new(2021,3,27,19),
   budget: 40,
   languages: ["spanish"],
   audiences: ["adults"],
